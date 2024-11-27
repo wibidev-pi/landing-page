@@ -4009,6 +4009,7 @@ input, select, textarea {
 .wrapper.style4,
 .wrapper.style4.special,
 .wrapper.alt.style4,
+.button.fit.primary,
 body.is-mobile.landing #footer,
 .spotlight:nth-child(1) {
     background-color: #2276ac !important;
