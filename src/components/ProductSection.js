@@ -8,11 +8,11 @@ const ProductSection = () => {
       <div className="product-grid">
         {/* Example product items */}
         <div className="product-item">
-          <img src="product-image.jpg" alt="Product 1" />
+          <img src="../assets/pic03.jpg" alt="Product 1" />
           <h3>Product 1</h3>
         </div>
         <div className="product-item">
-          <img src="product-image.jpg" alt="Product 2" />
+          <img src="../assets/pic01.jpg" alt="Product 2" />
           <h3>Product 2</h3>
         </div>
         {/* Add more products here */}
