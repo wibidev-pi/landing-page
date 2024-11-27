@@ -3997,3 +3997,16 @@ input, select, textarea {
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
 	}
+.wrapper.style1,
+.wrapper.style1.special,
+.wrapper.style3,
+.wrapper.alt.style2,
+.wrapper.style4,
+body.is-mobile.landing #footer,
+.spotlight:nth-child(1) {
+    background-color: #2276ac !important;
+}
+
+.wrapper.style3 {
+    color: inherit; /* Preserve text color */
+}
