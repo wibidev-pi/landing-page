@@ -5,117 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wibitech - Industrial Parts</title>
   <style>
-    /* General Styles */
-    body {
+    /* Global Styles */
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
     }
 
     .container {
       width: 90%;
       max-width: 1200px;
-      margin: 0 auto;
+      margin: auto;
     }
 
-    /* Navbar */
-    .navbar {
+    /* Header */
+    header {
       background: #004080;
-      color: #fff;
-      padding: 1rem 0;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
     }
 
-    .navbar h1 {
-      margin: 0;
-      display: inline-block;
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    .navbar nav {
-      float: right;
+    header nav {
+      margin-top: 10px;
     }
 
-    .navbar ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .navbar ul li {
-      display: inline-block;
-      margin: 0 10px;
-    }
-
-    .navbar ul li a {
-      color: #fff;
+    header nav a {
+      color: white;
       text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
     }
 
     /* Hero Section */
     .hero {
-      background: #e0e0e0;
-      text-align: center;
-      padding: 2rem 0;
-    }
-
-    .hero h2 {
-      margin: 0 0 1rem;
-    }
-
-    .hero p {
-      margin: 0 0 2rem;
-    }
-
-    .hero .btn {
-      background: #004080;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-    }
-
-    /* Featured Section */
-    .featured {
-      padding: 2rem 0;
-      text-align: center;
-    }
-
-    .featured h2 {
-      margin-bottom: 2rem;
-    }
-
-    .product-grid {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      color: #004080;
+    }
+
+    .hero img {
+      width: 50%;
+    }
+
+    /* Categories Section */
+    .categories {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .category-card {
+      flex: 1;
+      margin: 10px;
+      padding: 15px;
+      background: #e6e6e6;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    .category-card:hover {
+      background: #d9d9d9;
+    }
+
+    /* Featured Products */
+    .featured-products {
+      margin: 20px 0;
+    }
+
+    .featured-products h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004080;
+    }
+
+    .products-grid {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: space-around;
       gap: 20px;
-      flex-wrap: wrap;
     }
 
     .product-card {
-      background: #f9f9f9;
+      background: #fff;
       border: 1px solid #ddd;
-      padding: 1rem;
+      padding: 15px;
       width: 30%;
+      text-align: center;
+    }
+
+    .product-card img {
+      max-width: 100%;
     }
 
     .product-card h3 {
-      margin: 0 0 1rem;
+      font-size: 18px;
+      margin: 10px 0;
     }
 
     .product-card p {
-      margin: 0 0 1rem;
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
-    .product-card .btn {
-      background: #004080;
-      color: #fff;
+    .product-card a {
       text-decoration: none;
-      padding: 0.5rem 1rem;
+      background: #004080;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
       display: inline-block;
+      margin-top: 10px;
     }
 
     /* Testimonials */
     .testimonials {
-      background: #f1f1f1;
+      padding: 20px;
+      background: #004080;
+      color: white;
       text-align: center;
-      padding: 2rem 0;
     }
 
     .testimonials p {
@@ -123,71 +150,85 @@
     }
 
     /* Footer */
-    .footer {
-      background: #004080;
-      color: #fff;
+    footer {
       text-align: center;
-      padding: 1rem 0;
+      padding: 10px;
+      background: #333;
+      color: white;
+      margin-top: 20px;
+    }
+
+    footer a {
+      color: #ffcc00;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <header class="navbar">
+
+  <header>
     <div class="container">
-      <h1>Wibitech</h1>
+      <div class="logo">Wibitech</div>
       <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h2>Your One-Stop Shop for Industrial Parts</h2>
-      <p>Supplying premium pneumatic, hydraulic, and machine components for all industries.</p>
-      <a href="#" class="btn">Explore Products</a>
+      <h1>Industrial Parts Solutions</h1>
+      <p>Wibitech provides top-quality pneumatic, hydraulic, and machine components for all industries.</p>
+      <a href="#" class="btn">Learn More</a>
     </div>
+    <img src="https://via.placeholder.com/600x300" alt="Industrial Machines">
   </section>
 
-  <section class="featured">
-    <div class="container">
-      <h2>Featured Products</h2>
-      <div class="product-grid">
-        <div class="product-card">
-          <h3>Pneumatic Valves</h3>
-          <p>High-quality and reliable for industrial use.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-        <div class="product-card">
-          <h3>Hydraulic Pumps</h3>
-          <p>Efficient and durable for heavy-duty operations.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
-        <div class="product-card">
-          <h3>Control Systems</h3>
-          <p>Advanced automation solutions for industries.</p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
+  <section class="categories container">
+    <div class="category-card">Pneumatics</div>
+    <div class="category-card">Hydraulics</div>
+    <div class="category-card">Control Systems</div>
+    <div class="category-card">Sensors</div>
+    <div class="category-card">Automation</div>
+  </section>
+
+  <section class="featured-products container">
+    <h2>Featured Products</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Pneumatic Valve</h3>
+        <p>Reliable and efficient for industrial use.</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Hydraulic Pump</h3>
+        <p>Perfect for heavy-duty operations.</p>
+        <a href="#">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Product">
+        <h3>Control Systems</h3>
+        <p>Advanced automation solutions.</p>
+        <a href="#">Buy Now</a>
       </div>
     </div>
   </section>
 
   <section class="testimonials">
     <div class="container">
-      <h2>What Our Customers Say</h2>
-      <p>"Wibitech has transformed our supply chain with their quality products."</p>
+      <h2>What Our Clients Say</h2>
+      <p>"Wibitech has been our trusted partner for industrial parts!"</p>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2024 Wibitech. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>&copy; 2024 Wibitech. All rights reserved. | <a href="#">Privacy Policy</a></p>
   </footer>
+
 </body>
 </html>
