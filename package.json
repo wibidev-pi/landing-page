@@ -1,4 +1,5 @@
 {
+  "homepage": "https://wibidev-pi.github.io/landing-page",
   "name": "react-simplified-app",
   "version": "1.0.0",
   "main": "index.js",
@@ -6,6 +7,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx",
     "lint:fix": "eslint src --ext .js,.jsx --fix",
@@ -23,6 +26,7 @@
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "gh-pages": "^6.2.0",
     "prettier": "^3.4.1",
     "react-scripts": "^5.0.1"
   },
