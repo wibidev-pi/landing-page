@@ -1,13 +1,7 @@
 .footer {
-    background-color: #333;
+    background-color: #00669c;
     color: white;
-    padding: 20px;
     text-align: center;
-  }
-  
-  .footer .social-media a {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
+    padding: 20px;
   }
   

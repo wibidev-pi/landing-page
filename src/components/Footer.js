@@ -1,26 +1,12 @@
 import React from "react";
 import "../styles/Footer.css";
 
-const Footer = () => {
+function Footer() {
   return (
     <footer className="footer">
-      <div className="contact-info">
-        <p>Contact Us: info@wibitech.com</p>
-        <p>Phone: +123 456 7890</p>
-      </div>
-      <div className="social-media">
-        <a href="#" className="social-icon">
-          FB
-        </a>
-        <a href="#" className="social-icon">
-          TW
-        </a>
-        <a href="#" className="social-icon">
-          IN
-        </a>
-      </div>
+      <p>&copy; 2024 Wibitech. All rights reserved.</p>
     </footer>
   );
-};
+}
 
 export default Footer;
