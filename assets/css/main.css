@@ -4009,12 +4009,19 @@ input, select, textarea {
 .wrapper.style4,
 .wrapper.style4.special,
 .wrapper.alt.style4,
-.button.fit.primary,
 body.is-mobile.landing #footer,
 .spotlight:nth-child(1) {
     background-color: #2276ac !important;
 }
+.button.primary {
+    background-color: #2276ac !important; /* Set the background to blue */
+    border: none; /* Ensure no conflicting border styles */
+    color: #ffffff !important; /* Make the text white for contrast */
+}
 
+.button.primary:hover {
+    background-color: #1d5b86 !important; /* Slightly darker blue on hover */
+}
 .wrapper.style3 {
     color: inherit; /* Preserve text color */
 }
