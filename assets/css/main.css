@@ -3999,9 +3999,16 @@ input, select, textarea {
 	}
 .wrapper.style1,
 .wrapper.style1.special,
-.wrapper.style3,
+.wrapper.alt.style1,
+.wrapper.style2,
+.wrapper.style2.special,
 .wrapper.alt.style2,
+.wrapper.style3,
+.wrapper.style3.special,
+.wrapper.alt.style3,
 .wrapper.style4,
+.wrapper.style4.special,
+.wrapper.alt.style4,
 body.is-mobile.landing #footer,
 .spotlight:nth-child(1) {
     background-color: #2276ac !important;
