@@ -3,64 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wibitec Website</title>
+  <title>Wibitec</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="header">
-      <img src="logo.png" alt="Wibitec Logo" class="logo">
-      <nav class="nav-menu">
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Services & Solutions</a>
-        <a href="#">Contact</a>
-      </nav>
-      <div class="header-options">
-        <input type="text" placeholder="Search..." class="search-bar">
-        <button class="basket-btn">Basket</button>
+    <div class="top-bar">
+      <div class="logo">
+        <h1>WIBITEC</h1>
+      </div>
+      <div class="top-bar-links">
+        <a href="#">Contact Us</a>
+        <a href="#">Feedback</a>
+        <a href="#">Login / Signup</a>
       </div>
     </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Services & Solutions</a></li>
+        <li><a href="#">Product Sectors</a></li>
+        <li><a href="#">Information & Support</a></li>
+        <li><a href="#">News</a></li>
+      </ul>
+      <div class="search-bar">
+        <input type="text" placeholder="Search by part number or manufacturer/description">
+        <button>Search</button>
+      </div>
+    </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <section class="slider-section">
-      <div class="slider">
-        <div class="slider-images">
-          <img src="images/pic01.jpg" alt="Energy Saving" class="slider-image active">
-          <img src="images/pic02.jpg" alt="Automation Solutions" class="slider-image">
-          <img src="images/pic03.jpg" alt="HVAC Solutions" class="slider-image">
-        </div>
-        <div class="slider-text">
-          <h1>SAVE ENERGY, REDUCE CARBON, SAVE MONEY</h1>
-          <p>Energy Saving Solutions by Wibitec</p>
-        </div>
+    <section class="hero-carousel">
+      <div class="carousel">
+        <img src="images/pic01.jpg" alt="Image 1" class="carousel-image">
+        <img src="images/pic02.jpg" alt="Image 2" class="carousel-image">
+        <img src="images/pic03.jpg" alt="Image 3" class="carousel-image">
+      </div>
+      <div class="carousel-text">
+        <h2>Save Energy, Reduce Carbon, Save Money</h2>
+        <p>Energy Saving Solutions by Wibitec</p>
+      </div>
+    </section>
+
+    <section class="info-cards">
+      <div class="card">
+        <h3>Lighting Solutions</h3>
+        <p>Upgrade your existing lighting with advanced LED lighting solutions to save energy and reduce CO2.</p>
+      </div>
+      <div class="card">
+        <h3>Combustion Solutions</h3>
+        <p>Get expert guidance on industrial gas burner components, spares, and combustion systems.</p>
+      </div>
+      <div class="card">
+        <h3>Automation Solutions</h3>
+        <p>Modern industrial automation solutions for efficiency and replacing obsolete products.</p>
       </div>
     </section>
   </main>
 
-  <script src="script.js"></script>
-
   <!-- Footer -->
   <footer>
-    <div class="footer-top container">
+    <div class="footer-top">
       <div class="footer-section">
-        <h3>About Us</h3>
+        <h3>Company</h3>
         <ul>
-          <li><a href="#">Company Info</a></li>
+          <li><a href="#">About Us</a></li>
           <li><a href="#">Careers</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h3>Support</h3>
         <ul>
+          <li><a href="#">Contact Us</a></li>
           <li><a href="#">FAQ</a></li>
-          <li><a href="#">Contact</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 Wibitech. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+      <p>&copy; 2024 Wibitec. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
     </div>
   </footer>
 </body>
