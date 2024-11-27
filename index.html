@@ -286,12 +286,38 @@
       text-decoration: underline;
     }
 
-    /* Testimonials */
-    .testimonials {
-      background-color: #f8f8f8;
-      padding: 30px 0;
-      text-align: center;
+    /* Solutions Banner Section */
+    .solutions-banner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 40px 0;
     }
+
+    .solutions-banner .banner-item {
+      background-color: #f1f1f1;
+      padding: 20px;
+      width: 30%;
+      text-align: center;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+
+    .solutions-banner .banner-item img {
+      width: 100%;
+      height: auto;
+    }
+
+    .solutions-banner .banner-item h3 {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .solutions-banner .banner-item p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
   </style>
 </head>
 <body>
@@ -329,32 +355,9 @@
       <p>Wibitech provides top-quality pneumatic, hydraulic, and machine components for all industries.</p>
       <a href="#" class="btn">Learn More</a>
     </div>
-    <img src="https://via.placeholder.com/600x300" alt="Industrial Machines">
   </section>
 
-  <!-- Main Content -->
-  <div class="main-content container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h3>Categories</h3>
-      <ul>
-        <li><a href="#">Pneumatics</a></li>
-        <li><a href="#">Hydraulics</a></li>
-        <li><a href="#">Electrical Components</a></li>
-        <li><a href="#">Automation Parts</a></li>
-        <li><a href="#">Machine Tools</a></li>
-        <li><a href="#">HVAC Systems</a></li>
-        <li><a href="#">Power Supplies</a></li>
-      </ul>
-    </aside>
-
-    <!-- Content Section -->
-    <div class="content">
-      <h2>Welcome to Wibitech</h2>
-      <p>Your one-stop solution for industrial parts, including pneumatic, hydraulic, and automation components.</p>
-    </div>
-  </div>
-
+  <!-- Categories Section -->
   <section class="categories container">
     <div class="category-card">Pneumatics</div>
     <div class="category-card">Hydraulics</div>
@@ -363,69 +366,45 @@
     <div class="category-card">Automation</div>
   </section>
 
-  <section class="featured-products container">
-    <h2>Featured Products</h2>
-    <div class="products-grid">
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product">
-        <h3>Pneumatic Valve</h3>
-        <p>Reliable and efficient for industrial use.</p>
-        <a href="#">Buy Now</a>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product">
-        <h3>Hydraulic Pump</h3>
-        <p>Perfect for heavy-duty operations.</p>
-        <a href="#">Buy Now</a>
-      </div>
-      <div class="product-card">
-        <img src="https://via.placeholder.com/150" alt="Product">
-        <h3>Control Systems</h3>
-        <p>Advanced automation solutions.</p>
-        <a href="#">Buy Now</a>
-      </div>
+  <!-- Solutions Banner Section -->
+  <section class="solutions-banner container">
+    <div class="banner-item">
+      <img src="image.png" alt="Lighting Solutions">
+      <h3>Lighting Solutions</h3>
+      <p>Upgrade your existing high bay lights, emergency lighting, and incandescent lights with advanced LED lighting solutions.</p>
     </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="container">
-      <h2>What Our Clients Say</h2>
-      <p>"Wibitech has been our trusted partner for industrial parts!"</p>
+    <div class="banner-item">
+      <img src="image.png" alt="Combustion Solutions">
+      <h3>Combustion Solutions</h3>
+      <p>Expert advice on gas burner components, breakdowns, burner spares, and more with decades of combustion knowledge.</p>
+    </div>
+    <div class="banner-item">
+      <img src="image.png" alt="Automation Solutions">
+      <h3>Automation Solutions</h3>
+      <p>Modern automation and control solutions to support industry 4.0 and IIOT with inverters and other equipment.</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-section">
-          <h3>Company Info</h3>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Terms & Policies</h3>
-          <ul>
-            <li><a href="#">Returns Policy</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h3>Customer Support</h3>
-          <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Shipping Info</a></li>
-            <li><a href="#">Technical Support</a></li>
-          </ul>
-        </div>
+    <div class="footer-top container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <ul>
+          <li><a href="#">Company Info</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 Wibitech. All rights reserved. | <a href="#">Sitemap</a></p>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Wibitech. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
     </div>
   </footer>
 
