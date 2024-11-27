@@ -1,19 +1,19 @@
 import React from "react";
-import Nav from "./components/navigation"; // Import Nav component
-import Products from "./components/Products";
+import Header from "./components/Header";
+import MainBanner from "./components/MainBanner";
+import ProductSection from "./components/ProductSection";
+import Footer from "./components/Footer";
+import "./styles/App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Nav>
-        <Products>
-          <main style={{ padding: "1rem" }}>
-            <h1>Product Gallery</h1>
-          </main>
-        </Products>
-      </Nav>
+    <div>
+      <Header />
+      <MainBanner />
+      <ProductSection />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
