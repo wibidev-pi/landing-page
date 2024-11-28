@@ -1,24 +1,63 @@
-.products {
-    padding: 60px 20px;
-    background-color: #fff;
+.products-section {
+    padding: 50px 20px;
     text-align: center;
   }
   
-  .products h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  .products-section h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
   }
   
-  .product-item {
-    margin-bottom: 40px;
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Makes it responsive */
+    gap: 20px;
   }
   
-  .product-item h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
+  .brand-tile {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space between the image and the text */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px; /* Fixed height for the tile */
+    width: 250px; /* Fixed width for the tile */
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
   }
   
-  .product-item p {
-    font-size: 18px;
+  .brand-tile img {
+    width: 100%; /* Ensure the image takes up full width of the container */
+    height: 80%; /* 80% of the container height */
+    object-fit: cover; /* Ensures images cover the container area without overflow */
+    margin-bottom: 10px; /* Add space between the image and the text */
+  }
+  
+  .brands-name {
+    height: 20%; /* 20% of the container height for the text */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    padding: 0 10px;
+    text-align: center;
+  }
+  
+  .brands-name h3 {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0; /* Remove any default margin */
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowed text */
+    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  }
+  
+  .brand-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   }
   

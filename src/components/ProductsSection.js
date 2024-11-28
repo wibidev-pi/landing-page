@@ -1,20 +1,34 @@
 import React from "react";
-import "../styles/ProductsSection.css";
+import { useNavigate } from "react-router-dom";
+import "./../styles/ProductsSection.css";
+import brandsData from "./products.json"; // Path to the JSON file
 
-function ProductsSection() {
+const ProductsSection = () => {
+  const navigate = useNavigate();
+
+  const handleBrandClick = (brandId) => {
+    navigate(`/brands/${brandId}`); // Navigate to the Brand page
+  };
+
   return (
-    <section className="products">
-      <h2>Our Products & Services</h2>
-      <div className="product-item">
-        <h3>Product 1</h3>
-        <p>High-quality industrial controls and components</p>
-      </div>
-      <div className="product-item">
-        <h3>Product 2</h3>
-        <p>Automation solutions for industries</p>
+    <section className="products-section">
+      <h1>Our Brands</h1>
+      <div className="brands-grid">
+        {brandsData.map((brand) => (
+          <div
+            key={brand.id}
+            className="brand-tile"
+            onClick={() => handleBrandClick(brand.id)}
+          >
+            <img src={brand.image} alt={brand.name} />
+            <div className="brands-name">
+              <h3>{brand.name}</h3>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
-}
+};
 
 export default ProductsSection;

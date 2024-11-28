@@ -9,6 +9,7 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import ContactUsSection from "./components/ContactUsSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import BrandPage from "./components/BrandPage";
 
 function App() {
   return (
@@ -23,8 +24,10 @@ function App() {
           <Route path="/why-choose-us" element={<WhyChooseUsSection />} />
           <Route path="/testimonials" element={<TestimonialsSection />} />
           <Route path="/contact" element={<ContactUsSection />} />
+          <Route path="/brands/:brandId" element={<BrandPage />} />
         </Routes>
         <Footer />
+        <ContactUsSection /> {/* Always visible */}
       </div>
     </Router>
   );
