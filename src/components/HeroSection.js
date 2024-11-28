@@ -32,7 +32,7 @@ const HeroSection = () => {
         className="hero-image"
       />
       <div className="hero-text">
-        <h1>Welcome to Wibitech</h1>
+        <h1>Welcome to Wibitec</h1>
         <p>Specialists in Electrical and Electronic Components</p>
       </div>
     </div>

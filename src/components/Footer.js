@@ -4,7 +4,7 @@ import "../styles/Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Wibitech. All rights reserved.</p>
+      <p>&copy; 2024 Wibitec. All rights reserved.</p>
     </footer>
   );
 }
