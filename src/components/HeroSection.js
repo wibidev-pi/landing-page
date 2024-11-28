@@ -25,17 +25,40 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="hero-section">
-      <img
-        src={bannerImages[currentImageIndex]}
-        alt="Banner"
-        className="hero-image"
-      />
-      <div className="hero-text">
-        <h1>Welcome to Wibitec</h1>
-        <p>Specialists in Electrical and Electronic Components</p>
+    <section className="hero-section">
+      <div className="hero-section">
+        <img
+          src={bannerImages[currentImageIndex]}
+          alt="Banner"
+          className="hero-image"
+        />
+        <div className="hero-text">
+          <h1>Welcome to Wibitec</h1>
+          <p>Specialists in Electrical and Electronic Components</p>
+        </div>
       </div>
-    </div>
+      <div className="container">
+        <div className="hero-content">
+          <h1>Welcome to Our Amazing Platform</h1>
+          <p>
+            Discover our products and services that make life easier and better.
+            We prioritize quality and innovation to exceed your expectations.
+          </p>
+          <div className="hero-buttons">
+            <a href="/products" className="btn btn-primary">
+              View Products
+            </a>
+            <a href="/contact" className="btn btn-secondary">
+              Contact Us
+            </a>
+          </div>
+        </div>
+        <div className="hero-image">
+          {/* Replace this with the relevant image in your `images` folder */}
+          <img src={bannerImages[currentImageIndex]} alt="Hero" />
+        </div>
+      </div>
+    </section>
   );
 };
 
