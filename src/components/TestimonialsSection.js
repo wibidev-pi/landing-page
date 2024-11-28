@@ -7,7 +7,7 @@ function TestimonialsSection() {
       <h2>What Our Customers Say</h2>
       <blockquote>
         {
-          '"Wibitech provided us with top-notch components and excellent customer service. Highly recommend!"'
+          '"Wibitec provided us with top-notch components and excellent customer service. Highly recommend!"'
         }
       </blockquote>
     </section>
