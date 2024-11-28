@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/App.css";
 import HeroSection from "./components/HeroSection";
 import AboutUsSection from "./components/AboutUsSection";
@@ -11,16 +12,21 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HeroSection />
-      <AboutUsSection />
-      <ProductsSection />
-      <WhyChooseUsSection />
-      <TestimonialsSection />
-      <ContactUsSection />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        {/* Header and Footer remain static */}
+        <Header />
+        <Routes>
+          <Route path="/" element={<HeroSection />} />
+          <Route path="/about-us" element={<AboutUsSection />} />
+          <Route path="/products" element={<ProductsSection />} />
+          <Route path="/why-choose-us" element={<WhyChooseUsSection />} />
+          <Route path="/testimonials" element={<TestimonialsSection />} />
+          <Route path="/contact" element={<ContactUsSection />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,25 +1,36 @@
 import React from "react";
 import "../styles/Header.css"; // We will create this CSS file
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">
-        <h1>Wibitec</h1> {/* Your company name */}
+      <div className="nav-links">
+        <li>
+          <Link to="/">
+            <h1>Wibitec</h1>
+          </Link>
+        </li>
       </div>
       <nav>
         <ul className="nav-links">
           <li>
-            <a href="#home">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#products">Products</a>
+            <Link to="/about-us">About Us</Link>
           </li>
           <li>
-            <a href="#about">About Us</a>
+            <Link to="/products">Products</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <Link to="/why-choose-us">Why Choose Us</Link>
+          </li>
+          <li>
+            <Link to="/testimonials">Testimonials</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
