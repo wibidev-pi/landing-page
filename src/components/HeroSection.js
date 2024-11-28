@@ -48,9 +48,6 @@ const HeroSection = () => {
             <a href="/products" className="btn btn-primary">
               View Products
             </a>
-            <a href="/contact" className="btn btn-secondary">
-              Contact Us
-            </a>
           </div>
         </div>
         <div className="hero-image">
