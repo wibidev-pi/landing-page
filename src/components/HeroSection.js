@@ -3,17 +3,17 @@ import "../styles/HeroSection.css";
 
 // Replace these with your actual image paths
 const banner1Images = [
-  "../assets/pic00.jpg",
-  "../assets/pic01.jpg",
-  "../assets/pic02.jpg",
-  "../assets/pic04.jpg",
+  "../assets/ass/pic00.jpg",
+  "../assets/ass/pic01.jpg",
+  "../assets/ass/pic02.jpg",
+  "../assets/ass/pic04.jpg",
 ];
 
 const bannerImages = [
-  "../assets/111.jpg",
-  "../assets/112.jpg",
-  "../assets/113.png",
-  "../assets/114.jpeg",
+  "../assets/products/111.jpg",
+  "../assets/products/112.jpg",
+  "../assets/products/113.png",
+  "../assets/products/114.jpeg",
 ];
 
 const HeroSection = () => {

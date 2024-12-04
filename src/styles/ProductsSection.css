@@ -1,3 +1,4 @@
+/* Products Section */
 .products-section {
     padding: 50px 20px;
     text-align: center;
@@ -9,12 +10,14 @@
     margin-bottom: 30px;
   }
   
+  /* Brands Grid */
   .brands-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Makes it responsive */
     gap: 20px;
   }
   
+  /* Brand Tile */
   .brand-tile {
     background: #ffffff;
     border: 1px solid #ddd;
@@ -59,5 +62,117 @@
   .brand-tile:hover {
     transform: translateY(-5px);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mobile (up to 600px) */
+  @media only screen and (max-width: 600px) {
+    .products-section {
+      padding: 30px 15px;
+    }
+  
+    .products-section h1 {
+      font-size: 1.8rem;
+    }
+  
+    .brands-grid {
+      grid-template-columns: 1fr; /* Stack brand tiles vertically on small screens */
+    }
+  
+    .brand-tile {
+      height: auto; /* Adjust height for small screens */
+      width: 100%; /* Make tile width 100% */
+    }
+  
+    .brand-tile img {
+      height: 200px; /* Adjust image height for smaller tiles */
+    }
+  
+    .brands-name h3 {
+      font-size: 1rem; /* Smaller font size for mobile */
+    }
+  }
+  
+  /* Tablet (601px to 768px) */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .products-section {
+      padding: 40px 20px;
+    }
+  
+    .products-section h1 {
+      font-size: 2rem; /* Adjust font size for tablets */
+    }
+  
+    .brands-grid {
+      grid-template-columns: repeat(2, 1fr); /* Two tiles per row on tablets */
+    }
+  
+    .brand-tile {
+      height: 250px; /* Keep tile height consistent */
+      width: 100%; /* Full width of the grid cell */
+    }
+  
+    .brand-tile img {
+      height: 70%; /* Adjust image height for tablets */
+    }
+  
+    .brands-name h3 {
+      font-size: 1.1rem; /* Adjust font size for tablets */
+    }
+  }
+  
+  /* Laptop (769px to 1024px) */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .products-section {
+      padding: 50px 20px;
+    }
+  
+    .products-section h1 {
+      font-size: 2.5rem; /* Default font size for laptop */
+    }
+  
+    .brands-grid {
+      grid-template-columns: repeat(3, 1fr); /* Three tiles per row on laptop */
+    }
+  
+    .brand-tile {
+      height: 250px; /* Keep tile height consistent */
+      width: 100%; /* Full width of the grid cell */
+    }
+  
+    .brand-tile img {
+      height: 80%; /* Adjust image height for laptop */
+    }
+  
+    .brands-name h3 {
+      font-size: 1.2rem; /* Default font size */
+    }
+  }
+  
+  /* Desktop (1025px and above) */
+  @media only screen and (min-width: 1025px) {
+    .products-section {
+      padding: 60px 40px;
+    }
+  
+    .products-section h1 {
+      font-size: 3rem; /* Larger font size for desktop */
+    }
+  
+    .brands-grid {
+      grid-template-columns: repeat(4, 1fr); /* Four tiles per row on desktop */
+    }
+  
+    .brand-tile {
+      height: 300px; /* Adjust tile height for desktop */
+      width: 100%; /* Full width of the grid cell */
+    }
+  
+    .brand-tile img {
+      height: 70%; /* Adjust image height for desktop */
+    }
+  
+    .brands-name h3 {
+      font-size: 1.3rem; /* Larger font size for desktop */
+    }
   }
   

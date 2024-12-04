@@ -1,7 +1,9 @@
+/* Hero Section */
 .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .banner-section {
@@ -24,6 +26,7 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  font-size: 1.5rem;
 }
 
 .content-section {
@@ -32,6 +35,7 @@
   align-items: center;
   padding: 20px;
   width: 80%;
+  margin: 0 auto;
 }
 
 .text-content {
@@ -51,7 +55,7 @@
   color: white;
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .image-slider {
@@ -66,4 +70,182 @@
   height: auto;
   border-radius: 10px;
   object-fit: contain;
+}
+
+/* Mobile (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .banner-section {
+    height: 200px; /* Reduced banner height for mobile */
+  }
+
+  .banner-text {
+    font-size: 1.2rem; /* Smaller text for mobile */
+  }
+
+  .content-section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .text-content {
+    flex: none;
+    text-align: center;
+  }
+
+  .text-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .image-slider {
+    margin-top: 20px;
+  }
+
+  .rotating-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+/* Tablet (601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .banner-section {
+    height: 250px; /* Adjust banner height for tablets */
+  }
+
+  .banner-text {
+    font-size: 1.3rem; /* Slightly smaller text for tablets */
+  }
+
+  .content-section {
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    padding: 20px;
+  }
+
+  .text-content {
+    flex: 1;
+    text-align: left;
+  }
+
+  .text-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-content p {
+    font-size: 1.1rem;
+  }
+
+  .image-slider {
+    margin-left: 20px;
+  }
+
+  .rotating-image {
+    width: 250px;
+  }
+
+  .btn-primary {
+    padding: 10px 18px;
+    font-size: 1rem;
+  }
+}
+
+/* Laptop (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .banner-section {
+    height: 300px; /* Default banner height for laptops */
+  }
+
+  .banner-text {
+    font-size: 1.5rem; /* Default font size */
+  }
+
+  .content-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1.2rem;
+  }
+
+  .image-slider {
+    margin-left: 20px;
+  }
+
+  .rotating-image {
+    width: 300px;
+  }
+
+  .btn-primary {
+    font-size: 1.1rem;
+    padding: 12px 20px;
+  }
+}
+
+/* Desktop (1025px and above) */
+@media only screen and (min-width: 1025px) {
+  .banner-section {
+    height: 350px; /* Larger banner for desktop */
+  }
+
+  .banner-text {
+    font-size: 1.6rem; /* Larger font for desktop */
+  }
+
+  .content-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 20px 40px;
+  }
+
+  .text-content {
+    flex: 1;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-content p {
+    font-size: 1.3rem;
+  }
+
+  .image-slider {
+    margin-left: 30px;
+  }
+
+  .rotating-image {
+    width: 350px;
+  }
+
+  .btn-primary {
+    font-size: 1.2rem;
+    padding: 15px 25px;
+  }
 }

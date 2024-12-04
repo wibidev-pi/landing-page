@@ -3,38 +3,48 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 150px; /* Adjusted for rectangle shape */
-  height: 50px; /* Adjusted for rectangle shape */
-  background-color: #24262b;
-  color: white;
-  border-radius: 25px; /* Rounded rectangle */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
+  border-radius: 15px;
+  background: transparent; /* Ensure the background is transparent */
+  background-image: url("../../public/assets/x.png"); /* Replace with your PNG image */
+  background-size: cover; /* Ensure image covers the button */
+  background-position: center; /* Center the image */
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  z-index: 1000;
+  border: none; /* Remove any borders */
+  outline: none; /* Remove outline to prevent default focus styles */
+  animation: zoom 2s infinite ease-in-out; /* Add zoom animation */
+  transition: transform 0.3s ease;
 }
 
+/* Hover Effect */
 .floating-button:hover {
-  background-color: rgb(69, 74, 82);
+  transform: scale(1.1); /* Slight zoom on hover */
 }
 
+/* Animation for zoom effect */
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Slightly larger size */
+  }
+}
+
+/* Expanded form styles */
 .floating-button.expanded {
-  width: 400px;
-  height: 500px;
-  border-radius: 15px; /* Rounded edges for expanded state */
-  background-color: #f8f9fa;
-  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  overflow: auto;
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  animation: none; /* Disable zooming when expanded */
 }
 
-.floating-button span {
-  color: white;
-  font-weight: bold;
+/* Contact form content */
+.contact-content {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #333;
 }
 
 .contact-content {
@@ -76,19 +86,19 @@
   padding: 10px;
   font-size: 0.9rem;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border-radius: 15px;
   box-sizing: border-box;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #24262b;
+  border-color: #007bff;
 }
 
 .btn-submit {
   padding: 10px 15px;
-  background-color: #24262b;
+  background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -97,5 +107,50 @@
 }
 
 .btn-submit:hover {
-  background-color: #24262b;
+  background-color: #0056b3;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  .floating-button {
+    width: 120px;
+    height: 45px;
+  }
+  .floating-button.expanded {
+    width: 320px;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .floating-button {
+    width: 130px;
+    height: 50px;
+  }
+  .floating-button.expanded {
+    width: 350px;
+    height: 450px;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .floating-button {
+    width: 150px;
+    height: 50px;
+  }
+  .floating-button.expanded {
+    width: 380px;
+    height: 450px;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .floating-button {
+    width: 180px;
+    height: 60px;
+  }
+  .floating-button.expanded {
+    width: 400px;
+    height: 500px;
+  }
 }
