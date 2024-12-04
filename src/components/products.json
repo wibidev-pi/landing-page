@@ -3,77 +3,77 @@
       "id": 1,
       "name": "AVENTICS",
       "brand": "AVENTICS",
-      "image": "../assets/1.png",
+      "image": "../assets/brand/1.png",
       "description": "Pneumatic systems for industrial automation."
     },
     {
       "id": 2,
       "name": "CAMOZZI",
       "brand": "CAMOZZI",
-      "image": "../assets/2.png",
+      "image": "../assets/brand/2.png",
       "description": "Advanced pneumatic systems and automation solutions."
     },
     {
       "id": 3,
       "name": "SMC",
       "brand": "SMC",
-      "image": "../assets/3.jpeg",
+      "image": "../assets/brand/3.jpeg",
       "description": "Industry-leading pneumatic and automation solutions."
     },
     {
       "id": 4,
       "name": "AIRTAC",
       "brand": "AIRTAC",
-      "image": "../assets/4.png",
+      "image": "../assets/brand/4.png",
       "description": "Pneumatic components for a wide range of applications."
     },
     {
       "id": 6,
       "name": "MAC",
       "brand": "MAC",
-      "image": "../assets/6.jpg",
+      "image": "../assets/brand/6.jpg",
       "description": "High-quality pneumatic valves and systems."
     },
     {
       "id": 7,
       "name": "NORGREN IMI",
       "brand": "NORGREN IMI",
-      "image": "../assets/7.png",
+      "image": "../assets/brand/7.png",
       "description": "Global leader in pneumatic and automation technology."
     },
     {
       "id": 8,
       "name": "HAFNER",
       "brand": "HAFNER",
-      "image": "../assets/8.png",
+      "image": "../assets/brand/8.png",
       "description": "Pneumatic solutions for complex industrial systems."
     },
     {
       "id": 9,
       "name": "FESTO",
       "brand": "FESTO",
-      "image": "../assets/9.png",
+      "image": "../assets/brand/9.png",
       "description": "Leading-edge automation solutions for various industries."
     },
     {
       "id": 10,
       "name": "ASCO NUMATICS",
       "brand": "ASCO NUMATICS",
-      "image": "/../assets/10.jpg",
+      "image": "/../assets/brand/10.jpg",
       "description": "Reliable valves and controls for automation systems."
     },
     {
       "id": 11,
       "name": "AZ PNEUMATICA",
       "brand": "AZ PNEUMATICA",
-      "image": "../assets/11.jpg",
+      "image": "../assets/brand/11.jpg",
       "description": "High-quality pneumatic components for industrial applications."
     },
     {
       "id": 12,
       "name": "LEGRIS",
       "brand": "LEGRIS",
-      "image": "../assets/12.png",
+      "image": "../assets/brand/12.png",
       "description": "Flexible pneumatic and fluid handling solutions."
     }
   ]

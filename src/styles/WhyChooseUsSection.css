@@ -1,3 +1,4 @@
+/* Why Choose Us Section */
 .why-choose-us {
     padding: 60px 20px;
     background-color: #f9f9f9;
@@ -17,5 +18,65 @@
   .why-choose-us ul li {
     font-size: 18px;
     margin-bottom: 10px;
+  }
+  
+  /* Mobile (up to 600px) */
+  @media only screen and (max-width: 600px) {
+    .why-choose-us {
+      padding: 40px 15px; /* Reduced padding for smaller screens */
+    }
+  
+    .why-choose-us h2 {
+      font-size: 24px; /* Smaller font size for mobile */
+    }
+  
+    .why-choose-us ul li {
+      font-size: 16px; /* Smaller font size for list items */
+    }
+  }
+  
+  /* Tablet (601px to 768px) */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    .why-choose-us {
+      padding: 50px 20px;
+    }
+  
+    .why-choose-us h2 {
+      font-size: 28px; /* Slightly smaller font size for tablets */
+    }
+  
+    .why-choose-us ul li {
+      font-size: 17px; /* Adjust font size for list items on tablets */
+    }
+  }
+  
+  /* Laptop (769px to 1024px) */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .why-choose-us {
+      padding: 60px 20px;
+    }
+  
+    .why-choose-us h2 {
+      font-size: 32px; /* Default font size for laptop */
+    }
+  
+    .why-choose-us ul li {
+      font-size: 18px; /* Default font size for list items */
+    }
+  }
+  
+  /* Desktop (1025px and above) */
+  @media only screen and (min-width: 1025px) {
+    .why-choose-us {
+      padding: 80px 40px; /* Larger padding for desktop */
+    }
+  
+    .why-choose-us h2 {
+      font-size: 36px; /* Larger font size for desktop */
+    }
+  
+    .why-choose-us ul li {
+      font-size: 18px; /* Maintain font size for list items on desktop */
+    }
   }
   

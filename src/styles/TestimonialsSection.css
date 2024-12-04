@@ -1,3 +1,4 @@
+/* Testimonials Section */
 .testimonials {
   padding: 60px 20px;
   background-color: #fff;
@@ -12,4 +13,65 @@
 .testimonials blockquote {
   font-size: 18px;
   font-style: italic;
+}
+
+/* Mobile (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .testimonials {
+    padding: 40px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .testimonials h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .testimonials blockquote {
+    font-size: 16px; /* Smaller font size for blockquote */
+    padding: 0 10px; /* Add some padding for better text alignment */
+  }
+}
+
+/* Tablet (601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .testimonials {
+    padding: 50px 20px;
+  }
+
+  .testimonials h2 {
+    font-size: 28px; /* Slightly smaller font size for tablets */
+  }
+
+  .testimonials blockquote {
+    font-size: 17px; /* Adjust blockquote font size for tablets */
+  }
+}
+
+/* Laptop (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .testimonials {
+    padding: 60px 20px;
+  }
+
+  .testimonials h2 {
+    font-size: 32px; /* Default font size for laptop */
+  }
+
+  .testimonials blockquote {
+    font-size: 18px; /* Default font size for blockquote */
+  }
+}
+
+/* Desktop (1025px and above) */
+@media only screen and (min-width: 1025px) {
+  .testimonials {
+    padding: 80px 40px; /* Larger padding for desktop */
+  }
+
+  .testimonials h2 {
+    font-size: 36px; /* Larger font size for desktop */
+  }
+
+  .testimonials blockquote {
+    font-size: 20px; /* Larger blockquote font size for desktop */
+  }
 }

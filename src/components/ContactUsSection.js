@@ -50,7 +50,7 @@ const ContactUsSection = () => {
           </div>
         ) : (
           // Default button text when collapsed
-          <span>Contact Us</span>
+          <span></span>
         )}
       </div>
     </>

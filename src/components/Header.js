@@ -9,7 +9,7 @@ const Header = () => {
         <li>
           <Link to="/">
             <img
-              src="../assets/logo2.png"
+              src="../assets/l11.png"
               className="logo"
               alt="description of image"
             />

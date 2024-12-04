@@ -2,14 +2,73 @@
     padding: 60px 20px;
     background-color: #f9f9f9;
     text-align: center;
-  }
-  
-  .about-us h2 {
+}
+
+.about-us h2 {
     font-size: 36px;
     margin-bottom: 20px;
-  }
-  
-  .about-us p {
+}
+
+.about-us p {
     font-size: 18px;
-  }
-  
+}
+
+/* Mobile (up to 600px) */
+@media only screen and (max-width: 600px) {
+    .about-us {
+        padding: 40px 15px;
+    }
+    
+    .about-us h2 {
+        font-size: 28px;
+    }
+    
+    .about-us p {
+        font-size: 16px;
+    }
+}
+
+/* iPad / Tablet (601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .about-us {
+        padding: 50px 20px;
+    }
+    
+    .about-us h2 {
+        font-size: 32px;
+    }
+    
+    .about-us p {
+        font-size: 17px;
+    }
+}
+
+/* Laptop (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .about-us {
+        padding: 60px 30px;
+    }
+    
+    .about-us h2 {
+        font-size: 34px;
+    }
+    
+    .about-us p {
+        font-size: 18px;
+    }
+}
+
+/* Desktop (1025px and above) */
+@media only screen and (min-width: 1025px) {
+    .about-us {
+        padding: 60px 40px;
+    }
+    
+    .about-us h2 {
+        font-size: 36px;
+    }
+    
+    .about-us p {
+        font-size: 18px;
+    }
+}
