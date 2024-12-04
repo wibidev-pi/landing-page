@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #00669c;
+    background-color: #4d525b;
     padding: 10px 20px;
   }
   
@@ -23,3 +23,7 @@
     color: white;
     text-decoration: none;
   }
+
+.logo{
+height: 60px;
+}

@@ -8,7 +8,11 @@ const Header = () => {
       <div className="nav-links">
         <li>
           <Link to="/">
-            <h1>Wibitec</h1>
+            <img
+              src="../assets/logo2.png"
+              className="logo"
+              alt="description of image"
+            />
           </Link>
         </li>
       </div>

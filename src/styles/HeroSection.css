@@ -1,22 +1,23 @@
 .hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-section {
   position: relative;
   width: 100%;
-  height: 400px; /* Adjust the height of the banner */
+  height: 300px;
   overflow: hidden;
 }
 
-.hero-images {
-  display: flex;
-  transition: transform 1s ease-in-out; /* Smooth transition for the swipe effect */
-}
-
-.hero-image {
+.banner-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image fills the container */
+  object-fit: cover;
 }
 
-.hero-text {
+.banner-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -25,93 +26,44 @@
   text-align: center;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 1.5rem;
-  margin-top: 10px;
-}
-
-
-.hero-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 50px 20px;
-  background: linear-gradient(to right, #f8fafc, #e9ecef);
-  min-height: 100vh;
-}
-
-.container {
+.content-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero-content {
-  flex: 1;
   padding: 20px;
+  width: 80%;
 }
 
-.hero-content h1 {
-  font-size: 2.5rem;
-  color: #333;
+.text-content {
+  flex: 1;
+}
+
+.text-content h1 {
+  margin-bottom: 10px;
+}
+
+.text-content p {
   margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 30px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
 }
 
 .btn-primary {
   background-color: #007bff;
-  color: #fff;
-  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
 }
 
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  color: #fff;
-  border: none;
-}
-
-.btn-secondary:hover {
-  background-color: #5a6268;
-}
-
-.hero-image {
+.image-slider {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero-image img {
-  max-width: 100%;
+.rotating-image {
+  width: 300px;
   height: auto;
   border-radius: 10px;
+  object-fit: contain;
 }
