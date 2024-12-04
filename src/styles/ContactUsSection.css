@@ -5,7 +5,7 @@
   right: 20px;
   width: 150px; /* Adjusted for rectangle shape */
   height: 50px; /* Adjusted for rectangle shape */
-  background-color: #007bff;
+  background-color: #24262b;
   color: white;
   border-radius: 25px; /* Rounded rectangle */
   display: flex;
@@ -19,7 +19,7 @@
 }
 
 .floating-button:hover {
-  background-color: #0056b3;
+  background-color: rgb(69, 74, 82);
 }
 
 .floating-button.expanded {
@@ -83,12 +83,12 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #24262b;
 }
 
 .btn-submit {
   padding: 10px 15px;
-  background-color: #007bff;
+  background-color: #24262b;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -97,5 +97,5 @@
 }
 
 .btn-submit:hover {
-  background-color: #0056b3;
+  background-color: #24262b;
 }
