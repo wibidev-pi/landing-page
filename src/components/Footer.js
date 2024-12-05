@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure Font Awesome is imported
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Footer() {
   return (
@@ -50,39 +50,46 @@ function Footer() {
         </div>
       </div>
 
-      {/* Social Media and Footer Bottom */}
-      <div className="footer-bottom">
-        <div className="social-icons">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-facebook"></i>
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-linkedin"></i>
-          </a>
-        </div>
-        <p>&copy; 2024 Wibitec Industrial Equipment. All Rights Reserved.</p>
+      <div className="social-icons">
+        <a
+          href="https://wa.me/your-phone-number"
+          aria-label="WhatsApp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-whatsapp"></i>
+        </a>
+        <a
+          href="https://www.facebook.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://www.twitter.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-x-twitter"></i>
+        </a>
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <div className="social-icons">
+        <p>&copy; 2024 Wibitec Industrial Equipment, All Rights Reserved.</p>
       </div>
     </footer>
   );

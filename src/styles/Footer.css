@@ -49,26 +49,24 @@
     margin-top: 20px;
   }
   
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
   .social-icons a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5em; /* Adjust the icon size */
+    color: #d7e0eb; /* Match your theme color */
+    font-size: 30px;
     text-decoration: none;
+    transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
-    color: #006aff; /* Change hover color */
+    color: #ffffff; /* Darker shade on hover */
   }
-  
-  .social-icons i {
-    transition: transform 0.3s ease;
-  }
-  
-  .social-icons i:hover {
-    transform: scale(1.1); /* Slightly enlarge icons on hover */
-  }
-  
-  /* Responsive Styles */
   
   /* Mobile (up to 600px) */
   @media only screen and (max-width: 600px) {
