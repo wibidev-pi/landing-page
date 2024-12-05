@@ -1,3 +1,4 @@
+/* General Footer Styling */
 .footer {
     background-color: #223f65;
     color: white;
@@ -51,54 +52,69 @@
   .social-icons a {
     color: white;
     margin: 0 10px;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Adjust the icon size */
     text-decoration: none;
   }
   
   .social-icons a:hover {
-    color: #006aff;
+    color: #006aff; /* Change hover color */
   }
   
-/* Mobile (up to 600px) */
-@media only screen and (max-width: 600px) {
+  .social-icons i {
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons i:hover {
+    transform: scale(1.1); /* Slightly enlarge icons on hover */
+  }
+  
+  /* Responsive Styles */
+  
+  /* Mobile (up to 600px) */
+  @media only screen and (max-width: 600px) {
     .footer {
-        padding: 15px; /* Adjust padding for smaller screens */
+      padding: 15px; /* Adjust padding for smaller screens */
     }
-
+  
     .footer p {
-        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+      font-size: 0.9rem; /* Slightly smaller font size for mobile */
     }
-}
-
-/* iPad / Tablet (601px to 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+  
+    .social-icons a {
+      font-size: 1.2em; /* Slightly smaller icons for mobile */
+    }
+  }
+  
+  /* iPad / Tablet (601px to 768px) */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
     .footer {
-        padding: 18px; /* Adjust padding for tablets */
+      padding: 18px; /* Adjust padding for tablets */
     }
-
+  
     .footer p {
-        font-size: 1rem; /* Default font size for tablets */
+      font-size: 1rem; /* Default font size for tablets */
     }
-}
-
-/* Laptop (769px to 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  }
+  
+  /* Laptop (769px to 1024px) */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .footer {
-        padding: 20px; /* Default padding for laptops */
+      padding: 20px; /* Default padding for laptops */
     }
-
+  
     .footer p {
-        font-size: 1rem; /* Default font size for laptops */
+      font-size: 1rem; /* Default font size for laptops */
     }
-}
-
-/* Desktop (1025px and above) */
-@media only screen and (min-width: 1025px) {
+  }
+  
+  /* Desktop (1025px and above) */
+  @media only screen and (min-width: 1025px) {
     .footer {
-        padding: 25px; /* Larger padding for desktop */
+      padding: 25px; /* Larger padding for desktop */
     }
-
+  
     .footer p {
-        font-size: 1.1rem; /* Slightly larger font for desktop */
+      font-size: 1.1rem; /* Slightly larger font for desktop */
     }
-}
+  }
+  

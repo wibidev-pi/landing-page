@@ -1,43 +1,61 @@
+/* Your existing styles */
 .header {
+    height: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #223f65;
     padding: 10px 20px;
+    position: relative; /* Ensure the hamburger can be positioned absolutely */
+    flex-wrap: wrap; /* Allow the items to wrap when needed */
+}
+.logo {
+    height: 60px;
+    margin-right: auto; /* Align logo to the left */
+    flex-grow: 0; /* Prevent logo from growing */
   }
-  
-  .header .logo h1 {
+.header .logo h1 {
     color: white;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;}
-  
-  .nav-links li {
-    margin-left: 20px;
-  }
-  
-  .nav-links li a {
-    color: white;
-    text-decoration: none;
-  }
-
-.logo{
-height: 60px;
 }
 
-/* Mobile (up to 600px) */
-@media only screen and (max-width: 600px) {
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    height: 60px;
+    flex-grow: 1; /* Allow the logo to grow and take space in the flex container */
+}
+
+/* Show Hamburger Icon for widths between 850px and 950px */
+@media only screen and (max-width: 950px) {
     .header {
-        flex-direction: column; /* Stack the items vertically on mobile */
+        flex-direction: column;
         text-align: center;
         padding: 15px;
+        justify-content: flex-start; /* Align the logo and menu at the top */
     }
 
     .nav-links {
         flex-direction: column;
         margin-top: 10px;
+        display: none; /* Hide the menu by default */
+        width: 100%; /* Full width on mobile */
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: block; /* Display menu when active */
     }
 
     .nav-links li {
@@ -46,41 +64,66 @@ height: 60px;
     }
 
     .logo {
-        height: 50px; /* Slightly smaller logo on mobile */
+        height: 50px;
+        flex-grow: 0; /* Disable growing on smaller screens */
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        height: 25px;
+        position: absolute;
+        right: 20px; /* Position it on the right side */
+        top: 20px; /* Optional: adjust vertical position */
+    }
+
+    .hamburger .bar {
+        background-color: white;
+        height: 4px;
+        width: 100%;
+        position: absolute;
+        transition: all 0.3s;
+    }
+
+    .hamburger .bar:nth-child(1) {
+        top: 0;
+    }
+
+    .hamburger .bar:nth-child(2) {
+        top: 10px;
+    }
+
+    .hamburger .bar:nth-child(3) {
+        top: 20px;
+    }
+
+    .hamburger.open .bar:nth-child(1) {
+        transform: rotate(45deg);
+        top: 10px;
+    }
+
+    .hamburger.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 10px;
     }
 }
 
-/* iPad / Tablet (601px to 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
+/* For screens above 950px, keep the nav links visible horizontally */
+@media only screen and (min-width: 951px) {
     .header {
-        flex-direction: row; /* Keep items in row for tablets */
-        justify-content: space-between;
-        padding: 15px 25px;
-    }
-
-    .nav-links {
-        flex-direction: row; /* Horizontal navigation links */
-    }
-
-    .nav-links li {
-        margin-left: 15px;
-    }
-
-    .logo {
-        height: 55px; /* Adjust logo size for tablets */
-    }
-}
-
-/* Laptop (769px to 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .header {
-        flex-direction: row; /* Keep row layout for laptops */
+        flex-direction: row;
         justify-content: space-between;
         padding: 20px 30px;
     }
 
     .nav-links {
-        flex-direction: row; /* Horizontal nav-links */
+        flex-direction: row;
     }
 
     .nav-links li {
@@ -88,15 +131,18 @@ height: 60px;
     }
 
     .logo {
-        height: 60px; /* Default logo size for laptops */
+        height: 60px;
+    }
+
+    /* Hide hamburger icon for larger screens */
+    .hamburger {
+        display: none;
     }
 }
 
-/* Desktop (1025px and above) */
+/* Optional: For screens larger than 1024px (desktop) */
 @media only screen and (min-width: 1025px) {
     .header {
-        flex-direction: row; /* Row layout for desktop */
-        justify-content: space-between;
         padding: 20px 40px;
     }
 
@@ -109,6 +155,10 @@ height: 60px;
     }
 
     .logo {
-        height: 70px; /* Slightly larger logo for desktop */
+        height: 70px;
+    }
+
+    .hamburger {
+        display: none;
     }
 }

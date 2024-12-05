@@ -1,0 +1,155 @@
+/* Contact Section */
+.contact {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #223f65; /* Add a color for the heading */
+}
+
+.contact blockquote {
+  font-size: 18px;
+  font-style: italic;
+  margin: 20px 0;
+  color: #666; /* A little lighter color for the blockquote */
+  padding: 0 10px;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #223f65; /* Match your theme color */
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #1a2d45; /* Darker shade on hover */
+}
+
+/* Footer Text */
+.footer-bottom p {
+  font-size: 14px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Mobile (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .contact {
+    padding: 40px 15px; /* Reduced padding for smaller screens */
+  }
+
+  .contact h2 {
+    font-size: 24px; /* Smaller font size for mobile */
+  }
+
+  .contact blockquote {
+    font-size: 16px; /* Smaller font size for blockquote */
+    padding: 0 10px; /* Add some padding for better text alignment */
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .social-icons {
+    gap: 10px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px; /* Adjust footer text size for mobile */
+  }
+}
+
+/* Tablet (601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .contact h2 {
+    font-size: 28px; /* Slightly smaller font size for tablets */
+  }
+
+  .contact blockquote {
+    font-size: 17px; /* Adjust blockquote font size for tablets */
+  }
+
+  .footer-bottom {
+    padding: 30px 0;
+  }
+
+  .social-icons {
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+  }
+}
+
+/* Laptop (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .contact {
+    padding: 60px 20px;
+  }
+
+  .contact h2 {
+    font-size: 32px; /* Default font size for laptop */
+  }
+
+  .contact blockquote {
+    font-size: 18px; /* Default font size for blockquote */
+  }
+
+  .footer-bottom {
+    padding: 30px 0;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+  }
+}
+
+/* Desktop (1025px and above) */
+@media only screen and (min-width: 1025px) {
+  .contact {
+    padding: 80px 40px; /* Larger padding for desktop */
+  }
+
+  .contact h2 {
+    font-size: 36px; /* Larger font size for desktop */
+  }
+
+  .contact blockquote {
+    font-size: 20px; /* Larger blockquote font size for desktop */
+  }
+
+  .footer-bottom {
+    padding: 40px 0;
+  }
+
+  .social-icons {
+    gap: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 16px;
+  }
+}

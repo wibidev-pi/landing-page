@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Footer.css";
+import "@fortawesome/fontawesome-free/css/all.min.css"; // Ensure Font Awesome is imported
 
 function Footer() {
   return (
@@ -40,11 +41,10 @@ function Footer() {
           <h4>Get In Touch</h4>
           <address></address>
           <p>
-            Phone: <a href="tel">+xxx xxx xxxxxx</a>
+            Phone: <a href="tel:+xxx-xxx-xxxx">+xxx xxx xxxxxx</a>
           </p>
           <p>
-            Email:{" "}
-            <a href="mailto:sales@targetindoman.com">sales@wibitec.com</a>
+            Email: <a href="mailto:sales@wibitec.com">sales@wibitec.com</a>
           </p>
           <p>Working Hours: Monday-Saturday, 8:00 AM - 6:00 PM</p>
         </div>
@@ -53,20 +53,36 @@ function Footer() {
       {/* Social Media and Footer Bottom */}
       <div className="footer-bottom">
         <div className="social-icons">
-          <a href="#">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-facebook"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="fab fa-linkedin"></i>
           </a>
         </div>
-        <p>&copy; 2024 wibitec Industrial Equipments. All Rights Reserved.</p>
+        <p>&copy; 2024 Wibitec Industrial Equipment. All Rights Reserved.</p>
       </div>
     </footer>
   );

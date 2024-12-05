@@ -1,23 +1,36 @@
-import React from "react";
-import "../styles/Header.css"; // We will create this CSS file
+import React, { useState } from "react";
+import "../styles/Header.css"; // Ensure your updated CSS file is being used
 import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false); // State to toggle menu visibility
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen); // Toggle the menu on click
+  };
+
   return (
     <header className="header">
-      <div className="nav-links">
-        <li>
-          <Link to="/">
-            <img
-              src="../assets/l11.png"
-              className="logo"
-              alt="description of image"
-            />
-          </Link>
-        </li>
+      <div className="logo">
+        <Link to="/">
+          <img
+            src="../assets/l11.png"
+            className="logo"
+            alt="description of image"
+          />
+        </Link>
       </div>
+
+      {/* Hamburger icon for screens between 850px and 950px */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
+        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
+        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
+      </div>
+
+      {/* Navigation */}
       <nav>
-        <ul className="nav-links">
+        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -28,7 +41,7 @@ const Header = () => {
             <Link to="/products">Products</Link>
           </li>
           <li>
-            <Link to="/why-choose-us">Why Choose Us</Link>
+            <Link to="/why-choose-us">Why Us</Link>
           </li>
           <li>
             <Link to="/testimonials">Testimonials</Link>
