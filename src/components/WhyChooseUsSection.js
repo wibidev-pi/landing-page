@@ -4,7 +4,7 @@ import "../styles/WhyChooseUsSection.css";
 function WhyChooseUsSection() {
   return (
     <section className="why-choose-us">
-      <h2>Why Choose Us</h2>
+      <h2>Why Us</h2>
       <ul>
         <li>Expertise in the field of industrial electronics</li>
         <li>High-quality products</li>
