@@ -23,7 +23,7 @@
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 65px;
   margin-top: 20px;
 }
 
@@ -43,6 +43,44 @@
   font-size: 14px;
   color: #888;
   margin-top: 20px;
+}
+
+.phone-section {
+  flex: 1 1 200px;
+  margin: 10px;
+}
+
+.phone-section h3, .phone-section h4 {
+  color: #004bd6;
+  margin-bottom: 15px;
+}
+
+.phone-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.phone-section ul li {
+  margin: 5px 0;
+}
+
+.phone-section ul li a {
+  color: #223f65; /* Phone & Email Links Color */
+  text-decoration: none; /* Remove underline by default */
+}
+
+.phone-section ul li a:hover {
+  color: #1a2d45; /* Darker shade on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.phone-section a {
+  color: #000103; /* Default link color */
+}
+
+.phone-section a:hover {
+  color: #1a2d45; /* Darker shade on hover */
+  text-decoration: underline; /* Underline on hover */
 }
 
 /* Mobile (up to 600px) */

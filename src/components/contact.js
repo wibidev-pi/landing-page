@@ -5,10 +5,17 @@ function Contact() {
   return (
     <section className="contact">
       <h2>Contact</h2>
-      <blockquote>
-        "Wibitec provided us with top-notch components and excellent customer
-        service. Highly recommend!"
-      </blockquote>
+      <div className="phone-section">
+        <address></address>
+        <p>
+          Phone: <a href="tel:+xxx-xxx-xxxx">+xxx xxx xxxxxx</a>
+        </p>
+        <p>
+          Email: <a href="mailto:sales@wibitec.com">sales@wibitec.com</a>
+        </p>
+        <p>Working Hours: Monday-Saturday, 8:00 AM - 6:00 PM</p>
+      </div>
+
       {/* Social Media and Footer Bottom */}
       <div className="footer-bottom">
         <div className="social-icons">
@@ -30,7 +37,6 @@ function Contact() {
             <i className="fab fa-whatsapp"></i> {/* WhatsApp Icon */}
           </a>
         </div>
-        <p>&copy; 2024 Wibitec Industrial Equipment. All Rights Reserved.</p>
       </div>
     </section>
   );

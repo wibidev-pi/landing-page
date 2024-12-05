@@ -1,21 +1,19 @@
 /* Your existing styles */
 .header {
-    height: 55px;
+    height: 55px; /* Fixed header height */
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #223f65;
     padding: 10px 20px;
-    position: relative; /* Ensure the hamburger can be positioned absolutely */
-    flex-wrap: wrap; /* Allow the items to wrap when needed */
+    position: relative; /* Allow the dropdown to be positioned absolutely */
+    flex-wrap: wrap;
+    overflow: visible; /* Ensure dropdown can overflow */
 }
+
 .logo {
-    height: 60px;
     margin-right: auto; /* Align logo to the left */
     flex-grow: 0; /* Prevent logo from growing */
-  }
-.header .logo h1 {
-    color: white;
 }
 
 .nav-links {
@@ -51,7 +49,12 @@
         margin-top: 10px;
         display: none; /* Hide the menu by default */
         width: 100%; /* Full width on mobile */
-        text-align: center;
+        position: absolute; /* Position the dropdown outside the header */
+        top: 55px; /* Position it just below the header */
+        left: 0;
+        background-color: #223f65; /* Match the header background */
+        z-index: 10; /* Make sure the menu appears above other content */
+        padding: 20px 0; /* Optional padding */
     }
 
     .nav-links.active {
