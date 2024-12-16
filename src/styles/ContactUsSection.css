@@ -1,23 +1,29 @@
-/* Floating Button */
+/* Base styles for the floating button */
 .floating-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   border-radius: 15px;
   background: transparent; /* Ensure the background is transparent */
-  background-image: url("../../public/assets/x.png"); /* Replace with your PNG image */
   background-size: cover; /* Ensure image covers the button */
   background-position: center; /* Center the image */
   cursor: pointer;
   border: none; /* Remove any borders */
   outline: none; /* Remove outline to prevent default focus styles */
-  animation: zoom 2s infinite ease-in-out; /* Add zoom animation */
   transition: transform 0.3s ease;
 }
 
-/* Hover Effect */
-.floating-button:hover {
-  transform: scale(1.1); /* Slight zoom on hover */
+/* Apply the zoom effect only to the collapsed state */
+.floating-button:not(.expanded) {
+  animation: zoom 2s infinite ease-in-out; /* Add zoom animation when collapsed */
+}
+
+/* Style for the image inside the button */
+.floating-button img.contact-icon {
+  width: 180px; /* Adjust size as needed */
+  height: 80px;
+  cursor: pointer; /* Show pointer cursor to indicate it’s clickable */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
 }
 
 /* Animation for zoom effect */
@@ -35,7 +41,7 @@
   width: 300px;
   height: auto;
   border-radius: 10px;
-  animation: none; /* Disable zooming when expanded */
+  padding: 20px;
 }
 
 /* Contact form content */
@@ -109,7 +115,24 @@
 .btn-submit:hover {
   background-color: #0056b3;
 }
-
+/* Close Button Styles */
+.close-button {
+  position: fixed;
+  margin-top: 10px;
+  margin-left: 130px;
+  position: absolute;
+  top: 20px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.close-button:hover {
+  color: #9a9a9a; /* Change text color on hover */
+  background: transparent; /* Ensure no background color on hover */
+  border: none; /* Ensure no border on hover */
+}
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 600px) {
   .floating-button {

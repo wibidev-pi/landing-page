@@ -1,4 +1,4 @@
-/* Your existing styles */
+/* General Header Styling */
 .header {
     height: 55px; /* Fixed header height */
     display: flex;
@@ -6,7 +6,9 @@
     align-items: center;
     background-color: #223f65;
     padding: 10px 20px;
-    position: relative; /* Allow the dropdown to be positioned absolutely */
+    position: sticky; /* Make header sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
     flex-wrap: wrap;
     overflow: visible; /* Ensure dropdown can overflow */
 }
@@ -35,7 +37,85 @@
     flex-grow: 1; /* Allow the logo to grow and take space in the flex container */
 }
 
-/* Show Hamburger Icon for widths between 850px and 950px */
+/* User Dropdown Styling */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn {
+    margin-left: 10px;
+    background-color: #f44336; /* Red background */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f; /* Darker red when hovered */
+}
+
+/* Dropdown Menu Styling */
+.user-info {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 30px; /* Adjust position */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    width: 200px; /* Adjust width as needed */
+    z-index: 1000; /* Ensure dropdown is above other elements */
+}
+
+/* Align the items vertically */
+.dropdown-menu li {
+    padding: 12px 20px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Add spacing between items */
+.dropdown-menu li + li {
+    border-top: 1px solid #ddd;
+}
+
+/* Profile and Settings Button Styles */
+.profile-btn, .settings-btn {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.profile-btn:hover, .settings-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.logout-btn {
+    margin-top: 10px; /* Add margin for spacing between logout and other items */
+}
+
+/* Mobile (Below 950px) */
 @media only screen and (max-width: 950px) {
     .header {
         flex-direction: column;
@@ -49,7 +129,7 @@
         margin-top: 10px;
         display: none; /* Hide the menu by default */
         width: 100%; /* Full width on mobile */
-        position: absolute; /* Position the dropdown outside the header */
+        position: absolute; /* Position it just below the header */
         top: 55px; /* Position it just below the header */
         left: 0;
         background-color: #223f65; /* Match the header background */

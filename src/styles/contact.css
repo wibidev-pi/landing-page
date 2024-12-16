@@ -25,6 +25,7 @@
   justify-content: center;
   gap: 65px;
   margin-top: 20px;
+  color: #223f65;
 }
 
 .social-icons a {
@@ -43,6 +44,10 @@
   font-size: 14px;
   color: #888;
   margin-top: 20px;
+}
+
+.social-icons i {
+  color: #223f65; /* Ensure Font Awesome icons are the correct color */
 }
 
 .phone-section {

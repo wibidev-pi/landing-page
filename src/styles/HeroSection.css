@@ -1,15 +1,39 @@
-/* Hero Section */
-.hero-section {
+/* Additional styles for HeroSectionReviews */
+.hero-section .reviews-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  text-align: center;
+}
+
+.hero-section .reviews-section h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero-section .reviews {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
+.hero-section .review {
+  margin: 15px 0;
+  font-size: 18px;
+  color: #333; /* Dark text for readability */
+  padding: 0; /* Remove padding */
+  background-color: transparent; /* No background */
+  box-shadow: none; /* Remove shadow */
+}
+
+.hero-section .review p {
+  margin: 5px 0;
+}
+
+/* Main Banner */
 .banner-section {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 350px;
   overflow: hidden;
 }
 
@@ -26,226 +50,214 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.content-section {
+/* Featured Section */
+.featured-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
   padding: 20px;
-  width: 80%;
-  margin: 0 auto;
+  background-color: #eef1f7;
 }
 
-.text-content {
-  flex: 1;
+.info-box {
+  width: 30%;
+  text-align: center;
 }
 
-.text-content h1 {
-  margin-bottom: 10px;
+/* Product Slider */
+.product-slider {
+  padding: 20px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
-.text-content p {
-  margin-bottom: 20px;
+.slider-wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
+.slider-container {
+  display: flex;
+  animation: slide 30s linear infinite; /* Slower and seamless animation */
+}
+
+.slider-item {
+  flex: 0 0 25%; /* 4 items per row */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slider-item img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for uniform appearance */
+  object-fit: contain; /* Prevent cropping by fitting the image within the container */
+  border-radius: 5px;
+  background-color: #fff; /* Optional: Add a background to ensure empty space looks neat */
+}
+
+/* Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.features {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0;
+  background-color: white;
+  justify-content: center; /* Center horizontally */
+  align-items: center;
+}
+
+.features h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.tile-teaser {
+  margin: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #f9f9f9; /* Light background */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 16px; /* Padding around the content */
+  margin: 10px; /* Space between tiles */
+  width: 348px; /* Set a fixed width */
+  height: 550px; /* Set a fixed height */
+  box-sizing: border-box; /* Ensure padding is included in the height/width */
+  transition: transform 0.3s; /* Smooth scaling effect */
   text-decoration: none;
-  border-radius: 15px;
 }
 
-.image-slider {
-  flex: 1;
+.tile-teaser:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tile-image {
+  width: 100%; /* Full width of the tile */
+  height: 220px; /* Fixed height for the image */
+  object-fit: cover; /* Maintain aspect ratio and fit within the container */
+  border-bottom: 1px solid #ddd; /* Optional: Separate image visually */
+}
+
+.tile-title {
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #222;
+  text-align: center;
+}
+
+.tile-text {
+  margin: 0 1rem 1rem;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+  overflow: hidden; /* Ensure text doesn't overflow */
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical;
+    text-decoration: none;
+}
+
+.tile-link {
+  margin-top: auto; /* Push link to the bottom of the tile */
+  text-decoration: none;
+}
+
+.tile-link span {
+  display: inline-block;
+  color: #223f65;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.tile-link span:hover {
+  color: #223f65;
+  text-decoration: none;
+}
+
+#main-teaser-container {
+  padding: 20px;
+  height: 300px;
+  align-items: center;
+}
+/* Main Container */
+#reference-teaser-container {
+  margin-top: 20px;
+  height: 150px;
+  background: linear-gradient(to right, #223f65, #9edcfb); /* Gradient background */
+  padding: 30px; /* Add spacing */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.rotating-image {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain;
+/* Content Card */
+.reference-teaser-content {
+  background-color: #fff; /* White background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center-align text */
+  padding: 40px; /* Inner spacing */
+  max-width: 700px; /* Restrict width */
 }
 
-/* Mobile (up to 600px) */
-@media only screen and (max-width: 600px) {
-  .banner-section {
-    height: 200px; /* Reduced banner height for mobile */
-  }
-
-  .banner-text {
-    font-size: 1.2rem; /* Smaller text for mobile */
-  }
-
-  .content-section {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 15px;
-  }
-
-  .text-content {
-    flex: none;
-    text-align: center;
-  }
-
-  .text-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .text-content p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  .image-slider {
-    margin-top: 20px;
-  }
-
-  .rotating-image {
-    width: 100%;
-    height: auto;
-  }
-
-  .btn-primary {
-    font-size: 0.9rem;
-    padding: 8px 15px;
-  }
+/* Preheadline */
+.teaser-preheadline {
+  color: #6c757d; /* Muted gray text */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-/* Tablet (601px to 768px) */
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-  .banner-section {
-    height: 250px; /* Adjust banner height for tablets */
-  }
-
-  .banner-text {
-    font-size: 1.3rem; /* Slightly smaller text for tablets */
-  }
-
-  .content-section {
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    padding: 20px;
-  }
-
-  .text-content {
-    flex: 1;
-    text-align: left;
-  }
-
-  .text-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .text-content p {
-    font-size: 1.1rem;
-  }
-
-  .image-slider {
-    margin-left: 20px;
-  }
-
-  .rotating-image {
-    width: 250px;
-  }
-
-  .btn-primary {
-    padding: 10px 18px;
-    font-size: 1rem;
-  }
+/* Headline */
+.teaser-headline {
+  color: #212529; /* Darker text */
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-/* Laptop (769px to 1024px) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .banner-section {
-    height: 300px; /* Default banner height for laptops */
-  }
-
-  .banner-text {
-    font-size: 1.5rem; /* Default font size */
-  }
-
-  .content-section {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    width: 80%;
-  }
-
-  .text-content {
-    flex: 1;
-  }
-
-  .text-content h1 {
-    font-size: 2rem;
-  }
-
-  .text-content p {
-    font-size: 1.2rem;
-  }
-
-  .image-slider {
-    margin-left: 20px;
-  }
-
-  .rotating-image {
-    width: 300px;
-  }
-
-  .btn-primary {
-    font-size: 1.1rem;
-    padding: 12px 20px;
-  }
+/* Description */
+.teaser-description {
+  color: #495057; /* Subtle gray text */
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 
-/* Desktop (1025px and above) */
-@media only screen and (min-width: 1025px) {
-  .banner-section {
-    height: 350px; /* Larger banner for desktop */
-  }
+/* Button */
+.teaser-button {
+  background-color: #223f65; /* Teal button color */
+  color: #fff; /* White text */
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px; /* Rounded corners */
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
 
-  .banner-text {
-    font-size: 1.6rem; /* Larger font for desktop */
-  }
-
-  .content-section {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    padding: 20px 40px;
-  }
-
-  .text-content {
-    flex: 1;
-  }
-
-  .text-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .text-content p {
-    font-size: 1.3rem;
-  }
-
-  .image-slider {
-    margin-left: 30px;
-  }
-
-  .rotating-image {
-    width: 350px;
-  }
-
-  .btn-primary {
-    font-size: 1.2rem;
-    padding: 15px 25px;
-  }
+.teaser-button:hover {
+  background-color: #365680; /* Darker teal on hover */
 }
