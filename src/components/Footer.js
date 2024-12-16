@@ -6,6 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
+        {/* Quick Links Section */}
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul>
@@ -39,9 +40,9 @@ function Footer() {
         {/* Contact Section */}
         <div className="footer-section">
           <h4>Get In Touch</h4>
-          <address></address>
           <p>
             Phone: <a href="tel:+xxx-xxx-xxxx">+xxx xxx xxxxxx</a>
+            <br />
           </p>
           <p>
             Email: <a href="mailto:sales@wibitec.com">sales@wibitec.com</a>
@@ -50,7 +51,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="social-icons">
+      <div className="social-icons-footer">
         <a
           href="https://wa.me/your-phone-number"
           aria-label="WhatsApp"
@@ -88,7 +89,8 @@ function Footer() {
           <i className="fab fa-linkedin"></i>
         </a>
       </div>
-      <div className="social-icons">
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
         <p>&copy; 2024 Wibitec Industrial Equipment, All Rights Reserved.</p>
       </div>
     </footer>

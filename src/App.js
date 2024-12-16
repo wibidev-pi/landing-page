@@ -1,39 +1,62 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./styles/App.css";
+import React, { useState, createContext } from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+
+import Header from "./components/Header";
 import HeroSection from "./components/HeroSection";
 import AboutUsSection from "./components/AboutUsSection";
 import ProductsSection from "./components/ProductsSection";
-import WhyChooseUsSection from "./components/WhyChooseUsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import Contact from "./components/contact";
 import ContactUsSection from "./components/ContactUsSection";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Contact from "./components/contact"; // Correcting this import (if Contact component exists)
-import BrandPage from "./components/BrandPage";
+import Login from "./components/Login";
+import Signup from "./components/Signup";
+import AddProducts from "./components/AddProducts";
+import "./styles/App.css";
+
+const UserContext = createContext();
 
 function App() {
+  const [userRole, setUserRole] = useState(null);
+
   return (
-    <Router>
-      <div className="App">
-        {/* Header and Footer remain static */}
-        <Header />
-        {/* Main content */}
-        <Routes>
-          <Route path="/" element={<HeroSection />} />
-          <Route path="/about-us" element={<AboutUsSection />} />
-          <Route path="/products" element={<ProductsSection />} />
-          <Route path="/why-choose-us" element={<WhyChooseUsSection />} />
-          <Route path="/testimonials" element={<TestimonialsSection />} />
-          <Route path="/contact" element={<Contact />} />{" "}
-          {/* Correctly routing to Contact component */}
-          <Route path="/brands/:brandId" element={<BrandPage />} />
-        </Routes>
-        <Footer />
-        <ContactUsSection /> {/* Always visible on all routes */}
-      </div>
-    </Router>
+    <UserContext.Provider value={{ userRole, setUserRole }}>
+      <Router>
+        <div className="App">
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                userRole === "admin" ? (
+                  <Navigate to="/products" />
+                ) : (
+                  <HeroSection />
+                )
+              }
+            />
+            <Route path="/about-us" element={<AboutUsSection />} />
+            <Route path="/products" element={<ProductsSection />} />
+            <Route path="/testimonials" element={<TestimonialsSection />} />
+            <Route path="/contact" element={<Contact />} />{" "}
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/addproduct" element={<AddProducts />} />
+          </Routes>
+          {userRole !== "admin" &&
+            window.location.pathname !== "/login" &&
+            window.location.pathname !== "/signup" && <Footer />}
+        </div>
+        <ContactUsSection />
+      </Router>
+    </UserContext.Provider>
   );
 }
 
 export default App;
+export { UserContext };

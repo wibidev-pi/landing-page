@@ -1,9 +1,29 @@
 /* General Footer Styling */
 .footer {
-    background-color: #223f65;
-    color: white;
+    background-color: #223f65; /* Dark background for footer */
+    color: #ffffff; /* Light gray color for text */
     padding: 40px 20px;
-  }
+    font-family: Arial, sans-serif;
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.social-icons-footer {
+  display: flex;
+  justify-content: center;
+  gap: 65px;
+  margin-top: 20px;
+}
+
+.social-icons-footer a {
+  color: #f8fbff; /* Match your theme color for footer icons */
+  font-size: 30px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons-footer a:hover {
+  color: #ffffff; /* Darker shade on hover */
+}
   
   .footer-container {
     display: flex;
@@ -16,9 +36,10 @@
     margin: 10px;
   }
   
-  .footer-section h3, .footer-section h4 {
-    color: #7182a2;
+  .footer-section h4 {
+    color: #a1a1a4; /* White color for section titles */
     margin-bottom: 15px;
+    font-size: 1.2rem;
   }
   
   .footer-section ul {
@@ -28,37 +49,30 @@
   
   .footer-section ul li {
     margin: 5px 0;
+    color: #ffffff; /* Light gray color for list items */
+    font-size: 1rem;
   }
   
   .footer-section ul li a {
-    color: white;
+    color: #d7e0eb; /* Same light gray for links */
     text-decoration: none;
   }
   
   .footer-section ul li a:hover {
+    color: #ffffff; /* White color on hover */
     text-decoration: underline;
   }
   
-  .footer-section a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-/* Social Media Icons */
-.social-icons {
+  /* Social Media Icons */
+  .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 65px;
     margin-top: 20px;
   }
   
   .social-icons a {
-    color: #d7e0eb; /* Match your theme color */
+    color: #f8fbff; /* Match your theme color */
     font-size: 30px;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -68,51 +82,80 @@
     color: #ffffff; /* Darker shade on hover */
   }
   
+  /* Footer Text */
+  .footer-bottom {
+    text-align: center; /* Center align the footer text */
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+    color: #fffefe;
+    margin-top: 0; /* Remove top margin to reduce gap */
+    padding-top: 0; /* Ensure no padding */
+  }
+  
+  .footer-section p {
+    color: #ffffff; /* White color for text */
+    font-size: 1rem; /* Ensure readability */
+    line-height: 1.5; /* Add line spacing */
+    margin-bottom: 10px; /* Add space between each paragraph */
+  }
+  
+  .footer-section p a {
+    color: #ffffff; /* White color for links */
+    text-decoration: none; /* No underline */
+  }
+  
+  .footer-section p a:hover {
+    color: #ffffff; /* White color on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
   /* Mobile (up to 600px) */
   @media only screen and (max-width: 600px) {
     .footer {
-      padding: 15px; /* Adjust padding for smaller screens */
+      padding: 15px;
     }
   
     .footer p {
-      font-size: 0.9rem; /* Slightly smaller font size for mobile */
+      font-size: 0.9rem;
     }
   
     .social-icons a {
-      font-size: 1.2em; /* Slightly smaller icons for mobile */
+      font-size: 1.2em;
     }
   }
   
   /* iPad / Tablet (601px to 768px) */
   @media only screen and (min-width: 601px) and (max-width: 768px) {
     .footer {
-      padding: 18px; /* Adjust padding for tablets */
+      padding: 18px;
     }
   
     .footer p {
-      font-size: 1rem; /* Default font size for tablets */
+      font-size: 1rem;
     }
   }
   
   /* Laptop (769px to 1024px) */
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .footer {
-      padding: 20px; /* Default padding for laptops */
+      padding: 20px;
     }
   
     .footer p {
-      font-size: 1rem; /* Default font size for laptops */
+      font-size: 1rem;
     }
   }
   
   /* Desktop (1025px and above) */
   @media only screen and (min-width: 1025px) {
     .footer {
-      padding: 25px; /* Larger padding for desktop */
+      padding: 25px;
     }
   
     .footer p {
-      font-size: 1.1rem; /* Slightly larger font for desktop */
+      font-size: 1.1rem;
     }
   }
   
