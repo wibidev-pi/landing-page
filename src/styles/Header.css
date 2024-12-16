@@ -1,10 +1,10 @@
 /* General Header Styling */
 .header {
+  background: #223f65; /* Gradient background */
     height: 55px; /* Fixed header height */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #223f65;
     padding: 10px 20px;
     position: sticky; /* Make header sticky */
     top: 0; /* Stick to the top */
