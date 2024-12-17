@@ -8,7 +8,7 @@ function Contact() {
       <div className="phone-section">
         <address></address>
         <p>
-          Phone: <a href="tel:+xxx-xxx-xxxx">+xxx xxx xxxxxx</a>
+          Phone: <a href="tel:+xxx-xxx-xxxx">+971-5042-89825</a>
         </p>
         <p>
           Email: <a href="mailto:sales@wibitec.com">sales@wibitec.com</a>
@@ -29,7 +29,7 @@ function Contact() {
             <i className="fab fa-instagram"></i> {/* Instagram Icon */}
           </a>
           <a
-            href="https://wa.me/your-phone-number"
+            href="https://wa.me/+971504289825"
             aria-label="WhatsApp"
             target="_blank"
             rel="noopener noreferrer"

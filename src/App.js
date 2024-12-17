@@ -13,7 +13,9 @@ import ProductsSection from "./components/ProductsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import Contact from "./components/contact";
 import ContactUsSection from "./components/ContactUsSection";
+import BrandPage from "./components/BrandPage";
 import Footer from "./components/Footer";
+import ProductDetailPage from "./components/ProductDetailPage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AddProducts from "./components/AddProducts";
@@ -42,11 +44,16 @@ function App() {
             />
             <Route path="/about-us" element={<AboutUsSection />} />
             <Route path="/products" element={<ProductsSection />} />
+            <Route path="//brands/:brandId" element={<BrandPage />} />
             <Route path="/testimonials" element={<TestimonialsSection />} />
             <Route path="/contact" element={<Contact />} />{" "}
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/addproduct" element={<AddProducts />} />
+            <Route
+              path="/products/:productId"
+              element={<ProductDetailPage />}
+            />
           </Routes>
           {userRole !== "admin" &&
             window.location.pathname !== "/login" &&
