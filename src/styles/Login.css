@@ -46,7 +46,7 @@ h2 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #223f65;
+  color: #444c54;
 }
 
 input[type="text"],
@@ -80,14 +80,14 @@ input[type="checkbox"] {
 
 .checkbox-container label {
   font-size: 1rem;
-  color: #223f65;
+  color: #444c54;
   font-weight: 500;
 }
 
 button[type="submit"] {
   width: 100%;
   padding: 12px;
-  background-color: #223f65;
+  background-color: #444c54;
   color: #ffffff;
   font-weight: bold;
   border: none;
@@ -104,7 +104,7 @@ button[type="submit"]:hover {
 .signup-text {
   margin-top: 10px;
   font-size: 0.9rem;
-  color: #223f65;
+  color: #444c54;
 }
 
 .signup-link {
@@ -121,7 +121,7 @@ button[type="submit"]:hover {
   margin-top: 30px;
   text-align: center;
   font-size: 0.9rem;
-  color: #223f65;
+  color: #444c54;
 }
 
 .footer-links {
@@ -138,7 +138,7 @@ button[type="submit"]:hover {
 }
 
 .footer-links a {
-  color: #223f65;
+  color: #444c54;
   text-decoration: none;
 }
 

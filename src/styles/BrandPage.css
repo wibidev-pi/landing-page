@@ -1,3 +1,4 @@
+/* General Page Styling */
 .brand-page {
   padding: 20px;
   text-align: center; /* Center align the heading */
@@ -7,34 +8,13 @@
   margin-bottom: 20px; /* Add some space below heading */
 }
 
+/* Content Layout */
 .brand-content {
   display: flex;
   gap: 10px; /* Decreased gap between left and right sections */
   align-items: flex-start;
-  border-top: 1px solid #223f65; /* Top border for overall section */
+  border-top: 1px solid #444c54; /* Top border for overall section */
   padding-top: 10px;
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-  .brand-content {
-    flex-direction: column; /* Stack left sidebar and right list vertically */
-  }
-
-  .brand-image {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
-  }
-
-  .product-names-sidebar {
-    border-right: none; /* Remove right border on mobile */
-    border-bottom: 2px solid #223f65; /* Add bottom border for separation */
-    margin-bottom: 10px; /* Space below the sidebar */
-  }
-
-  .products-list {
-    grid-template-columns: 1fr; /* Stack product list items in a single column */
-  }
 }
 
 .brand-image-container {
@@ -53,13 +33,13 @@
   flex: 1;
   padding: 10px;
   background-color: transparent;
-  border-right: 2px solid #223f65; /* Divider line */
+  border-right: 2px solid #444c54; /* Divider line */
   text-align: left; /* Align list items to the left */
 }
 
 .product-names-sidebar h3 {
   margin-bottom: 10px;
-  color: #223f65;
+  color: #444c54;
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center; /* Center align the sidebar title */
@@ -73,7 +53,7 @@
 
 .product-name-item {
   cursor: pointer;
-  color: #223f65; /* Default text color */
+  color: #444c54; /* Default text color */
   font-size: 1rem;
   font-weight: 500;
   margin: 5px 0; /* Spacing between names */
@@ -133,7 +113,7 @@
 .product-info h3 {
   margin: 0;
   font-size: 1rem;
-  color: #223f65;
+  color: #444c54;
 }
 
 .product-info p {
@@ -142,20 +122,52 @@
   color: #555; /* Lighter gray for details */
 }
 
-.get-quote-button {
-  background: none !important; /* Remove any background */
-  border: none !important; /* Remove any borders */
-  padding: 0 !important; /* Remove padding */
-  margin: 0 !important; /* Remove margin */
-  color: #223f65 !important; /* Set link color */
-  font-size: 1rem !important; /* Set font size */
-  font-weight: bold !important; /* Bold font */
-  text-decoration: none !important; /* No underline by default */
-  cursor: pointer; /* Show pointer cursor on hover */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .brand-content {
+    flex-direction: column; /* Stack sidebar and list vertically */
+  }
+
+  .product-names-sidebar {
+    border-right: none;
+    border-bottom: 2px solid #444c54;
+    margin-bottom: 10px;
+  }
+  .products-list {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 10px;
+  }
+
+  .product-list-item {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .list-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+
 }
 
-.get-quote-button:hover {
-  color: #31588a !important; /* Darker blue on hover */
-  text-decoration: underline !important; /* Add underline on hover */
-}
 
+@media (max-width: 760px) {
+
+  .brands-grid {
+    gap: 10px; /* Reduce gap for compact layout */
+  }
+  .brand-tile {
+    max-width: 240px; /* Further reduce tile width */
+    padding: 6px; /* Compact padding */
+  }
+  .brand-content {
+    flex-direction: row;
+}
+.product-names-sidebar {
+  border-right: 2px solid #444c54;
+  margin-right: 10px;
+}
+}

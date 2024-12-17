@@ -8,7 +8,7 @@
 .contact h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #223f65; /* Add a color for the heading */
+  color: #444c54; /* Add a color for the heading */
 }
 
 .contact blockquote {
@@ -25,11 +25,11 @@
   justify-content: center;
   gap: 65px;
   margin-top: 20px;
-  color: #223f65;
+  color: #444c54;
 }
 
 .social-icons a {
-  color: #223f65; /* Match your theme color */
+  color: #444c54; /* Match your theme color */
   font-size: 30px;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -47,7 +47,7 @@
 }
 
 .social-icons i {
-  color: #223f65; /* Ensure Font Awesome icons are the correct color */
+  color: #444c54; /* Ensure Font Awesome icons are the correct color */
 }
 
 .phone-section {
@@ -70,7 +70,7 @@
 }
 
 .phone-section ul li a {
-  color: #223f65; /* Phone & Email Links Color */
+  color: #444c54; /* Phone & Email Links Color */
   text-decoration: none; /* Remove underline by default */
 }
 

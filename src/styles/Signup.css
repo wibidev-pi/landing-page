@@ -20,7 +20,7 @@
 
 h2 {
   text-align: center;
-  color: #223f65;
+  color: #444c54;
   margin-bottom: 20px;
 }
 
@@ -39,7 +39,7 @@ h2 {
 label {
   font-weight: 600;
   margin-bottom: 5px;
-  color: #223f65;
+  color: #444c54;
 }
 
 input {
@@ -50,7 +50,7 @@ input {
 }
 
 input:focus {
-  border-color: #223f65;
+  border-color: #444c54;
   outline: none;
 }
 
@@ -84,7 +84,7 @@ input:focus {
 .btn-submit {
   width: 100%;
   padding: 12px;
-  background-color: #223f65;
+  background-color: #444c54;
   color: white;
   border: none;
   border-radius: 5px;
