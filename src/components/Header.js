@@ -1,41 +1,26 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../App";
-import "../styles/Header.css"; // Ensure your CSS is updated accordingly
+import { cleanPartNumber } from "./utils"; // Utility function for cleaning input
+import "../styles/Header.css";
 
 const Header = () => {
   const { userRole, setUserRole } = useContext(UserContext);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [searchInput, setSearchInput] = useState(""); // State for search input
+  const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
-  const handleLogout = () => {
-    setUserRole(null); // Clear user role
-    setDropdownOpen(false); // Close dropdown after logout
-  };
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!dropdownOpen);
-  };
-
-  const closeDropdown = (e) => {
-    if (!e.target.closest(".user-info")) {
-      setDropdownOpen(false);
+  const handleSearch = (e) => {
+    e.preventDefault();
+    const cleanedInput = cleanPartNumber(searchInput);
+    if (cleanedInput) {
+      console.log("Navigating with Cleaned Part Number:", cleanedInput);
+      navigate(`/products/${cleanedInput}`);
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("click", closeDropdown);
-    return () => {
-      document.removeEventListener("click", closeDropdown);
-    };
-  }, []);
-
   return (
     <header className="header">
+      {/* Logo */}
       <div className="logo">
         <Link to="/">
           <img
@@ -46,65 +31,47 @@ const Header = () => {
         </Link>
       </div>
 
-      {/* Hamburger icon */}
-      <div className="hamburger" onClick={toggleMenu}>
-        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
-        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
-        <div className={`bar ${menuOpen ? "open" : ""}`}></div>
-      </div>
+      {/* Search Bar */}
+      <form onSubmit={handleSearch} className="search-form">
+        <input
+          type="text"
+          placeholder="Search"
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
+          className="search-input"
+        />
+        <button type="submit" className="search-button">
+          <i className="fas fa-search"></i> {/* FontAwesome Icon */}
+        </button>
+      </form>
 
       {/* Navigation */}
       <nav>
-        <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <ul className="nav-links">
           {userRole === "admin" && (
             <li>
               <Link to="/addproduct">Add Products</Link>
             </li>
           )}
-          {userRole !== "admin" && (
-            <>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="products">Products</Link>
-              </li>
-              <li>
-                <Link to="/about-us">About Us</Link>
-              </li>
-              <li>
-                <Link to="/testimonials">Testimonials</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
-            </>
-          )}
-          {userRole ? (
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/products">Products</Link>
+          </li>
+          <li>
+            <Link to="/about-us">About Us</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+          {userRole && (
             <li className="user-info">
-              <span onClick={toggleDropdown}>Logged in as {userRole}</span>
-              {dropdownOpen && (
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/profile" className="profile-btn">
-                      Profile
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/settings" className="settings-btn">
-                      Settings
-                    </Link>
-                  </li>
-                  <li>
-                    <button onClick={handleLogout} className="logout-btn">
-                      Logout
-                    </button>
-                  </li>
-                </ul>
-              )}
+              <span>Logged in as {userRole}</span>
+              <button onClick={() => setUserRole(null)} className="logout-btn">
+                Logout
+              </button>
             </li>
-          ) : (
-            <li>{/* Removed Login/Signup link */}</li>
           )}
         </ul>
       </nav>

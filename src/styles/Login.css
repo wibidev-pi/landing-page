@@ -1,5 +1,25 @@
 /* General Login Styles */
 
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    .login-form {
+        width: 90%; /* Make form width responsive */
+        margin: auto; /* Center the form */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    button[type="submit"] {
+        padding: 10px; /* Adjust button padding for mobile */
+    }
+}
+
 
 .login-container {
   display:flex;

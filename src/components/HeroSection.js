@@ -55,7 +55,7 @@ const sectionsData = {
     },
     {
       href: "/en-us/charging-infrastructure/nacs-charging-cables",
-      id: "content-cz27ck",
+      id: "content-cz27cfk",
       ariaLabel: "Process",
       imgSrc: "../assets/Process.jpg",
       imgAlt:

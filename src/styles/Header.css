@@ -1,247 +1,294 @@
 /* General Header Styling */
 .header {
   background: #223f65; /* Gradient background */
-    height: 55px; /* Fixed header height */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky; /* Make header sticky */
-    top: 0; /* Stick to the top */
-    z-index: 1000; /* Ensure it stays above other content */
-    flex-wrap: wrap;
-    overflow: visible; /* Ensure dropdown can overflow */
+  height: 55px; /* Fixed header height */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky; /* Make header sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+  flex-wrap: wrap;
+  overflow: visible; /* Ensure dropdown can overflow */
 }
 
 .logo {
-    margin-right: auto; /* Align logo to the left */
-    flex-grow: 0; /* Prevent logo from growing */
+  margin-right: auto; /* Align logo to the left */
+  flex-grow: 0; /* Prevent logo from growing */
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .nav-links li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .logo {
-    height: 60px;
-    flex-grow: 1; /* Allow the logo to grow and take space in the flex container */
+  height: 60px;
+  flex-grow: 1; /* Allow the logo to grow and take space in the flex container */
 }
 
 /* User Dropdown Styling */
 .user-info {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logout-btn {
-    margin-left: 10px;
-    background-color: #f44336; /* Red background */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+  margin-left: 10px;
+  background-color: #f44336; /* Red background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .logout-btn:hover {
-    background-color: #d32f2f; /* Darker red when hovered */
+  background-color: #d32f2f; /* Darker red when hovered */
 }
 
 /* Dropdown Menu Styling */
 .user-info {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-menu {
-    position: absolute;
-    top: 30px; /* Adjust position */
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 10px 0;
-    width: 200px; /* Adjust width as needed */
-    z-index: 1000; /* Ensure dropdown is above other elements */
+  position: absolute;
+  top: 30px; /* Adjust position */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  width: 200px; /* Adjust width as needed */
+  z-index: 1000; /* Ensure dropdown is above other elements */
 }
 
 /* Align the items vertically */
 .dropdown-menu li {
-    padding: 12px 20px;
-    display: block;
-    text-align: left;
+  padding: 12px 20px;
+  display: block;
+  text-align: left;
 }
 
 .dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 .dropdown-menu li a:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 /* Add spacing between items */
 .dropdown-menu li + li {
-    border-top: 1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 
 /* Profile and Settings Button Styles */
 .profile-btn, .settings-btn {
-    background: none;
-    border: none;
-    padding: 10px 20px;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
 }
 
 .profile-btn:hover, .settings-btn:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .logout-btn {
-    margin-top: 10px; /* Add margin for spacing between logout and other items */
+  margin-top: 10px; /* Add margin for spacing between logout and other items */
 }
+
+/* Search Form Container */
+.search-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* Adjust width */
+  margin: 0 auto;
+}
+
+/* Input Field */
+.search-form input {
+  flex: 8; /* 80% width */
+  border: none;
+  background: transparent;
+  color: #000; /* Black text color */
+  font-size: 1rem;
+  padding: 8px 0; /* Adjust padding */
+  outline: none; /* Remove focus outline */
+}
+
+.search-form input::placeholder {
+  color: rgba(0, 0, 0, 0.5); /* Light black placeholder */
+}
+
+.search-form button {
+  flex: 0.5; /* 20% width */
+  font-size: 1.5rem; /* Adjust font size to change icon size */
+  bottom: 7px;
+  display: flex; /* Center icon */
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out; /* Smooth zoom effect */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Adjust positioning using relative positioning */
+.search-form button {
+  position: relative; /* Allows use of top/bottom for adjustments */
+}
+
+/* Hover Effect: Zoom the "Q" icon only */
+.search-form button:hover {
+  transform: scale(1.2); /* Slight zoom effect */
+  color: #fff; /* Maintain white color */
+}
+
 
 /* Mobile (Below 950px) */
 @media only screen and (max-width: 950px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-        justify-content: flex-start; /* Align the logo and menu at the top */
-    }
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+    justify-content: flex-start; /* Align the logo and menu at the top */
+  }
 
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
-        display: none; /* Hide the menu by default */
-        width: 100%; /* Full width on mobile */
-        position: absolute; /* Position it just below the header */
-        top: 55px; /* Position it just below the header */
-        left: 0;
-        background-color: #223f65; /* Match the header background */
-        z-index: 10; /* Make sure the menu appears above other content */
-        padding: 20px 0; /* Optional padding */
-    }
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+    display: none; /* Hide the menu by default */
+    width: 100%; /* Full width on mobile */
+    position: absolute; /* Position it just below the header */
+    top: 55px; /* Position it just below the header */
+    left: 0;
+    background-color: #223f65; /* Match the header background */
+    z-index: 10; /* Make sure the menu appears above other content */
+    padding: 20px 0; /* Optional padding */
+  }
 
-    .nav-links.active {
-        display: block; /* Display menu when active */
-    }
+  .nav-links.active {
+    display: block; /* Display menu when active */
+  }
 
-    .nav-links li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
+  .nav-links li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
 
-    .logo {
-        height: 50px;
-        flex-grow: 0; /* Disable growing on smaller screens */
-    }
+  .logo {
+    height: 50px;
+    flex-grow: 0; /* Disable growing on smaller screens */
+  }
 
-    /* Hamburger icon */
-    .hamburger {
-        display: block;
-        cursor: pointer;
-        width: 30px;
-        height: 25px;
-        position: absolute;
-        right: 20px; /* Position it on the right side */
-        top: 20px; /* Optional: adjust vertical position */
-    }
+  /* Hamburger icon */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: 20px; /* Position it on the right side */
+    top: 20px; /* Optional: adjust vertical position */
+  }
 
-    .hamburger .bar {
-        background-color: white;
-        height: 4px;
-        width: 100%;
-        position: absolute;
-        transition: all 0.3s;
-    }
+  .hamburger .bar {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    transition: all 0.3s;
+  }
 
-    .hamburger .bar:nth-child(1) {
-        top: 0;
-    }
+  .hamburger .bar:nth-child(1) {
+    top: 0;
+  }
 
-    .hamburger .bar:nth-child(2) {
-        top: 10px;
-    }
+  .hamburger .bar:nth-child(2) {
+    top: 10px;
+  }
 
-    .hamburger .bar:nth-child(3) {
-        top: 20px;
-    }
+  .hamburger .bar:nth-child(3) {
+    top: 20px;
+  }
 
-    .hamburger.open .bar:nth-child(1) {
-        transform: rotate(45deg);
-        top: 10px;
-    }
+  .hamburger.open .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
 
-    .hamburger.open .bar:nth-child(2) {
-        opacity: 0;
-    }
+  .hamburger.open .bar:nth-child(2) {
+    opacity: 0;
+  }
 
-    .hamburger.open .bar:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 10px;
-    }
+  .hamburger.open .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
 }
 
 /* For screens above 950px, keep the nav links visible horizontally */
 @media only screen and (min-width: 951px) {
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px 30px;
-    }
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 30px;
+  }
 
-    .nav-links {
-        flex-direction: row;
-    }
+  .nav-links {
+    flex-direction: row;
+  }
 
-    .nav-links li {
-        margin-left: 20px;
-    }
+  .nav-links li {
+    margin-left: 20px;
+  }
 
-    .logo {
-        height: 60px;
-    }
+  .logo {
+    height: 60px;
+  }
 
-    /* Hide hamburger icon for larger screens */
-    .hamburger {
-        display: none;
-    }
+  /* Hide hamburger icon for larger screens */
+  .hamburger {
+    display: none;
+  }
 }
 
 /* Optional: For screens larger than 1024px (desktop) */
 @media only screen and (min-width: 1025px) {
-    .header {
-        padding: 20px 40px;
-    }
+  .header {
+    padding: 20px 40px;
+  }
 
-    .nav-links {
-        flex-direction: row;
-    }
+  .nav-links {
+    flex-direction: row;
+  }
 
-    .nav-links li {
-        margin-left: 25px;
-    }
+  .nav-links li {
+    margin-left: 25px;
+  }
 
-    .logo {
-        height: 70px;
-    }
+  .logo {
+    height: 70px;
+  }
 
-    .hamburger {
-        display: none;
-    }
+  .hamburger {
+    display: none;
+  }
 }
