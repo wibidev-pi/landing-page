@@ -41,7 +41,7 @@ function Footer() {
         <div className="footer-section">
           <h4>Get In Touch</h4>
           <p>
-            Phone: <a href="tel:+xxx-xxx-xxxx">+xxx xxx xxxxxx</a>
+            Phone: <a href="https://wa.me/+971504289825">+971504289825</a>
             <br />
           </p>
           <p>

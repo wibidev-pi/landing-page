@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import "../styles/HeroSection.css";
 
 const banner1Images = [
-  "../assets/ass/pic00.jpg",
-  "../assets/ass/pic01.jpg",
-  "../assets/ass/pic02.jpg",
-  "../assets/ass/pic04.jpg",
+  "../assets/ass/2.jpg",
+  "../assets/ass/3.jpg",
+  "../assets/ass/4.jpg",
+  "../assets/ass/5.jpg",
+  "../assets/ass/6.jpg",
+  "../assets/ass/7.jpg",
+  "../assets/ass/8.jpg",
+  "../assets/ass/2.jpg",
 ];
 
 const bannerImages = [
@@ -151,7 +155,7 @@ const HeroSectionReviews = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentReviewIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-    }, 4000); // Change review every 4 seconds
+    }, 6000); // Change review every 4 seconds
 
     return () => clearInterval(intervalId); // Cleanup on unmount
   }, []);
