@@ -104,9 +104,7 @@ const Header = () => {
               )}
             </li>
           ) : (
-            <li>
-              <Link to="/login">Login/Signup</Link>
-            </li>
+            <li>{/* Removed Login/Signup link */}</li>
           )}
         </ul>
       </nav>

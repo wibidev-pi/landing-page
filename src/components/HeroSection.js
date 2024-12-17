@@ -9,11 +9,16 @@ const banner1Images = [
 ];
 
 const bannerImages = [
-  "../assets/products/111.jpg",
-  "../assets/products/112.jpg",
-  "../assets/products/113.png",
-  "../assets/products/114.jpeg",
-  "../assets/products/115.jpg",
+  "../assets/brandSlide/1.jpg",
+  "../assets/brandSlide/2.png",
+  "../assets/brandSlide/3.jpeg",
+  "../assets/brandSlide/4.jpg",
+  "../assets/brandSlide/5.jpg",
+  "../assets/brandSlide/6.jpg",
+  "../assets/brandSlide/7.jpg",
+  "../assets/brandSlide/8.png",
+  "../assets/brandSlide/9.jpg",
+  "../assets/brandSlide/0.jpg",
 ];
 
 const sectionsData = {
@@ -21,8 +26,8 @@ const sectionsData = {
     {
       href: "/en-us/pxr-digital-catalog",
       id: "content-ih0dd",
-      ariaLabel: "Digital Demos Find out more",
-      imgSrc: "../assets/l11.png",
+      ariaLabel: "automation",
+      imgSrc: "../assets/Automation-1.jpg",
       imgAlt: "Digital Demos",
       title: "Digital Demos",
       text: "Experience our digital demos with immersive features and interactivity.",
@@ -31,8 +36,8 @@ const sectionsData = {
     {
       href: "/en-us/service-and-support/resources",
       id: "content-ih0mx",
-      ariaLabel: "Resources More information",
-      imgSrc: "../assets/l11.png",
+      ariaLabel: "Pneumatics",
+      imgSrc: "../assets/Pneumatics.jpg",
       imgAlt: "Resources",
       title: "Resources",
       text: "Industry insight, product discussion and in-depth analysis written by our leading product experts.",
@@ -41,12 +46,21 @@ const sectionsData = {
     {
       href: "/en-us/charging-infrastructure/nacs-charging-cables",
       id: "content-cz27ck",
-      ariaLabel:
-        "NACS is coming – and we’re prepared More about NACS charging cables",
-      imgSrc: "../assets/l11.png",
+      ariaLabel: "Vacuum",
+      imgSrc: "../assets/Vacuum.jpg",
+      imgAlt: "Process",
+      title: "Vacuum",
+      text: "The first NACS charging cables will be available in Q1/2025 – SAE-compliant, UL-certified, and delivering proven wibi-tec quality.",
+      linkText: "More about NACS charging cables",
+    },
+    {
+      href: "/en-us/charging-infrastructure/nacs-charging-cables",
+      id: "content-cz27ck",
+      ariaLabel: "Process",
+      imgSrc: "../assets/Process.jpg",
       imgAlt:
         "Man charges his Tesla electric car using a NACS charging cable on the wallbox",
-      title: "NACS is coming – and we’re prepared",
+      title: "Process",
       text: "The first NACS charging cables will be available in Q1/2025 – SAE-compliant, UL-certified, and delivering proven wibi-tec quality.",
       linkText: "More about NACS charging cables",
     },
@@ -56,7 +70,7 @@ const sectionsData = {
       href: "/en-us/service-and-support/contact",
       id: "content-63co5",
       ariaLabel: "Contact Contact Us",
-      imgSrc: "../assets/l11.png",
+      imgSrc: "../assets/Process.Jpg",
       imgAlt: "Contact",
       title: "Contact",
       text: "Personally or digitally: We are nearby and here for you!",
@@ -181,7 +195,7 @@ const HeroSection = () => {
         <div className="banner-text">
           <h1>Engineered to Win</h1>
           <p>
-            Discover top-notch solutions in Hydrolics and pneumatic components.
+            Discover top-notch solutions in Hydraulics and Pneumatic components.
           </p>
         </div>
       </div>
@@ -189,17 +203,17 @@ const HeroSection = () => {
       {/* Featured Section */}
       <div className="featured-section">
         <div className="info-box">
-          <h3>Lighting Solutions</h3>
+          <h3>Hydraulic Solutions</h3>
           <p>
-            Upgrade your existing lights with advanced LED lighting to save
-            energy and reduce costs.
+            Delivering robust and efficient hydraulic systems tailored to your
+            industrial needs, ensuring precision and durability.
           </p>
         </div>
         <div className="info-box">
-          <h3>Combustion Solutions</h3>
+          <h3>Pneumatic Solutions</h3>
           <p>
-            Expert guidance on industrial gas burner systems, ensuring safety
-            and efficiency.
+            Optimize your operations with advanced pneumatic systems for
+            improved efficiency, reliability, and performance.
           </p>
         </div>
         <div className="info-box">
@@ -213,7 +227,6 @@ const HeroSection = () => {
 
       {/* Product Slider */}
       <section className="product-slider">
-        <h3>Featured Products</h3>
         <div className="slider-wrapper">
           <div className="slider-container">
             {/* Original images */}
@@ -246,7 +259,7 @@ const HeroSection = () => {
                   Technical solutions for a livable future
                 </div>
                 <div className="teaser-headline">
-                  Empowering the All Pneumatic & Hydraulics Industry
+                  Empowering and Enhancing the All automation industries
                 </div>
                 <div className="teaser-description">
                   Our products and solutions are paving the way toward a
