@@ -1,4 +1,24 @@
 /* Products Section */
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    .brands-grid {
+        grid-template-columns: 1fr; /* Ensure brand tiles are in a single column on mobile */
+    }
+
+    .brand-tile {
+        height: auto; /* Allow height to adjust for mobile */
+        width: 100%; /* Full width of the tile */
+    }
+
+    .brand-tile img {
+        height: 200px; /* Adjust image height for smaller tiles */
+    }
+
+    .brands-name h3 {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
 .products-section {
     padding: 50px 20px;
     text-align: center;

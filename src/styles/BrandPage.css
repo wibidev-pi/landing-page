@@ -14,6 +14,29 @@
   border-top: 1px solid #223f65; /* Top border for overall section */
   padding-top: 10px;
 }
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .brand-content {
+    flex-direction: column; /* Stack left sidebar and right list vertically */
+  }
+
+  .brand-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .product-names-sidebar {
+    border-right: none; /* Remove right border on mobile */
+    border-bottom: 2px solid #223f65; /* Add bottom border for separation */
+    margin-bottom: 10px; /* Space below the sidebar */
+  }
+
+  .products-list {
+    grid-template-columns: 1fr; /* Stack product list items in a single column */
+  }
+}
+
 .brand-image-container {
   text-align: center;
   margin-bottom: 20px; /* Space below the image */
@@ -60,7 +83,7 @@
 
 .product-name-item:hover,
 .product-name-item.selected {
-  color: #31588a; /* Black color on hover */
+  color: #31588a; /* Hover color */
   font-weight: bold; /* Bold on hover */
   text-decoration: underline; /* Underline for emphasis */
 }
@@ -72,8 +95,8 @@
 }
 
 .products-list {
-  display: grid; /* Use grid for 3-column layout */
-  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  display: grid; /* Use grid for list layout */
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 equal columns */
   gap: 20px; /* Space between grid items */
   list-style: none;
   padding: 0;
@@ -118,3 +141,21 @@
   font-size: 0.9rem;
   color: #555; /* Lighter gray for details */
 }
+
+.get-quote-button {
+  background: none !important; /* Remove any background */
+  border: none !important; /* Remove any borders */
+  padding: 0 !important; /* Remove padding */
+  margin: 0 !important; /* Remove margin */
+  color: #223f65 !important; /* Set link color */
+  font-size: 1rem !important; /* Set font size */
+  font-weight: bold !important; /* Bold font */
+  text-decoration: none !important; /* No underline by default */
+  cursor: pointer; /* Show pointer cursor on hover */
+}
+
+.get-quote-button:hover {
+  color: #31588a !important; /* Darker blue on hover */
+  text-decoration: underline !important; /* Add underline on hover */
+}
+

@@ -4,17 +4,20 @@ import Papa from "papaparse";
 import "./../styles/BrandPage.css";
 
 const BrandPage = () => {
-  const { brandId } = useParams(); // Get brandId from URL
+  const { brandId } = useParams();
   const [products, setProducts] = useState([]);
   const [groupedProductNames, setGroupedProductNames] = useState([]);
   const [selectedProductName, setSelectedProductName] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCSV = async () => {
-      const csvFilePath = `/assets/csv/${brandId}.csv`;
       try {
+        const csvFilePath = `/assets/csv/${brandId}.csv`;
         const response = await fetch(csvFilePath);
         if (!response.ok) throw new Error("Failed to load CSV file.");
 
@@ -23,17 +26,16 @@ const BrandPage = () => {
           header: true,
           skipEmptyLines: true,
           complete: (results) => {
-            const allProducts = results.data;
+            const allProducts = results.data || [];
 
-            // Group unique product names
             const productNames = [
               ...new Set(allProducts.map((product) => product.ProductName)),
             ];
 
             setProducts(allProducts);
             setGroupedProductNames(productNames);
+            setLoading(false);
 
-            // Automatically select the first product name and filter
             if (productNames.length > 0) {
               setSelectedProductName(productNames[0]);
               const filtered = allProducts.filter(
@@ -44,7 +46,8 @@ const BrandPage = () => {
           },
         });
       } catch (error) {
-        console.error("Error loading CSV:", error);
+        setError(error.message);
+        setLoading(false);
       }
     };
 
@@ -60,22 +63,16 @@ const BrandPage = () => {
   };
 
   const handleProductClick = (product) => {
-    navigate(`/products/${product.OrderCode}`, { state: product });
+    navigate(`/products/${product.PartNumber}`, { state: product });
   };
+
+  if (loading) return <p>Loading products...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <section className="brand-page">
-      {/* Brand Image */}
-      <div className="brand-image-container">
-        <img
-          src={`../assets/brand/9.png`}
-          alt={`Brand ${brandId}`}
-          className="brand-image"
-        />
-      </div>
-
       <div className="brand-content">
-        {/* Left Sidebar: Product Names */}
+        {/* Left Sidebar */}
         <aside className="product-names-sidebar">
           <h3>Product Names</h3>
           <ul>
@@ -93,7 +90,7 @@ const BrandPage = () => {
           </ul>
         </aside>
 
-        {/* Right Side: Filtered Products */}
+        {/* Right Product List */}
         <div className="products-list-container">
           <ul className="products-list">
             {filteredProducts.map((product, index) => (
@@ -110,7 +107,6 @@ const BrandPage = () => {
                 <div className="product-info">
                   <h3>{product.ProductName}</h3>
                   <p>Part Number: {product.PartNumber}</p>
-                  <p>GTIN: {product.GTIN}</p>
                 </div>
               </li>
             ))}

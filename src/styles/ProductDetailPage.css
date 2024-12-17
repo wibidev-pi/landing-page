@@ -4,7 +4,35 @@
     padding: 20px;
     justify-content: center;
     align-items: center;
-  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .product-detail-page {
+        flex-direction: column; /* Stack elements vertically */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .product-image-container {
+        max-width: 100%; /* Allow image container to take full width */
+    }
+
+    .product-details {
+        text-align: center; /* Center text on mobile */
+    }
+
+    .product-details h1 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .product-details p {
+        font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .get-quote-button {
+        width: 100%; /* Make button full width on mobile */
+    }
+}
   
   .product-image-container {
     max-width: 400px;
