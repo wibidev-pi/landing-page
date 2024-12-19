@@ -2,14 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../styles/HeroSection.css";
 
 const banner1Images = [
-  "../assets/ass/2.jpg",
-  "../assets/ass/3.jpg",
-  "../assets/ass/4.jpg",
-  "../assets/ass/5.jpg",
-  "../assets/ass/6.jpg",
-  "../assets/ass/7.jpg",
-  "../assets/ass/8.jpg",
-  "../assets/ass/2.jpg",
+  "../assets/ass/hero2.jpg",
+  "../assets/ass/hero3.jpg",
+  "../assets/ass/hero4.jpg",
+  "../assets/ass/hero5.jpg",
+  "../assets/ass/hero6.jpg",
+  "../assets/ass/hero7.jpg",
+  "../assets/ass/hero1.jpg",
 ];
 
 const bannerImages = [

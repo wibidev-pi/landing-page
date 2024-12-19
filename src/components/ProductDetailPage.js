@@ -12,33 +12,58 @@ const ProductDetailPage = () => {
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await fetch(`/assets/csv/1.csv`);
-        if (!response.ok) throw new Error("Failed to load CSV file.");
+        // Fetch both CSV files
+        const [response1, response2] = await Promise.all([
+          fetch(`/assets/csv/FESTO.csv`),
+          fetch(`/assets/csv/OMRAN.csv`),
+        ]);
 
-        const csvData = await response.text();
-        Papa.parse(csvData, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            console.log("Raw CSV Data:", results.data);
+        // Check if both responses are successful
+        if (!response1.ok || !response2.ok) {
+          throw new Error("Failed to load one or both CSV files.");
+        }
 
-            const cleanedInput = cleanPartNumber(partNumber);
-            console.log("Cleaned Search Part Number:", cleanedInput);
+        // Parse both CSV files as text
+        const csvData1 = await response1.text();
+        const csvData2 = await response2.text();
 
-            const foundProduct = results.data.find(
-              (item) =>
-                item.PartNumber &&
-                cleanPartNumber(item.PartNumber) === cleanedInput,
-            );
+        // Parse both CSV files using Papa.parse
+        const parseCSV = (csvData) => {
+          return new Promise((resolve) => {
+            Papa.parse(csvData, {
+              header: true,
+              skipEmptyLines: true,
+              complete: (results) => resolve(results.data),
+            });
+          });
+        };
 
-            if (foundProduct) {
-              console.log("Product Found:", foundProduct);
-              setProduct(foundProduct);
-            } else {
-              setError(`No product found for Part Number: ${partNumber}`);
-            }
-          },
-        });
+        // Parse and combine the data
+        const [data1, data2] = await Promise.all([
+          parseCSV(csvData1),
+          parseCSV(csvData2),
+        ]);
+        const combinedData = [...data1, ...data2];
+
+        console.log("Combined CSV Data:", combinedData);
+
+        // Clean the input part number
+        const cleanedInput = cleanPartNumber(partNumber);
+        console.log("Cleaned Search Part Number:", cleanedInput);
+
+        // Search for the product in the combined data
+        const foundProduct = combinedData.find(
+          (item) =>
+            item.PartNumber &&
+            cleanPartNumber(item.PartNumber) === cleanedInput,
+        );
+
+        if (foundProduct) {
+          console.log("Product Found:", foundProduct);
+          setProduct(foundProduct);
+        } else {
+          setError(`No product found for Part Number: ${partNumber}`);
+        }
       } catch (error) {
         console.error("Error fetching product data:", error.message);
         setError(`Error loading product details: ${error.message}`);
@@ -66,7 +91,7 @@ const ProductDetailPage = () => {
           <strong>Part Number:</strong> {product.PartNumber}
         </p>
         <p>
-          <strong>GTIN:</strong> {product.GTIN}
+          <strong>Discription:</strong> {product.Discription}
         </p>
         <button
           className="get-quote-button"

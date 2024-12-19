@@ -67,7 +67,7 @@ const ContactUsSection = () => {
           {/* Collapsed Button Content */}
           <img
             className="contact-icon"
-            src="../assets/b.png" /* Replace with your button image */
+            src="../assets/contact.png" /* Replace with your button image */
             alt="Contact"
           />
         </div>

@@ -44,7 +44,6 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute space between the image and the text */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 250px; /* Fixed height for the tile */
@@ -52,14 +51,20 @@
     max-width: 100%;
     box-sizing: border-box;
     position: relative;
+    justify-content: center; /* Center content vertically */
+    align-items: center;
   }
   
   .brand-tile img {
-    width: 100%; /* Ensure the image takes up full width of the container */
-    height: 80%; /* 80% of the container height */
-    object-fit: cover; /* Ensures images cover the container area without overflow */
+    align-items: center;
+    width: 80%; /* Ensure the image takes up the full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 80%; /* Prevent the image from growing too tall */
+    object-fit: contain; /* Ensure the entire SVG fits within the container */
     margin-bottom: 10px; /* Add space between the image and the text */
+    display: block; /* Ensures there are no extra inline gaps */
   }
+  
   
   .brands-name {
     height: 20%; /* 20% of the container height for the text */

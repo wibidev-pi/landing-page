@@ -17,22 +17,52 @@ const Header = () => {
       }
 
       try {
-        const response = await fetch("/assets/csv/1.csv");
-        const csvData = await response.text();
+        // Fetch both CSV files
+        const [response1, response2] = await Promise.all([
+          fetch("/assets/csv/FESTO.csv"),
+          fetch("/assets/csv/OMRAN.csv"),
+        ]);
 
-        Papa.parse(csvData, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            const filteredSuggestions = results.data.filter((item) =>
-              item.ProductName?.toLowerCase().includes(
-                searchInput.toLowerCase(),
-              ),
-            );
+        // Check if both fetches were successful
+        if (!response1.ok || !response2.ok) {
+          throw new Error("Failed to fetch one or both CSV files.");
+        }
 
-            setSuggestions(filteredSuggestions);
-          },
-        });
+        // Parse both CSV files as text
+        const csvData1 = await response1.text();
+        const csvData2 = await response2.text();
+
+        // Parse the CSV files using Papa.parse
+        const parseCSV = (csvData) => {
+          return new Promise((resolve) => {
+            Papa.parse(csvData, {
+              header: true,
+              skipEmptyLines: true,
+              complete: (results) => resolve(results.data),
+            });
+          });
+        };
+
+        // Parse both CSV files
+        const [data1, data2] = await Promise.all([
+          parseCSV(csvData1),
+          parseCSV(csvData2),
+        ]);
+
+        // Combine the data from both CSVs
+        const combinedData = [...data1, ...data2];
+
+        // Filter the combined data based on the search input
+        const filteredSuggestions = combinedData.filter(
+          (item) =>
+            item.ProductName?.toLowerCase().includes(
+              searchInput.toLowerCase(),
+            ) ||
+            item.PartNumber?.toLowerCase().includes(searchInput.toLowerCase()),
+        );
+
+        // Update the suggestions state
+        setSuggestions(filteredSuggestions);
       } catch (error) {
         console.error("Error fetching suggestions:", error.message);
       }
@@ -69,7 +99,7 @@ const Header = () => {
       {/* Logo */}
       <div className="logo">
         <Link to="/" onClick={closeMenu}>
-          <img src="../assets/l11.png" className="logo" alt="Logo" />
+          <img src="../assets/WibiTeclogo.png" className="logo" alt="Logo" />
         </Link>
       </div>
 

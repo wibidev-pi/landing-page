@@ -6,8 +6,8 @@ import brandsData from "./products.json"; // Path to the JSON file
 const ProductsSection = () => {
   const navigate = useNavigate();
 
-  const handleBrandClick = (brandId) => {
-    navigate(`/brands/${brandId}`); // Navigate to the Brand page
+  const handleBrandClick = (brandName) => {
+    navigate(`/brands/${brandName}`); // Navigate to the Brand page
   };
 
   return (
@@ -18,7 +18,7 @@ const ProductsSection = () => {
           <div
             key={brand.id}
             className="brand-tile"
-            onClick={() => handleBrandClick(brand.id)}
+            onClick={() => handleBrandClick(brand.name)}
           >
             <img src={brand.image} alt={brand.name} />
             <div className="brands-name">

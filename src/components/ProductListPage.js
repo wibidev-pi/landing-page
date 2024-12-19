@@ -10,17 +10,41 @@ const ProductListPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`/assets/csv/1.csv`);
-        if (!response.ok) throw new Error("Failed to load CSV file.");
+        // Fetch both CSV files
+        const [response1, response2] = await Promise.all([
+          fetch("/assets/csv/FESTO.csv"),
+          fetch("/assets/csv/OMRAN.csv"),
+        ]);
 
-        const csvData = await response.text();
-        Papa.parse(csvData, {
-          header: true,
-          skipEmptyLines: true,
-          complete: (results) => {
-            setProducts(results.data);
-          },
-        });
+        // Check if both responses are successful
+        if (!response1.ok || !response2.ok) {
+          throw new Error("Failed to load one or both CSV files.");
+        }
+
+        // Parse both CSV files as text
+        const csvData1 = await response1.text();
+        const csvData2 = await response2.text();
+
+        // Parse both CSV files using Papa.parse
+        const parseCSV = (csvData) => {
+          return new Promise((resolve) => {
+            Papa.parse(csvData, {
+              header: true,
+              skipEmptyLines: true,
+              complete: (results) => resolve(results.data),
+            });
+          });
+        };
+
+        // Parse and combine the data
+        const [data1, data2] = await Promise.all([
+          parseCSV(csvData1),
+          parseCSV(csvData2),
+        ]);
+        const combinedData = [...data1, ...data2];
+
+        // Set the combined data to the products state
+        setProducts(combinedData);
       } catch (err) {
         setError(`Error loading products: ${err.message}`);
       }

@@ -3,7 +3,14 @@
       "id": 1,
       "name": "FESTO",
       "brand": "FESTO",
-      "image": "../assets/brand/9.png",
+      "image": "../assets/brand/festo.svg",
+      "description": "Leading-edge automation solutions for various industries."
+    },
+    {
+      "id": 2,
+      "name": "OMRAN",
+      "brand": "OMRAN",
+      "image": "../assets/brand/omran.svg",
       "description": "Leading-edge automation solutions for various industries."
     }
   ]
