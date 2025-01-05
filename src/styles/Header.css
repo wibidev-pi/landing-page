@@ -1,6 +1,5 @@
-/* General Header Styling */
 .header {
-  background: #444c54; /* Background color */
+  background:#eef1f7 ; /* Background color */
   height: auto; /* Fixed header height */
   display: flex;
   justify-content: space-between;
@@ -29,7 +28,7 @@
 }
 
 .nav-links li a {
-  color: white;
+  color:  #104C97;
   text-decoration: none;
 }
 
@@ -41,13 +40,14 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  margin-top: 11px;
 }
 
 .search-form input {
   flex: 8;
   border: none;
   background: transparent;
-  color: #000;
+  color: #104C97;
   font-size: 1rem;
   padding: 8px 0;
   outline: none;
@@ -61,7 +61,7 @@
   flex: 0.5;
   font-size: 1.5rem;
   display: flex;
-  margin-bottom: auto;
+  margin-bottom: 15px;
   align-items: center;
   justify-content: center;
   transition: transform 0.2s ease-in-out;
@@ -92,7 +92,7 @@
 
 .suggestion-item {
   display: flex;
-  color: #000;
+  color: #104C97;
   padding: 5px;
   cursor: pointer;
 }
@@ -120,11 +120,12 @@
 }
 
 .hamburger .bar {
-  background-color: white;
+  background-color:  #104C97;
   height: 4px;
   width: 30px;
   margin: 3px 0;
   transition: all 0.3s ease;
+  margin-left: 15px;
 }
 
 .hamburger.open .bar:nth-child(1) {
@@ -147,7 +148,7 @@
 }
 
 .nav-links li a {
-  color: white;
+  color:  #104C97;
   text-decoration: none;
 }
 
@@ -158,16 +159,8 @@
   cursor: pointer;
 }
 
-.hamburger .bar {
-  background-color: white;
-  height: 4px;
-  width: 30px;
-  margin: 3px 0;
-  transition: all 0.3s ease;
-}
-
 /* Responsive Styling */
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1400px) {
   .header {
     flex-direction: row;
     position: relative;
@@ -176,10 +169,10 @@
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #5d6166;
+    background-color: #eef1f7;
     width: 100%;
     position: absolute;
-    top: 90%; /* Below the header */
+    top: 70%; /* Below the header */
     left: 0;
     padding: 20px 0;
   }
@@ -195,6 +188,7 @@
 
   .hamburger {
     display: flex;
+    margin-bottom: 12px;
   }
 
   /* Hamburger Animation */

@@ -46,7 +46,7 @@
 
 /* Contact form content */
 .contact-content {
-  background: white;
+  background:  #ffffff;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -61,7 +61,7 @@
 
 .contact-content h2 {
   font-size: 1.8rem;
-  color: #333;
+  color: #104C97;
   margin-bottom: 10px;
 }
 
@@ -89,9 +89,9 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px; /* Increased padding */
   font-size: 0.9rem;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc; /* Slightly darker border */
   border-radius: 15px;
   box-sizing: border-box;
 }
@@ -99,13 +99,18 @@
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #999a9b;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+  border-color: #58595B; /* Change border color on hover */
 }
 
 .btn-submit {
   padding: 10px 15px;
-  background-color: #007bff;
-  color: #fff;
+  background-color: #104C97;
+  color: #104C97;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -113,26 +118,29 @@
 }
 
 .btn-submit:hover {
-  background-color: #0056b3;
+  color: #eef1f7;
+  background: #104C97; /* Red background for visibility */
 }
+
 /* Close Button Styles */
 .close-button {
   position: fixed;
-  margin-top: 10px;
-  margin-left: 130px;
+  margin-top: 20px;
+  margin-left: 330px;
   position: absolute;
   top: 20px;
-  background: transparent;
-  border: none;
-  color: #333;
+  background: #104C97; /* Red background for visibility */
+  color: #fff; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Ensure no border */
   font-size: 1.2rem;
   cursor: pointer;
 }
 .close-button:hover {
-  color: #9a9a9a; /* Change text color on hover */
-  background: transparent; /* Ensure no background color on hover */
-  border: none; /* Ensure no border on hover */
+  background: #5b9bea; /* Darker red on hover */
+  color: #fff; /* Ensure text remains white */
 }
+
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 600px) {
   .floating-button {

@@ -1,9 +1,8 @@
 /* General Footer Styling */
 .footer {
-    background-color: #444c54; /* Dark background for footer */
-    color: #ffffff; /* Light gray color for text */
+    background-color: #eef1f7; /* Dark background for footer */
+    color: #104C97; /* Light gray color for text */
     padding: 40px 20px;
-    font-family: Arial, sans-serif;
     margin-bottom: 0; /* Remove bottom margin */
 }
 
@@ -15,14 +14,14 @@
 }
 
 .social-icons-footer a {
-  color: #f8fbff; /* Match your theme color for footer icons */
+  color: #104C97; /* Match your theme color for footer icons */
   font-size: 30px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-icons-footer a:hover {
-  color: #ffffff; /* Darker shade on hover */
+  color: #104C97; /* Darker shade on hover */
 }
   
   .footer-container {
@@ -37,7 +36,7 @@
   }
   
   .footer-section h4 {
-    color: #a1a1a4; /* White color for section titles */
+    color: #104C97; /* White color for section titles */
     margin-bottom: 15px;
     font-size: 1.2rem;
   }
@@ -49,17 +48,17 @@
   
   .footer-section ul li {
     margin: 5px 0;
-    color: #ffffff; /* Light gray color for list items */
+    color: #104C97; /* Light gray color for list items */
     font-size: 1rem;
   }
   
   .footer-section ul li a {
-    color: #d7e0eb; /* Same light gray for links */
+    color: #104C97; /* Same light gray for links */
     text-decoration: none;
   }
   
   .footer-section ul li a:hover {
-    color: #ffffff; /* White color on hover */
+    color: #104C97; /* White color on hover */
     text-decoration: underline;
   }
   
@@ -72,14 +71,14 @@
   }
   
   .social-icons a {
-    color: #f8fbff; /* Match your theme color */
+    color: #104C97; /* Match your theme color */
     font-size: 30px;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
-    color: #ffffff; /* Darker shade on hover */
+    color: #104C97; /* Darker shade on hover */
   }
   
   /* Footer Text */
@@ -89,25 +88,25 @@
 
   .footer-bottom p {
     font-size: 14px;
-    color: #fffefe;
+    color: #104C97;
     margin-top: 0; /* Remove top margin to reduce gap */
     padding-top: 0; /* Ensure no padding */
   }
   
   .footer-section p {
-    color: #ffffff; /* White color for text */
+    color: #104C97; /* White color for text */
     font-size: 1rem; /* Ensure readability */
     line-height: 1.5; /* Add line spacing */
     margin-bottom: 10px; /* Add space between each paragraph */
   }
   
   .footer-section p a {
-    color: #ffffff; /* White color for links */
+    color: #104C97; /* White color for links */
     text-decoration: none; /* No underline */
   }
   
   .footer-section p a:hover {
-    color: #ffffff; /* White color on hover */
+    color: #104C97; /* White color on hover */
     text-decoration: underline; /* Underline on hover */
   }
   

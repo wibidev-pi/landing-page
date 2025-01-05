@@ -9,7 +9,7 @@
 }
 
 .signup-form {
-  background-color: #ffffff;
+  background-color: #58595B;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
 
 h2 {
   text-align: center;
-  color: #444c54;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -39,7 +39,7 @@ h2 {
 label {
   font-weight: 600;
   margin-bottom: 5px;
-  color: #444c54;
+  color: #ffffff;
 }
 
 input {
@@ -50,7 +50,7 @@ input {
 }
 
 input:focus {
-  border-color: #444c54;
+  border-color: #ffffff;
   outline: none;
 }
 
@@ -84,8 +84,8 @@ input:focus {
 .btn-submit {
   width: 100%;
   padding: 12px;
-  background-color: #444c54;
-  color: white;
+  background-color: #ffffff;
+  color:  #58595B;
   border: none;
   border-radius: 5px;
   cursor: pointer;

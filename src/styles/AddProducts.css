@@ -58,7 +58,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #104C97;
     transform: scale(1.05);
 }
 
@@ -95,7 +95,9 @@
 .list-group-item:hover {
     background-color: #f1f1f1;
 }
-
+body {
+    font-family: 'Abadi MT Std', sans-serif;
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
     .row {

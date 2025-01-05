@@ -1,14 +1,14 @@
 /* Contact Section */
 .contact {
   padding: 60px 20px;
-  background-color: #fff;
+  background-color: #eef1f7;
   text-align: center;
 }
 
 .contact h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  color: #444c54; /* Add a color for the heading */
+  color: #104C97; /* Add a color for the heading */
 }
 
 .contact blockquote {
@@ -25,18 +25,18 @@
   justify-content: center;
   gap: 65px;
   margin-top: 20px;
-  color: #444c54;
+  color: #104C97;
 }
 
 .social-icons a {
-  color: #444c54; /* Match your theme color */
+  color: #104C97; /* Match your theme color */
   font-size: 30px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #1a2d45; /* Darker shade on hover */
+  color: #104C97; /* Darker shade on hover */
 }
 
 /* Footer Text */
@@ -47,7 +47,7 @@
 }
 
 .social-icons i {
-  color: #444c54; /* Ensure Font Awesome icons are the correct color */
+  color: #104C97; /* Ensure Font Awesome icons are the correct color */
 }
 
 .phone-section {
@@ -70,21 +70,21 @@
 }
 
 .phone-section ul li a {
-  color: #444c54; /* Phone & Email Links Color */
+  color: #104C97; /* Phone & Email Links Color */
   text-decoration: none; /* Remove underline by default */
 }
 
 .phone-section ul li a:hover {
-  color: #1a2d45; /* Darker shade on hover */
+  color: #104C97; /* Darker shade on hover */
   text-decoration: underline; /* Underline on hover */
 }
 
 .phone-section a {
-  color: #000103; /* Default link color */
+  color: #104C97; /* Default link color */
 }
 
 .phone-section a:hover {
-  color: #1a2d45; /* Darker shade on hover */
+  color: #104C97; /* Darker shade on hover */
   text-decoration: underline; /* Underline on hover */
 }
 

@@ -102,17 +102,6 @@ const Header = () => {
           <img src="../assets/WibiTeclogo.png" className="logo" alt="Logo" />
         </Link>
       </div>
-
-      {/* Hamburger Menu */}
-      <div
-        className={`hamburger ${isMenuOpen ? "open" : ""}`}
-        onClick={toggleMenu}
-      >
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
-      </div>
-
       {/* Search Bar */}
       <form onSubmit={handleSearchSubmit} className="search-form">
         <input
@@ -138,6 +127,16 @@ const Header = () => {
             ))}
           </div>
         )}
+
+        {/* Hamburger Menu */}
+        <div
+          className={`hamburger ${isMenuOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
       </form>
 
       {/* Navigation */}

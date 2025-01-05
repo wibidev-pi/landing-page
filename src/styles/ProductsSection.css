@@ -20,20 +20,20 @@
     }
 }
 .products-section {
+    align-items: center;
     padding: 50px 20px;
     text-align: center;
   }
   
   .products-section h1 {
     font-size: 2.5rem;
-    color: #333;
+    color: #104C97;
     margin-bottom: 30px;
   }
   
   /* Brands Grid */
   .brands-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Makes it responsive */
     gap: 20px;
   }
   
@@ -77,7 +77,7 @@
   
   .brands-name h3 {
     font-size: 1.2rem;
-    color: #555;
+    color: #104C97;
     margin: 0; /* Remove any default margin */
     white-space: nowrap; /* Prevent text from wrapping */
     overflow: hidden; /* Hide overflowed text */
