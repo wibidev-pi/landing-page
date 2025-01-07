@@ -54,7 +54,7 @@ const ProductListPage = () => {
   }, []);
 
   const filteredProducts = products.filter((product) =>
-    product.ProductName.toLowerCase().includes(searchTerm.toLowerCase()),
+    product.productTitle.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   if (error) return <p>{error}</p>;
@@ -71,9 +71,9 @@ const ProductListPage = () => {
       />
       <ul>
         {filteredProducts.map((product) => (
-          <li key={product.PartNumber}>
-            <a href={`/products/${product.PartNumber}`}>
-              {product.ProductName}
+          <li key={product.productNumber}>
+            <a href={`/products/${product.productNumber}`}>
+              {product.productTitle}
             </a>
           </li>
         ))}

@@ -19,6 +19,9 @@ import ProductDetailPage from "./components/ProductDetailPage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AddProducts from "./components/AddProducts";
+import ProductsPage from "./components/ProductsPage";
+import SubcategoriesPage from "./components/SubcategoriesPage";
+import CategoryProductsPage from "./components/CategoryProductsPage";
 import "./styles/App.css";
 
 const UserContext = createContext();
@@ -43,6 +46,7 @@ function App() {
               }
             />
             <Route path="/about-us" element={<AboutUsSection />} />
+            <Route path="/products-page" element={<ProductsPage />} />
             <Route path="/products" element={<ProductsSection />} />
             <Route path="//brands/:brandId" element={<BrandPage />} />
             <Route path="/testimonials" element={<TestimonialsSection />} />
@@ -51,8 +55,16 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/addproduct" element={<AddProducts />} />
             <Route
-              path="/products/:partNumber"
+              path="/products/:productNumber"
               element={<ProductDetailPage />}
+            />
+            <Route
+              path="/subcategories/:categoryName"
+              element={<SubcategoriesPage />}
+            />
+            <Route
+              path="/products-page/:subcategoryId"
+              element={<CategoryProductsPage />}
             />
           </Routes>
           {userRole !== "admin" &&

@@ -1,69 +1,63 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Papa from "papaparse";
-import { cleanPartNumber } from "./utils"; // Import utility function
+import { cleanproductNumber } from "./utils"; // Import utility function
 import "./../styles/ProductDetailPage.css";
 
 const ProductDetailPage = () => {
-  const { partNumber } = useParams();
+  const { productNumber } = useParams();
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        // Fetch both CSV files
-        const [response1, response2] = await Promise.all([
-          fetch(`/assets/csv/FESTO.csv`),
-          fetch(`/assets/csv/OMRAN.csv`),
-        ]);
+        // Fetch the merged CSV file
 
-        // Check if both responses are successful
-        if (!response1.ok || !response2.ok) {
-          throw new Error("Failed to load one or both CSV files.");
+        const response = await fetch(`/products.csv`);
+        if (!response.ok) {
+          throw new Error("Failed to load CSV file.");
         }
 
-        // Parse both CSV files as text
-        const csvData1 = await response1.text();
-        const csvData2 = await response2.text();
+        // Parse the CSV file as text
+        const csvData = await response.text();
 
-        // Parse both CSV files using Papa.parse
-        const parseCSV = (csvData) => {
-          return new Promise((resolve) => {
-            Papa.parse(csvData, {
-              header: true,
-              skipEmptyLines: true,
-              complete: (results) => resolve(results.data),
+        // Parse the CSV using Papa.parse
+        Papa.parse(csvData, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            const combinedData = results.data || [];
+
+            // Debug log all cleaned product numbers
+            combinedData.forEach((item) => {
+              console.log(
+                "CSV Product Number (Cleaned):",
+                cleanproductNumber(item.productNumber),
+              );
             });
-          });
-        };
 
-        // Parse and combine the data
-        const [data1, data2] = await Promise.all([
-          parseCSV(csvData1),
-          parseCSV(csvData2),
-        ]);
-        const combinedData = [...data1, ...data2];
+            // Clean the input part number
+            const cleanedInput = cleanproductNumber(productNumber);
+            console.log("Cleaned Input Part Number:", cleanedInput);
 
-        console.log("Combined CSV Data:", combinedData);
+            // Search for the product
+            const foundProduct = combinedData.find(
+              (item) =>
+                item.productNumber &&
+                cleanproductNumber(item.productNumber).toLowerCase().trim() ===
+                  cleanedInput.toLowerCase().trim(),
+            );
 
-        // Clean the input part number
-        const cleanedInput = cleanPartNumber(partNumber);
-        console.log("Cleaned Search Part Number:", cleanedInput);
-
-        // Search for the product in the combined data
-        const foundProduct = combinedData.find(
-          (item) =>
-            item.PartNumber &&
-            cleanPartNumber(item.PartNumber) === cleanedInput,
-        );
-
-        if (foundProduct) {
-          console.log("Product Found:", foundProduct);
-          setProduct(foundProduct);
-        } else {
-          setError(`No product found for Part Number: ${partNumber}`);
-        }
+            if (foundProduct) {
+              console.log("Product Found:", foundProduct);
+              setProduct(foundProduct);
+            } else {
+              console.warn("No matching product found for:", cleanedInput);
+              setError(`No product found for Part Number: ${productNumber}`);
+            }
+          },
+        });
       } catch (error) {
         console.error("Error fetching product data:", error.message);
         setError(`Error loading product details: ${error.message}`);
@@ -71,7 +65,7 @@ const ProductDetailPage = () => {
     };
 
     fetchProductDetails();
-  }, [partNumber]);
+  }, [productNumber]);
 
   if (error) return <p>{error}</p>;
   if (!product) return <p>Loading product details...</p>;
@@ -80,18 +74,18 @@ const ProductDetailPage = () => {
     <section className="product-detail-page">
       <div className="product-image-container">
         <img
-          src={`/assets/images/${product.ImageName}`}
-          alt={product.ProductName}
+          src={`${product.mediumImagePath}`}
+          alt={product.productTitle}
           className="product-large-image"
         />
       </div>
       <div className="product-details">
-        <h1>{product.ProductName}</h1>
+        <h1>{product.productTitle}</h1>
         <p>
-          <strong>Part Number:</strong> {product.PartNumber}
+          <strong>Part Number:</strong> {product.productNumber}
         </p>
         <p>
-          <strong>Discription:</strong> {product.Discription}
+          <strong>Description:</strong> {product.urlSegment}
         </p>
         <button
           className="get-quote-button"

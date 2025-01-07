@@ -1,8 +1,8 @@
 /* Base styles for the floating button */
 .floating-button {
   position: fixed;
-  bottom: 50px;
-  right: 20px;
+  bottom: 70px;
+  right: 5px;
   border-radius: 15px;
   background: transparent; /* Ensure the background is transparent */
   background-size: cover; /* Ensure image covers the button */
@@ -118,7 +118,7 @@
 }
 
 .btn-submit:hover {
-  color: #eef1f7;
+  color: #ffffff;
   background: #104C97; /* Red background for visibility */
 }
 
@@ -126,7 +126,7 @@
 .close-button {
   position: fixed;
   margin-top: 20px;
-  margin-left: 330px;
+  margin-left: 335px;
   position: absolute;
   top: 20px;
   background: #104C97; /* Red background for visibility */
@@ -144,44 +144,54 @@
 /* Media Queries for responsiveness */
 @media only screen and (max-width: 600px) {
   .floating-button {
-    width: 120px;
+    width: 190px;
     height: 45px;
   }
   .floating-button.expanded {
-    width: 320px;
-    height: 400px;
+    width: 300px;
+    height: 535px;
+  }
+  .close-button {
+    position: fixed;
+    margin-top: 15px;
+    margin-left: 240px;
+    position: absolute;
+    top: 20px;
   }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   .floating-button {
-    width: 130px;
-    height: 50px;
+    width: 190px;
+    height: 45px;
   }
   .floating-button.expanded {
     width: 350px;
-    height: 450px;
+    height: 530px;
+  }
+  .close-button {
+    position: fixed;
+    margin-top: 15px;
+    margin-left: 290px;
+    position: absolute;
+    top: 20px;
   }
 }
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) {
   .floating-button {
-    width: 150px;
-    height: 50px;
+    width: 220px;
+    height: 40px;
   }
   .floating-button.expanded {
     width: 380px;
-    height: 450px;
+    height: 535px;
   }
-}
-
-@media only screen and (min-width: 1025px) {
-  .floating-button {
-    width: 180px;
-    height: 60px;
-  }
-  .floating-button.expanded {
-    width: 400px;
-    height: 500px;
+  .close-button {
+    position: fixed;
+    margin-top: 15px;
+    margin-left: 320px;
+    position: absolute;
+    top: 20px;
   }
 }

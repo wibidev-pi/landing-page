@@ -1,5 +1,5 @@
 .header {
-  background:#eef1f7 ; /* Background color */
+  background:#ffffff ; /* Background color */
   height: auto; /* Fixed header height */
   display: flex;
   justify-content: space-between;
@@ -169,7 +169,7 @@
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #eef1f7;
+    background-color: #ffffff;
     width: 100%;
     position: absolute;
     top: 70%; /* Below the header */

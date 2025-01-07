@@ -1,34 +1,6 @@
-/* Additional styles for HeroSectionReviews */
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .hero-section .reviews-section {
-        padding: 20px; /* Adjust padding for mobile */
-    }
-
-    .hero-section .reviews-section h3 {
-        font-size: 24px; /* Smaller font size for mobile */
-    }
-
-    .hero-section .review {
-        font-size: 16px; /* Smaller font size for reviews */
-    }
-
-    .banner-section {
-        height: 150px; /* Lower height for mobile view */
-    }
-
-    .banner-text {
-        font-size: 18px; /* Smaller font size for banner text */
-    }
-}
-
-body {
-  font-family: 'Abadi MT Std', sans-serif;
-}
 .hero-section .reviews-section {
   padding: 40px 20px;
-  background-color: #eef1f7; /* Light background for contrast */
+  background-color: #ffffff; /* Light background for contrast */
   text-align: center;
 }
 
@@ -87,7 +59,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
-  background-color: #eef1f7;
+  background-color: #ffffff;
 }
 
 .section-heading {
@@ -150,22 +122,10 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .featured-tiles-container {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 10px;
-  }
-  
-  .section-heading h3 {
-    font-size: 1.8rem;
-  }
-}
-
 /* Product Slider */
 .product-slider {
   padding: 20px;
-  background: linear-gradient(to right, #104C97, #eef1f7); /* Gradient background */
+  background: linear-gradient(to right, #104C97, #ffffff); /* Gradient background */
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -213,7 +173,7 @@ body {
   display: flex;
   flex-direction: row;
   padding: 2rem 0;
-  background-color: #eef1f7;
+  background-color: #ffffff;
   justify-content: center; /* Center horizontally */
   align-items: center;
 }
@@ -224,7 +184,7 @@ body {
   color: #104C97;
   text-align: center;
   font-weight: bold ;
-  background-color: #eef1f7;
+  background-color: #ffffff;
 }
 
 .tile-teaser {
@@ -233,7 +193,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #f9f9f9; /* Light background */
+  background-color: #ffffff; /* Light background */
   border: 1px solid #ddd; /* Light border */
   border-radius: 8px; /* Rounded corners */
   padding: 16px; /* Padding around the content */
@@ -298,16 +258,15 @@ body {
 }
 
 #main-teaser-container {
-  padding: 20px;
   height: 300px;
   align-items: center;
-  background-color: #eef1f7;
+  background-color: #ffffff;
 }
 /* Main Container */
 #reference-teaser-container {
   margin-top: 20px;
   height: 150px;
-  background: linear-gradient(to right, #eef1f7, #104C97); /* Gradient background */
+  background: linear-gradient(to right, #ffffff, #104C97); /* Gradient background */
   padding: 30px; /* Add spacing */
   display: flex;
   justify-content: center;
@@ -351,7 +310,7 @@ body {
 
 /* Button */
 .teaser-button {
-  background-color: #ffffff; /* Teal button color */
+  background-color: #104C97; /* Teal button color */
   color: #fff; /* White text */
   padding: 12px 24px;
   font-size: 1rem;
@@ -367,7 +326,62 @@ body {
 }
 
 /* Mobile-Specific Styles: Force 2 Tiles Per Row Cleanly */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
+
+
+    .features {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping to the next row */
+        padding: 2rem 0;
+        background-color: #ffffff;
+        justify-content: center; /* Center-align the tiles in the row */
+        align-items: center;
+    }
+
+    .tile-teaser {
+        flex: 0 0 calc(50% - 1rem); /* Each tile takes 50% of the row width, minus some margin */
+        max-width: calc(50% - 1rem); /* Prevent tiles from exceeding the desired size */
+        height: 300px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px #5b80ad;
+        overflow: hidden;
+        text-align: center;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0.5rem; /* Add spacing between tiles */
+    }
+
+
+.featured-section {
+  display: flex;
+        flex-wrap: wrap; /* Enable wrapping */
+        justify-content: space-between; /* Adjust alignment */
+        width: 100%; /* Ensure full width */
+        gap: 0; /* No gaps by default */
+        box-sizing: border-box;
+}
+  .featured-tile {
+    flex: 0 0 calc(50% - 10px); /* Subtract margin for spacing */
+        margin: 5px; /* Equal spacing around tiles */
+        padding: 10px; /* Inner padding */
+        box-sizing: border-box; /* Include padding/borders in width */
+        height: 300px; /* Fixed height for tiles */
+        margin: 0;
+}
+
+
+.featured-tile h3 {
+margin: 0%;
+  font-size: 1rem;
+
+}
+
+.featured-tile p {
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
   /* Tile Container: Use Grid for 2 Columns */
   .tile-container {
     display: grid; /* Use grid layout */
@@ -376,19 +390,6 @@ body {
     padding: 10px; /* Compact padding */
     margin: 0; /* Reset any margins */
   }
-
-  /* Tile Styling */
-  .tile-teaser {
-    background-color: #fff; /* White background */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px #104C97; /* Subtle shadow */
-    overflow: hidden; /* Prevent content overflow */
-    text-align: center; /* Center-align content */
-    padding: 8px; /* Compact padding */
-    box-sizing: border-box; /* Include padding and borders in the size */
-  }
-
   /* Image Styling */
   .tile-image {
     width: 100%; /* Full width */
@@ -412,10 +413,139 @@ body {
     margin: 0; /* No extra margins */
   }
 
+
+  .product-slider {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: linear-gradient(to right, #104C97, #ffffff);
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    animation: slide 30s linear infinite; /* Slower and seamless animation */
+  }
+  
+  .slider-item {
+    flex: 0 0 45%; /* 4 items per row */
+  }
+  
+  .slider-item img {
+    width: 100%;
+    height: 100px; /* Set a fixed height for uniform appearance */
+  }
+  
+  #main-teaser-container {
+    padding: 1px;
+    height: 300px;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  /* Main Container */
+  #reference-teaser-container {
+    margin-top: 100px;
+    height: 70px;
+    padding: 30px; /* Add spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Content Card */
+  .reference-teaser-content {
+    width: 250px;
+    height: 210px;
+    border-radius: 15px; /* Rounded corners */
+    text-align: center; /* Center-align text */
+    padding: 20px; /* Inner spacing */
+  }
+
+  .teaser-headline {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.teaser-preheadline {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 7px;
+  font-weight: 550;
+}
+
+.teaser-description {
+  color: #495057;
+  font-size: .75rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.teaser-button {
+  background-color: #104C97;
+  color: #fff;
+  padding: 7px 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 100;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: -10px;
+  transition: background-color 0.3s ease;
+}
   /* Ensure Consistent View */
   body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  .feature p {
+    margin-top: 40px;
+    font-size: 1.25rem;
+    color: #104C97;
+
+}
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 360px; /* Original height */
+  overflow: hidden;
+}
+
+.section-heading h3 {
+  font-size: 1.25rem; /* Smaller font size for mobile */
+
+}
+  .hero-section .reviews-section {
+      padding: 20px; /* Adjust padding for mobile */
+  }
+
+  .hero-section .reviews-section h3 {
+      font-size: 1.25rem; /* Smaller font size for mobile */
+  }
+
+  .hero-section .review {
+      font-size: 16px; /* Smaller font size for reviews */
+  }
+  .banner-text {
+      font-size: 15px; /* Smaller font size for banner text */
+      width: 350px;
+  }
+
+  .featured-tiles-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
   }
 }

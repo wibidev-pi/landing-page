@@ -6,8 +6,8 @@ import "./../styles/BrandPage.css";
 const BrandPage = () => {
   const { brandId } = useParams();
   const [products, setProducts] = useState([]);
-  const [groupedProductNames, setGroupedProductNames] = useState([]);
-  const [selectedProductName, setSelectedProductName] = useState(null);
+  const [groupedproductTitles, setGroupedproductTitles] = useState([]);
+  const [selectedproductTitle, setSelectedproductTitle] = useState(null);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -17,7 +17,7 @@ const BrandPage = () => {
   useEffect(() => {
     const fetchCSV = async () => {
       try {
-        const csvFilePath = `/assets/csv/${brandId}.csv`;
+        const csvFilePath = `/products.csv`; // Use the merged CSV file
         const response = await fetch(csvFilePath);
         if (!response.ok) throw new Error("Failed to load CSV file.");
 
@@ -28,18 +28,23 @@ const BrandPage = () => {
           complete: (results) => {
             const allProducts = results.data || [];
 
-            const productNames = [
-              ...new Set(allProducts.map((product) => product.ProductName)),
+            // Filter products based on the `brand` column matching the `brandId`
+            const brandProducts = allProducts.filter(
+              (product) => product.brand === brandId,
+            );
+
+            const productTitles = [
+              ...new Set(brandProducts.map((product) => product.productTitle)),
             ];
 
-            setProducts(allProducts);
-            setGroupedProductNames(productNames);
+            setProducts(brandProducts);
+            setGroupedproductTitles(productTitles);
             setLoading(false);
 
-            if (productNames.length > 0) {
-              setSelectedProductName(productNames[0]);
-              const filtered = allProducts.filter(
-                (product) => product.ProductName === productNames[0],
+            if (productTitles.length > 0) {
+              setSelectedproductTitle(productTitles[0]);
+              const filtered = brandProducts.filter(
+                (product) => product.productTitle === productTitles[0],
               );
               setFilteredProducts(filtered);
             }
@@ -54,16 +59,16 @@ const BrandPage = () => {
     fetchCSV();
   }, [brandId]);
 
-  const handleProductNameClick = (productName) => {
-    setSelectedProductName(productName);
+  const handleproductTitleClick = (productTitle) => {
+    setSelectedproductTitle(productTitle);
     const filtered = products.filter(
-      (product) => product.ProductName === productName,
+      (product) => product.productTitle === productTitle,
     );
     setFilteredProducts(filtered);
   };
 
   const handleProductClick = (product) => {
-    navigate(`/products/${product.PartNumber}`, { state: product });
+    navigate(`/products/${product.productNumber}`, { state: product });
   };
 
   if (loading) return <p>Loading products...</p>;
@@ -76,13 +81,13 @@ const BrandPage = () => {
         <aside className="product-names-sidebar">
           <h3>Product Names</h3>
           <ul>
-            {groupedProductNames.map((name, index) => (
+            {groupedproductTitles.map((name, index) => (
               <li
                 key={index}
                 className={`product-name-item ${
-                  selectedProductName === name ? "selected" : ""
+                  selectedproductTitle === name ? "selected" : ""
                 }`}
-                onClick={() => handleProductNameClick(name)}
+                onClick={() => handleproductTitleClick(name)}
               >
                 {name}
               </li>
@@ -100,13 +105,13 @@ const BrandPage = () => {
                 onClick={() => handleProductClick(product)}
               >
                 <img
-                  src={`/assets/images/${product.ImageName}`}
-                  alt={product.ProductName}
+                  src={`${product.mediumImagePath}`}
+                  alt={product.productTitle}
                   className="list-image"
                 />
                 <div className="product-info">
-                  <h3>{product.ProductName}</h3>
-                  <p>Part Number: {product.PartNumber}</p>
+                  <h3>{product.productTitle}</h3>
+                  <p>Part Number: {product.productNumber}</p>
                 </div>
               </li>
             ))}

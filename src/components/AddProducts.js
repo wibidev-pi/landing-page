@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import "../styles/AddProducts.css";
 
 function AddProducts() {
-  const [productName, setProductName] = useState("");
+  const [productTitle, setproductTitle] = useState("");
   const [price, setPrice] = useState("");
   const [availableQuantity, setAvailableQuantity] = useState("");
   const [description, setDescription] = useState("");
@@ -25,7 +25,7 @@ function AddProducts() {
 
     // Validation
     if (
-      !productName ||
+      !productTitle ||
       !price ||
       !availableQuantity ||
       !description ||
@@ -37,7 +37,7 @@ function AddProducts() {
 
     // Add product to local state
     const newProduct = {
-      productName,
+      productTitle,
       price,
       availableQuantity,
       description,
@@ -48,7 +48,7 @@ function AddProducts() {
     setProducts((prevProducts) => [...prevProducts, newProduct]);
 
     // Reset form
-    setProductName("");
+    setproductTitle("");
     setPrice("");
     setAvailableQuantity("");
     setDescription("");
@@ -87,15 +87,15 @@ function AddProducts() {
                   </select>
                 </div>
                 <div className="mb-3 mt-3">
-                  <label htmlFor="productName" className="form-label">
+                  <label htmlFor="productTitle" className="form-label">
                     Product Name
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     placeholder="Enter Product Name"
-                    value={productName}
-                    onChange={(e) => setProductName(e.target.value)}
+                    value={productTitle}
+                    onChange={(e) => setproductTitle(e.target.value)}
                   />
                 </div>
                 <div className="mb-3 mt-3">
@@ -165,8 +165,8 @@ function AddProducts() {
             <ul className="list-group">
               {products.map((product, index) => (
                 <li key={index} className="list-group-item">
-                  <strong>{product.productName}</strong> - {product.description}{" "}
-                  | Price: {product.price} | Quantity:{" "}
+                  <strong>{product.productTitle}</strong> -{" "}
+                  {product.description} | Price: {product.price} | Quantity:{" "}
                   {product.availableQuantity} | Category: {product.categoryId} |
                   File: {product.file}
                 </li>

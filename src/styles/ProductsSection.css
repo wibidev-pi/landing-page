@@ -1,203 +1,145 @@
-/* Products Section */
-
-/* Media Queries for responsiveness */
-@media only screen and (max-width: 600px) {
-    .brands-grid {
-        grid-template-columns: 1fr; /* Ensure brand tiles are in a single column on mobile */
-    }
-
-    .brand-tile {
-        height: auto; /* Allow height to adjust for mobile */
-        width: 100%; /* Full width of the tile */
-    }
-
-    .brand-tile img {
-        height: 200px; /* Adjust image height for smaller tiles */
-    }
-
-    .brands-name h3 {
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
-}
+/* General Products Section */
 .products-section {
-    align-items: center;
-    padding: 50px 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.products-section h1 {
+  font-size: 2rem;
+  color: #104C97;
+  margin-bottom: 20px;
+}
+
+/* Brands Grid */
+.brands-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Dynamic grid for responsive design */
+  justify-items: center;
+}
+
+/* Brand Tile */
+.brand-tile {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 120px; /* Smaller fixed height */
+  width: 180px; /* Smaller fixed width */
+  max-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-tile img {
+  align-items: center;
+  width: 80%; /* Ensure the image fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 70%; /* Limit height for compact tiles */
+  object-fit: contain; /* Prevent cropping */
+  margin-bottom: 8px; /* Space between image and text */
+}
+
+.brands-name {
+  height: auto; /* Dynamic height for text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5px;
+  text-align: center;
+}
+
+.brands-name h3 {
+  font-size: 0.9rem; /* Smaller font size */
+  color: #104C97;
+  margin: 0;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+.brand-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile (up to 600px) */
+@media only screen and (max-width: 600px) {
+  .products-section h1 {
+    font-size: 1.5rem;
   }
-  
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two tiles per row on small screens */
+    gap: 10px; /* Smaller gap */
+  }
+
+  .brand-tile {
+    height: 140px; /* Reduced height */
+    width: 140px; /* Reduced width */
+  }
+
+  .brand-tile img {
+    max-height: 60%;
+  }
+
+  .brands-name h3 {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet (601px to 768px) */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .products-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three tiles per row */
+  }
+
+  .brand-tile {
+    height: 160px;
+    width: 160px;
+  }
+
+  .brand-tile img {
+    max-height: 65%;
+  }
+
+  .brands-name h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* Laptop (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .products-section h1 {
+    font-size: 2rem;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr); /* Four tiles per row */
+  }
+
+}
+
+/* Desktop (1025px and above) */
+@media only screen and (min-width: 1025px) {
   .products-section h1 {
     font-size: 2.5rem;
-    color: #104C97;
-    margin-bottom: 30px;
   }
-  
-  /* Brands Grid */
+
   .brands-grid {
-    display: grid;
-    gap: 20px;
+    grid-template-columns: repeat(7, 1fr); /* Five tiles per row */
   }
-  
-  /* Brand Tile */
-  .brand-tile {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 250px; /* Fixed height for the tile */
-    width: 250px; /* Fixed width for the tile */
-    max-width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    justify-content: center; /* Center content vertically */
-    align-items: center;
-  }
-  
-  .brand-tile img {
-    align-items: center;
-    width: 80%; /* Ensure the image takes up the full width of the container */
-    height: auto; /* Maintain aspect ratio */
-    max-height: 80%; /* Prevent the image from growing too tall */
-    object-fit: contain; /* Ensure the entire SVG fits within the container */
-    margin-bottom: 10px; /* Add space between the image and the text */
-    display: block; /* Ensures there are no extra inline gaps */
-  }
-  
-  
-  .brands-name {
-    height: 20%; /* 20% of the container height for the text */
-    display: flex;
-    justify-content: center; /* Center text horizontally */
-    align-items: center; /* Center text vertically */
-    padding: 0 10px;
-    text-align: center;
-  }
-  
-  .brands-name h3 {
-    font-size: 1.2rem;
-    color: #104C97;
-    margin: 0; /* Remove any default margin */
-    white-space: nowrap; /* Prevent text from wrapping */
-    overflow: hidden; /* Hide overflowed text */
-    text-overflow: ellipsis; /* Add ellipsis for overflowed text */
-  }
-  
-  .brand-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Mobile (up to 600px) */
-  @media only screen and (max-width: 600px) {
-    .products-section {
-      padding: 30px 15px;
-    }
-  
-    .products-section h1 {
-      font-size: 1.8rem;
-    }
-  
-    .brands-grid {
-      grid-template-columns: 1fr; /* Stack brand tiles vertically on small screens */
-    }
-  
-    .brand-tile {
-      height: auto; /* Adjust height for small screens */
-      width: 100%; /* Make tile width 100% */
-    }
-  
-    .brand-tile img {
-      height: 200px; /* Adjust image height for smaller tiles */
-    }
-  
-    .brands-name h3 {
-      font-size: 1rem; /* Smaller font size for mobile */
-    }
-  }
-  
-  /* Tablet (601px to 768px) */
-  @media only screen and (min-width: 601px) and (max-width: 768px) {
-    .products-section {
-      padding: 40px 20px;
-    }
-  
-    .products-section h1 {
-      font-size: 2rem; /* Adjust font size for tablets */
-    }
-  
-    .brands-grid {
-      grid-template-columns: repeat(2, 1fr); /* Two tiles per row on tablets */
-    }
-  
-    .brand-tile {
-      height: 250px; /* Keep tile height consistent */
-      width: 100%; /* Full width of the grid cell */
-    }
-  
-    .brand-tile img {
-      height: 70%; /* Adjust image height for tablets */
-    }
-  
-    .brands-name h3 {
-      font-size: 1.1rem; /* Adjust font size for tablets */
-    }
-  }
-  
-  /* Laptop (769px to 1024px) */
-  @media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .products-section {
-      padding: 50px 20px;
-    }
-  
-    .products-section h1 {
-      font-size: 2.5rem; /* Default font size for laptop */
-    }
-  
-    .brands-grid {
-      grid-template-columns: repeat(3, 1fr); /* Three tiles per row on laptop */
-    }
-  
-    .brand-tile {
-      height: 250px; /* Keep tile height consistent */
-      width: 100%; /* Full width of the grid cell */
-    }
-  
-    .brand-tile img {
-      height: 80%; /* Adjust image height for laptop */
-    }
-  
-    .brands-name h3 {
-      font-size: 1.2rem; /* Default font size */
-    }
-  }
-  
-  /* Desktop (1025px and above) */
-  @media only screen and (min-width: 1025px) {
-    .products-section {
-      padding: 60px 40px;
-    }
-  
-    .products-section h1 {
-      font-size: 3rem; /* Larger font size for desktop */
-    }
-  
-    .brands-grid {
-      grid-template-columns: repeat(4, 1fr); /* Four tiles per row on desktop */
-    }
-  
-    .brand-tile {
-      height: 300px; /* Adjust tile height for desktop */
-      width: 100%; /* Full width of the grid cell */
-    }
-  
-    .brand-tile img {
-      height: 70%; /* Adjust image height for desktop */
-    }
-  
-    .brands-name h3 {
-      font-size: 1.3rem; /* Larger font size for desktop */
-    }
-  }
-  
+
+}

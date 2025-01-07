@@ -5,64 +5,62 @@ import "../styles/Header.css";
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState("");
+  const [debouncedInput, setDebouncedInput] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for hamburger menu
   const navigate = useNavigate();
 
+  // Debounce effect
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedInput(searchInput); // Update debounced input
+    }, 300); // Adjust delay as needed
+
+    return () => {
+      clearTimeout(handler); // Clear timeout if the user types again
+    };
+  }, [searchInput]);
+
   useEffect(() => {
     const fetchSuggestions = async () => {
-      if (!searchInput) {
+      if (!debouncedInput) {
         setSuggestions([]);
         return;
       }
-
       try {
-        // Fetch both CSV files
-        const [response1, response2] = await Promise.all([
-          fetch("/assets/csv/FESTO.csv"),
-          fetch("/assets/csv/OMRAN.csv"),
-        ]);
+        // Fetch the merged CSV file
+        const response = await fetch("/products.csv");
 
-        // Check if both fetches were successful
-        if (!response1.ok || !response2.ok) {
-          throw new Error("Failed to fetch one or both CSV files.");
+        // Check if the fetch was successful
+        if (!response.ok) {
+          throw new Error("Failed to fetch the CSV file.");
         }
 
-        // Parse both CSV files as text
-        const csvData1 = await response1.text();
-        const csvData2 = await response2.text();
+        // Parse the CSV file as text
+        const csvData = await response.text();
 
-        // Parse the CSV files using Papa.parse
-        const parseCSV = (csvData) => {
-          return new Promise((resolve) => {
-            Papa.parse(csvData, {
-              header: true,
-              skipEmptyLines: true,
-              complete: (results) => resolve(results.data),
-            });
-          });
-        };
+        // Parse the CSV file using Papa.parse
+        Papa.parse(csvData, {
+          header: true,
+          skipEmptyLines: true,
+          complete: (results) => {
+            const combinedData = results.data || [];
 
-        // Parse both CSV files
-        const [data1, data2] = await Promise.all([
-          parseCSV(csvData1),
-          parseCSV(csvData2),
-        ]);
+            // Filter the data based on the search input
+            const filteredSuggestions = combinedData.filter(
+              (item) =>
+                item.productTitle
+                  ?.toLowerCase()
+                  .includes(searchInput.toLowerCase()) ||
+                item.productNumber
+                  ?.toLowerCase()
+                  .includes(searchInput.toLowerCase()),
+            );
 
-        // Combine the data from both CSVs
-        const combinedData = [...data1, ...data2];
-
-        // Filter the combined data based on the search input
-        const filteredSuggestions = combinedData.filter(
-          (item) =>
-            item.ProductName?.toLowerCase().includes(
-              searchInput.toLowerCase(),
-            ) ||
-            item.PartNumber?.toLowerCase().includes(searchInput.toLowerCase()),
-        );
-
-        // Update the suggestions state
-        setSuggestions(filteredSuggestions);
+            // Update the suggestions state
+            setSuggestions(filteredSuggestions);
+          },
+        });
       } catch (error) {
         console.error("Error fetching suggestions:", error.message);
       }
@@ -71,8 +69,8 @@ const Header = () => {
     fetchSuggestions();
   }, [searchInput]);
 
-  const handleSuggestionClick = (partNumber) => {
-    navigate(`/products/${partNumber}`);
+  const handleSuggestionClick = (productNumber) => {
+    navigate(`/products/${productNumber}`);
     setSearchInput("");
     setSuggestions([]);
     setIsMenuOpen(false); // Close hamburger menu after navigation
@@ -120,9 +118,9 @@ const Header = () => {
               <div
                 key={index}
                 className="suggestion-item"
-                onClick={() => handleSuggestionClick(item.PartNumber)}
+                onClick={() => handleSuggestionClick(item.productNumber)}
               >
-                {item.ProductName} - {item.PartNumber}
+                {item.productTitle} - {item.productNumber}
               </div>
             ))}
           </div>
@@ -148,8 +146,13 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/products" onClick={closeMenu}>
+            <Link to="/products-page" onClick={closeMenu}>
               Products
+            </Link>
+          </li>
+          <li>
+            <Link to="/products" onClick={closeMenu}>
+              Brands
             </Link>
           </li>
           <li>
