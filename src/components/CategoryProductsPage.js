@@ -6,40 +6,56 @@ import "./../styles/CategoryProductsPage.css";
 const CategoryProductsPage = () => {
   const location = useLocation();
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 20; // Limit to 20 products per page
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const productsCsv = location.state?.productsCsv;
+    const uniqueId = location.state?.uniqueId;
 
-    if (!productsCsv) {
-      console.error("No products CSV specified.");
+    if (!uniqueId) {
+      console.error("No unique ID specified.");
+      setError("No unique ID provided. Unable to filter products.");
       setLoading(false);
       return;
     }
 
-    // Load the CSV file dynamically
-    Papa.parse(`/csv-files/${productsCsv}`, {
+    // Load the merged CSV file
+    Papa.parse("products.csv", {
       download: true,
       header: true,
       complete: (result) => {
-        console.log("Parsed Products Data:", result.data); // Debug parsed data
-        setProducts(result.data);
+        const allProducts = result.data || [];
+        console.log("Parsed Products Data:", allProducts); // Debug parsed data
+
+        // Filter products by unique ID
+        const filtered = allProducts.filter(
+          (product) => product.uniqueId?.trim() === uniqueId?.trim()
+        );
+
+        if (!filtered.length) {
+          setError("No products found for the selected subcategory.");
+        }
+
+        setProducts(allProducts); // Optional: Keep all products in case you need global access
+        setFilteredProducts(filtered);
         setLoading(false);
       },
       error: (error) => {
-        console.error("Error loading products CSV:", error);
+        console.error("Error loading merged CSV:", error);
+        setError("Failed to load products. Please try again later.");
         setLoading(false);
       },
     });
   }, [location.state]);
 
-  // Calculate pagination details
-  const totalPages = Math.ceil(products.length / productsPerPage);
-  const currentProducts = products.slice(
+  // Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+  const currentProducts = filteredProducts.slice(
     (currentPage - 1) * productsPerPage,
-    currentPage * productsPerPage,
+    currentPage * productsPerPage
   );
 
   const handleNext = () => {
@@ -54,7 +70,11 @@ const CategoryProductsPage = () => {
     return <h2>Loading products...</h2>;
   }
 
-  if (!products.length) {
+  if (error) {
+    return <h2>{error}</h2>;
+  }
+
+  if (!filteredProducts.length) {
     return <h2>No products found.</h2>;
   }
 
@@ -64,7 +84,11 @@ const CategoryProductsPage = () => {
       <div className="products-grid">
         {currentProducts.map((product, index) => (
           <div key={index} className="product-tile">
-            <img src={product.smallImagePath} alt={product.productTitle} />
+            <img
+              src={product.smallImagePath || "/images/default.jpg"}
+              alt={product.productTitle}
+              onError={(e) => (e.target.src = "/images/default.jpg")}
+            />
             <h3>{product.productTitle}</h3>
             <p>Part Number: {product.productNumber}</p>
           </div>
