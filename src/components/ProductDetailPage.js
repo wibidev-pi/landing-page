@@ -8,12 +8,12 @@ const ProductDetailPage = () => {
   const { productNumber } = useParams();
   const [product, setProduct] = useState(null);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
         // Fetch the merged CSV file
-
         const response = await fetch(`/products.csv`);
         if (!response.ok) {
           throw new Error("Failed to load CSV file.");
@@ -29,25 +29,20 @@ const ProductDetailPage = () => {
           complete: (results) => {
             const combinedData = results.data || [];
 
-            // Debug log all cleaned product numbers
-            combinedData.forEach((item) => {
-              console.log(
-                "CSV Product Number (Cleaned):",
-                cleanproductNumber(item.productNumber),
-              );
-            });
+            // Index the data by productNumber for faster lookup
+            const productIndex = combinedData.reduce((acc, item) => {
+              if (item.productNumber) {
+                acc[cleanproductNumber(item.productNumber)] = item;
+              }
+              return acc;
+            }, {});
 
             // Clean the input part number
             const cleanedInput = cleanproductNumber(productNumber);
             console.log("Cleaned Input Part Number:", cleanedInput);
 
-            // Search for the product
-            const foundProduct = combinedData.find(
-              (item) =>
-                item.productNumber &&
-                cleanproductNumber(item.productNumber).toLowerCase().trim() ===
-                  cleanedInput.toLowerCase().trim(),
-            );
+            // Find the product by cleaned part number
+            const foundProduct = productIndex[cleanedInput];
 
             if (foundProduct) {
               console.log("Product Found:", foundProduct);
@@ -56,19 +51,22 @@ const ProductDetailPage = () => {
               console.warn("No matching product found for:", cleanedInput);
               setError(`No product found for Part Number: ${productNumber}`);
             }
+            setLoading(false);
           },
         });
       } catch (error) {
         console.error("Error fetching product data:", error.message);
         setError(`Error loading product details: ${error.message}`);
+        setLoading(false);
       }
     };
 
     fetchProductDetails();
   }, [productNumber]);
 
+  if (loading) return <p>Loading product details...</p>;
   if (error) return <p>{error}</p>;
-  if (!product) return <p>Loading product details...</p>;
+  if (!product) return <p>No product found for Part Number: {productNumber}</p>;
 
   return (
     <section className="product-detail-page">

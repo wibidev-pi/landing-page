@@ -1,86 +1,84 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Papa from "papaparse";
+import Fuse from "fuse.js";
+import { debounce } from "lodash";
 import "../styles/Header.css";
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState("");
-  const [debouncedInput, setDebouncedInput] = useState("");
+  const [debouncedQuery, setDebouncedQuery] = useState(""); // For debounced search input
   const [suggestions, setSuggestions] = useState([]);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for hamburger menu
+  const [fuse, setFuse] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  // Debounce effect
+  // Fetch and parse the CSV file
   useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedInput(searchInput); // Update debounced input
-    }, 300); // Adjust delay as needed
-
-    return () => {
-      clearTimeout(handler); // Clear timeout if the user types again
-    };
-  }, [searchInput]);
-
-  useEffect(() => {
-    const fetchSuggestions = async () => {
-      if (!debouncedInput) {
-        setSuggestions([]);
-        return;
-      }
+    const fetchCSV = async () => {
       try {
-        // Fetch the merged CSV file
         const response = await fetch("/products.csv");
+        if (!response.ok) throw new Error("Failed to fetch CSV file.");
 
-        // Check if the fetch was successful
-        if (!response.ok) {
-          throw new Error("Failed to fetch the CSV file.");
-        }
-
-        // Parse the CSV file as text
         const csvData = await response.text();
-
-        // Parse the CSV file using Papa.parse
         Papa.parse(csvData, {
           header: true,
           skipEmptyLines: true,
           complete: (results) => {
             const combinedData = results.data || [];
+            console.log("Loaded Data Example:", combinedData[0]); // Debug a single row
 
-            // Filter the data based on the search input
-            const filteredSuggestions = combinedData.filter(
-              (item) =>
-                item.productTitle
-                  ?.toLowerCase()
-                  .includes(searchInput.toLowerCase()) ||
-                item.productNumber
-                  ?.toLowerCase()
-                  .includes(searchInput.toLowerCase()),
-            );
-
-            // Update the suggestions state
-            setSuggestions(filteredSuggestions);
+            // Initialize Fuse.js
+            const options = {
+              keys: ["productTitle", "productNumber"], // Use exact keys from CSV
+              includeScore: true,
+              threshold: 0.5, // Adjust as needed
+            };
+            setFuse(new Fuse(combinedData, options));
           },
         });
       } catch (error) {
-        console.error("Error fetching suggestions:", error.message);
+        console.error("Error loading data:", error.message);
       }
     };
 
-    fetchSuggestions();
+    fetchCSV();
+  }, []);
+
+  // Debounce the search input to improve performance
+  useEffect(() => {
+    const debouncedSearch = debounce((query) => setDebouncedQuery(query), 300);
+    debouncedSearch(searchInput);
+
+    return () => {
+      debouncedSearch.cancel(); // Clean up debounce timer
+    };
   }, [searchInput]);
+
+  // Perform the search when the debounced query changes
+  useEffect(() => {
+    if (!fuse || !debouncedQuery) {
+      setSuggestions([]);
+      return;
+    }
+
+    const results = fuse.search(debouncedQuery).slice(0, 10); // Limit to top 10 results
+    const matchedItems = results.map((result) => result.item); // Extract matched items
+    setSuggestions(matchedItems);
+  }, [fuse, debouncedQuery]);
 
   const handleSuggestionClick = (productNumber) => {
     navigate(`/products/${productNumber}`);
     setSearchInput("");
     setSuggestions([]);
-    setIsMenuOpen(false); // Close hamburger menu after navigation
+    setIsMenuOpen(false);
   };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
     if (searchInput) {
       navigate(`/products/${searchInput}`);
-      setIsMenuOpen(false); // Close menu after search
+      setIsMenuOpen(false);
     }
   };
 
@@ -89,18 +87,16 @@ const Header = () => {
   };
 
   const closeMenu = () => {
-    setIsMenuOpen(false); // Function to close the hamburger menu
+    setIsMenuOpen(false);
   };
 
   return (
     <header className="header">
-      {/* Logo */}
       <div className="logo">
         <Link to="/" onClick={closeMenu}>
           <img src="../assets/WibiTeclogo.png" className="logo" alt="Logo" />
         </Link>
       </div>
-      {/* Search Bar */}
       <form onSubmit={handleSearchSubmit} className="search-form">
         <input
           type="text"
