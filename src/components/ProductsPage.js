@@ -1,4 +1,4 @@
-mport React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Papa from "papaparse";
 import "./../styles/ProductsPage.css";
@@ -9,16 +9,33 @@ const ProductsPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Load categories from the CSV
+    // Parse the subcategories.csv to extract parent categories and subcategories
     Papa.parse("/subcategories.csv", {
       download: true,
       header: true,
+      skipEmptyLines: true, // Skip empty lines in the CSV file
       complete: (result) => {
-        // Log parsed data for debugging
-        console.log("Parsed Data:", result.data);
+        console.log("Raw CSV Parse Result:", result);
 
-        // Filter out rows with missing ParentCategory
-        const validData = result.data.filter((row) => row.ParentCategory);
+        // Check for parsing errors or missing data
+        if (!result.data) {
+          console.error("No data found in CSV.");
+          return;
+        }
+        if (result.errors.length > 0) {
+          console.error("Errors during CSV parsing:", result.errors);
+          return;
+        }
+
+        // Filter rows with missing ParentCategory or subcategoryName
+        const validData = result.data.filter(
+          (row) => row.ParentCategory && row.subcategoryName,
+        );
+
+        if (validData.length === 0) {
+          console.error("No valid rows found in the CSV.");
+          return;
+        }
 
         // Generate unique categories with subcategories
         const uniqueCategories = [
@@ -26,16 +43,19 @@ const ProductsPage = () => {
         ].map((name, index) => ({
           id: index + 1,
           name,
-          description: Explore products in ${name},
-          image: /images/${name.toLowerCase().replace(/ /g, "_")}.jpg, // Generate image path
+          description: `Explore products in ${name}`,
+          image: `/images/${name.toLowerCase().replace(/ /g, "_")}.jpg`,
           subcategories: validData
             .filter((row) => row.ParentCategory === name)
-            .map((row) => row.subcategoryName),
+            .map((row) => row.subcategoryName || "Unnamed Subcategory"),
         }));
 
+        console.log("Final Categories Data:", uniqueCategories);
         setCategoriesData(uniqueCategories);
       },
-      error: (error) => console.error("Error loading CSV:", error),
+      error: (error) => {
+        console.error("Error loading CSV:", error);
+      },
     });
   }, []);
 
@@ -44,7 +64,11 @@ const ProductsPage = () => {
   };
 
   const handleTileClick = (categoryName) => {
-    navigate(/subcategories/${encodeURIComponent(categoryName)});
+    console.log(
+      "Navigating to:",
+      `/subcategories/${encodeURIComponent(categoryName)}`,
+    );
+    navigate(`/subcategories/${encodeURIComponent(categoryName)}`);
   };
 
   return (
@@ -80,9 +104,9 @@ const ProductsPage = () => {
             >
               <img
                 src={category.image}
-                alt={category.name}
+                alt={`Image of ${category.name}`}
                 onError={(e) => {
-                  // Fallback to default image if the specified image is missing
+                  console.error("Image not found, falling back:", e.target.src);
                   e.target.src = "/images/default.jpg";
                 }}
               />

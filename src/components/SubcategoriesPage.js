@@ -1,37 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Papa from "papaparse";
+import React from "react";
+import { useParams, useLocation, useNavigate } from "react-router-dom";
 import "./../styles/SubcategoriesPage.css";
 
 const SubcategoriesPage = () => {
-  const { categoryName } = useParams(); // Extract ParentCategory from URL
-  const [subcategories, setSubcategories] = useState([]);
+  const { categoryName } = useParams(); // Extract category name from the URL
+  const location = useLocation(); // Retrieve state data passed from ProductsPage
   const navigate = useNavigate();
 
-  useEffect(() => {
-    Papa.parse("/subcategories.csv", {
-      download: true,
-      header: true,
-      complete: (result) => {
-        console.log("Parsed CSV Data:", result.data); // Debug parsed data
-        console.log("Filtering for ParentCategory:", categoryName); // Debug categoryName
+  // Retrieve subcategories from location state or fallback to an empty array
+  const { subcategories } = location.state || { subcategories: [] };
 
-        const filteredSubcategories = result.data.filter(
-          (row) =>
-            row.ParentCategory?.trim().toLowerCase() ===
-            categoryName?.trim().toLowerCase(),
-        );
+  console.log("Category Name:", categoryName);
+  console.log("Subcategories Data:", subcategories);
 
-        console.log("Filtered Subcategories:", filteredSubcategories); // Debug filtered rows
-        setSubcategories(filteredSubcategories);
-      },
-      error: (error) => console.error("Error loading CSV:", error),
-    });
-  }, [categoryName]);
-
+  // Handle subcategory click to navigate to the products page
   const handleSubcategoryClick = (subcategory) => {
+    console.log("Navigating to subcategory:", subcategory);
     navigate(`/products-page/${subcategory.subcategoryId}`, {
-      state: { productsCsv: subcategory["products-list-subcategoryId.csv"] },
+      state: { subcategoryName: subcategory.subcategoryName },
     });
   };
 
@@ -46,11 +32,18 @@ const SubcategoriesPage = () => {
               className="subcategory-tile"
               onClick={() => handleSubcategoryClick(subcategory)}
             >
+              {/* Dynamically construct the image source based on subcategory name */}
               <img
-                src={`/images/category/${subcategory.subcategoryName
+                src={`/images/${subcategory.subcategoryName
                   ?.toLowerCase()
                   .replace(/ /g, "_")}.jpg`}
-                alt={subcategory.subcategoryName}
+                alt={`Image of ${subcategory.subcategoryName}`}
+                onError={(e) => {
+                  console.error(
+                    `Image not found for ${subcategory.subcategoryName}, using fallback.`,
+                  );
+                  e.target.src = "/images/default.jpg"; // Fallback image
+                }}
               />
               <h3>{subcategory.subcategoryName}</h3>
             </div>

@@ -5,7 +5,7 @@ import "./../styles/CategoryProductsPage.css";
 
 const CategoryProductsPage = () => {
   const location = useLocation();
-  const [products, setProducts] = useState([]);
+  const [setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 20; // Limit to 20 products per page
@@ -32,7 +32,7 @@ const CategoryProductsPage = () => {
 
         // Filter products by unique ID
         const filtered = allProducts.filter(
-          (product) => product.uniqueId?.trim() === uniqueId?.trim()
+          (product) => product.uniqueId?.trim() === uniqueId?.trim(),
         );
 
         if (!filtered.length) {
@@ -55,7 +55,7 @@ const CategoryProductsPage = () => {
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
   const currentProducts = filteredProducts.slice(
     (currentPage - 1) * productsPerPage,
-    currentPage * productsPerPage
+    currentPage * productsPerPage,
   );
 
   const handleNext = () => {
