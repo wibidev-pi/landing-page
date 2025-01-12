@@ -1,0 +1,143 @@
+id,ParentCategory,subcategoryName,subcategoryId,products-list-subcategoryId.csv
+1,Mobile Hydraulics,Pumps,unique_0126,products-list-d9be7be6-18e8-4272-b2ac-af8f006de433.csv
+2,Mobile Hydraulics,Motors,unique_0080,products-list-85158733-e941-496e-99c9-af8f006de3f2.csv
+3,Mobile Hydraulics,Valves,unique_0010,products-list-0d1b556a-df57-4543-9709-af8f006de478.csv
+4,Mobile Hydraulics,Manifolds,unique_0009,products-list-0c813c9d-5184-46ee-ac23-af8f006de3c0.csv
+5,Mobile Hydraulics,Engine Cooling Packages,unique_0049,products-list-4966bf53-7b3c-441a-b039-af8f006de39e.csv
+6,Mobile Hydraulics,Mobile Electronics,unique_0095,products-list-9a4a1801-67a0-4bdc-9162-af8f006de3d0.csv
+7,Mobile Hydraulics,Accumulators,unique_0118,products-list-c59fca19-980c-4cf0-b742-af8f006de338.csv
+8,Mobile Hydraulics,Brakes & Clutches,unique_0054,products-list-4ef388f8-ddab-4af8-a402-af8f006de34c.csv
+9,Mobile Hydraulics,Compressed Air Cooling,unique_0140,products-list-fc6493d0-f146-4827-9690-af8f006de35b.csv
+10,Mobile Hydraulics,Creep Drive Systems,unique_0024,products-list-20985906-9fb3-46d7-93fe-af8f006de36e.csv
+11,Mobile Hydraulics,Cylinders,unique_0078,products-list-822ac0c2-dace-4a78-986b-af8f006de37f.csv
+12,Mobile Hydraulics,Dc Power Units,unique_0123,products-list-d04a4017-3c5a-4cfc-a651-af8f006de391.csv
+13,Mobile Hydraulics,Hydraulic Oil Cooling,unique_0117,products-list-c0c2a399-0c7d-445f-9876-af8f006de3b2.csv
+14,Mobile Hydraulics,Mobile Oil Coolers,unique_0134,products-list-e9dbe1bf-1ec4-4315-99c5-af8f006de3e3.csv
+15,Mobile Hydraulics,Planetary Wheel Drives,unique_0129,products-list-e02df91d-95d0-4d39-95d0-af8f006de401.csv
+16,Mobile Hydraulics,Ptos,unique_0063,products-list-5ce7d2eb-2dc8-41c1-a507-af8f006de414.csv
+17,Mobile Hydraulics,Pump Drives,unique_0125,products-list-d35ff434-32f7-4b4f-9dba-af8f006de422.csv
+18,Mobile Hydraulics,Reservoirs & Reservoir Accessories,unique_0033,products-list-34c9da2f-e6c9-4469-9395-af8f006de448.csv
+19,Mobile Hydraulics,Seats & Cab Accessories,unique_0070,products-list-6c167613-33f5-4b1f-b14d-af8f006de456.csv
+20,Mobile Hydraulics,Steering,unique_0127,products-list-d9cdf727-5db9-41aa-8e6e-af8f006de469.csv
+21,Mobile Hydraulics,Winches,unique_0059,products-list-52e4e500-b6a0-4f3d-bdbc-af8f006de48b.csv
+22,Industrial Hydraulics,Pumps,unique_0007,products-list-0b601b67-b1e8-4270-be4a-af8f006de2d9.csv
+23,Industrial Hydraulics,Motors,unique_0036,products-list-37959588-a98e-4ec5-b643-af8f006de2b6.csv
+24,Industrial Hydraulics,Valves,unique_0050,products-list-4b9231ba-c12b-4005-9806-af8f006de32a.csv
+25,Industrial Hydraulics,"Actuators, Cylinders & Cylinder Accessories",unique_0025,products-list-219c56e8-e1b2-471f-a5a4-af8f006de1e0.csv
+26,Industrial Hydraulics,Hydraulic Oil Cooling,unique_0115,products-list-ba6ab7cc-63b7-42db-8f53-af8f006de260.csv
+27,Industrial Hydraulics,Power Units,unique_0037,products-list-37c9bd44-57a4-433c-a20c-af8f006de2c6.csv
+28,Industrial Hydraulics,Accumulators,unique_0031,products-list-3079540e-7332-41e8-b0b5-af8f006de1d0.csv
+29,Industrial Hydraulics,Brakes And Clutches,unique_0089,products-list-8fceaeda-aacd-48ca-b275-af8f006de1ed.csv
+30,Industrial Hydraulics,Cartridge Kits,unique_0026,products-list-25d56c95-fac0-4ded-bac3-af8f006de200.csv
+31,Industrial Hydraulics,Clamps,unique_0107,products-list-b2957501-4490-4461-9153-af8f006de212.csv
+32,Industrial Hydraulics,"Clamps, Clips, Screws & Pins",unique_0138,products-list-f7945341-55f9-4df4-aced-af8f006de221.csv
+33,Industrial Hydraulics,Compressed Air Cooling,unique_0132,products-list-e7f8d8b8-8f1b-4c1b-a0ce-af8f006de22f.csv
+34,Industrial Hydraulics,Filter Carts,unique_0008,products-list-0bc07a41-72ff-4b20-afb0-af8f006de23d.csv
+35,Industrial Hydraulics,"Gauges, Pressure Sensors, Level Sensors & Temperature Sensors",unique_0065,products-list-6325ceac-ea2a-400c-b89c-af8f006de252.csv
+36,Industrial Hydraulics,Industrial Coolers,unique_0137,products-list-f5dff2cd-d6ac-47e2-93f4-af8f006de273.csv
+37,Industrial Hydraulics,Industrial Cylinders,unique_0014,products-list-1048bf01-2865-4e3d-8375-af8f006de283.csv
+38,Industrial Hydraulics,Industrial Filtration,unique_0142,products-list-fe7fd148-fb3c-49a7-9f57-af8f006de291.csv
+39,Industrial Hydraulics,Industrial Hydraulic Accessories,unique_0043,products-list-3fabe3d2-ec23-4d3b-b6cb-af8f006de2a8.csv
+40,Industrial Hydraulics,Quick Disconnect,unique_0083,products-list-8776a7f3-e367-4e0d-9597-af8f006de2e7.csv
+41,Industrial Hydraulics,Reservoirs & Reservoir Accessories,unique_0097,products-list-a2f4b758-44cd-49fd-a189-af8f006de2fc.csv
+42,Industrial Hydraulics,"Seal Kits, Sealants & Gaskets",unique_0052,products-list-4c5b8251-5f4a-4431-ace6-af8f006de30f.csv
+43,Industrial Hydraulics,Value Added Kits,unique_0002,products-list-01a9694a-7a77-409a-96c6-af8f006de31d.csv
+44,Pneumatics,Valves,unique_0028,products-list-27cd74bd-f9db-4ed4-9a87-af8f006dd066.csv
+45,Pneumatics,Valve Manifolds,unique_0035,products-list-35dca3e0-99f8-4a5d-9a03-af8f006dd057.csv
+46,Pneumatics,"Actuators, Cylinders & Grippers",unique_0082,products-list-86519a3f-08fe-4bb3-8372-af8f006dcf74.csv
+47,Pneumatics,Air Prep,unique_0110,products-list-b491dec0-0454-4515-b9ec-af8f006dcf83.csv
+48,Pneumatics,Vacuum & Vacuum Components,unique_0013,products-list-0fc70764-a057-4647-97ae-af8f006dd046.csv
+49,Pneumatics,Fittings,unique_0109,products-list-b3d551a6-df03-4adf-b0d1-af8f006dcfa8.csv
+50,Pneumatics,Boosters,unique_0136,products-list-f52bb536-81d6-42a1-8ed9-af8f006dcf98.csv
+51,Pneumatics,Flow Control,unique_0017,products-list-135c195f-cb00-4e31-be88-af8f006dcfbb.csv
+52,Pneumatics,Pneumatic Accessories,unique_0062,products-list-5bba613f-8a59-4e08-868e-af8f006dcfca.csv
+53,Pneumatics,Pressure Switches,unique_0042,products-list-3f8f2104-2668-46b2-a54e-af8f006dcfdd.csv
+54,Pneumatics,Pumps,unique_0016,products-list-12f4a436-5147-4cc1-ac36-af8f006dcfeb.csv
+55,Pneumatics,Service Kits,unique_0122,products-list-cde93af5-b13b-4075-98d7-af8f006dcffe.csv
+56,Pneumatics,Suspension & Air Springs,unique_0039,products-list-39e3e273-1d83-406f-9956-af8f006dd00d.csv
+57,Pneumatics,Transducers,unique_0066,products-list-6596b6c1-d66a-4b97-8ec4-af8f006dd022.csv
+58,Pneumatics,Tubing,unique_0073,products-list-70e887e1-c7ad-4103-949b-af8f006dd033.csv
+59,Fluid Process,"Process Pumps, Diaphragm Pumps & Pumping Systems",unique_0058,products-list-52a926dd-2c24-43ea-a91f-af8f006dd102.csv
+60,Fluid Process,"Pipes, Pipe Fittings & Corrosion Resistant Piping Systems",unique_0046,products-list-42fc1189-3a27-457b-8585-af8f006dd0f2.csv
+61,Fluid Process,Mixers,unique_0041,products-list-3ed1994b-4456-45ea-b1c9-af8f006dd0df.csv
+62,Fluid Process,Measurement Instrumentation & Control,unique_0064,products-list-61c86dee-b313-4c32-b85b-af8f006dd0ce.csv
+63,Fluid Process,Fluid Process Filtration,unique_0056,products-list-50884112-e67a-40db-a010-af8f006dd0aa.csv
+64,Fluid Process,"Tubing, Hose & Tube Fittings",unique_0076,products-list-7abb5428-a159-4e7c-8b09-af8f006dd143.csv
+65,Fluid Process,"Drain, Waste & Vent Systems",unique_0094,products-list-99a38ed2-04fc-4b5a-97f4-af8f006dd078.csv
+66,Fluid Process,Flow Control & Valves,unique_0034,products-list-34ecfd39-4f38-4875-819a-af8f006dd08a.csv
+67,Fluid Process,Fluid Process Accessories,unique_0079,products-list-84dcc89f-c9c5-4d4a-ba11-af8f006dd09a.csv
+68,Fluid Process,Heaters,unique_0111,products-list-b59abc07-587e-4f25-8a3d-af8f006dd0bb.csv
+69,Fluid Process,Seals,unique_0015,products-list-117e0a70-8b30-496e-b0f9-af8f006dd113.csv
+70,Fluid Process,Storage Containment Tanks,unique_0128,products-list-dc90c325-0b13-4167-9a11-af8f006dd124.csv
+71,Fluid Process,Structural Shapes,unique_0018,products-list-13a6c64a-0088-43ad-80f8-af8f006dd134.csv
+72,Automation And Motion Control,Variable Frequency & Servo Drives (Ac And Dc),unique_0119,products-list-c5e243b3-1b7d-4979-8939-af8f006de5b6.csv
+73,Automation And Motion Control,"Motors (Ac, Dc, Servo, Stepper)",unique_0057,products-list-50b48f9f-b434-471d-8496-af8f006de535.csv
+74,Automation And Motion Control,Electric Actuators,unique_0084,products-list-88eb82b7-1d42-4b62-9645-af8f006de4ac.csv
+75,Automation And Motion Control,Sensors & Cables,unique_0098,products-list-a56dadeb-4a13-4e29-b03c-af8f006de584.csv
+76,Automation And Motion Control,Gear Boxes & Gear Motors,unique_0088,products-list-8eef1fbe-b327-4d61-8157-af8f006de4bc.csv
+77,Automation And Motion Control,Industrial Framing,unique_0029,products-list-2b7e23aa-e733-46ef-8b28-af8f006de4fc.csv
+78,Automation And Motion Control,Connection Technologies,unique_0077,products-list-80de06af-3fad-43e0-9e8f-af8f006de49a.csv
+79,Automation And Motion Control,Hmi & Panel Pc'S,unique_0121,products-list-cd7d5cee-bfbc-42eb-9839-af8f006de4cc.csv
+80,Automation And Motion Control,Industrial Computers,unique_0027,products-list-25fb554a-a04e-44bc-a490-af8f006de4de.csv
+81,Automation And Motion Control,Industrial Control Panels,unique_0044,products-list-40424d8b-c098-4fbc-b155-af8f006de4ef.csv
+82,Automation And Motion Control,Linear Technologies (Transducers),unique_0069,products-list-681b6164-3ee6-437a-bab7-af8f006de510.csv
+83,Automation And Motion Control,"Motor Controls, Relays, Contactors & Pilot Devices",unique_0099,products-list-aa1fb93d-4e06-4fb8-801c-af8f006de522.csv
+84,Automation And Motion Control,"Plc, Remote I/O, Fieldbus Modules & Ethernet",unique_0100,products-list-ab05d1f4-ef4d-439d-877e-af8f006de547.csv
+85,Automation And Motion Control,Robots & End Of Arm Tooling,unique_0108,products-list-b35443f7-2eef-4fbd-bb81-af8f006de559.csv
+86,Automation And Motion Control,Safety Devices & Sensors,unique_0005,products-list-07cef507-b2f2-48a3-b36a-af8f006de56f.csv
+87,Automation And Motion Control,Transformers & Power Supply,unique_0051,products-list-4bef915b-dd8e-4498-971e-af8f006de597.csv
+88,Filtration,Bag Filters,unique_0144,products-list-ff6296ae-7f7b-4430-96e3-af8f006dd166.csv
+89,Filtration,Cartridge & Spin-On Filters,unique_0045,products-list-423da2dc-487f-4ab6-aa10-af8f006dd185.csv
+90,Filtration,Air & Gas Filters,unique_0055,products-list-4f3a1109-b55a-439e-ae18-af8f006dd152.csv
+91,Filtration,"Hydraulic, Lube, And Fuel Filters",unique_0030,products-list-2f5a2178-3584-400c-b8f2-af8f006dd242.csv
+92,Filtration,Dryers & Moisture Removal Solutions,unique_0067,products-list-663a6cc0-b480-4f76-95e2-af8f006dd1aa.csv
+93,Filtration,Filter Carts & Off-Line Filtration,unique_0085,products-list-892f3e6f-657b-4c1d-8d2a-af8f006dd1da.csv
+94,Filtration,Breathers,unique_0071,products-list-6d00286f-b609-4570-9332-af8f006dd176.csv
+95,Filtration,Condition Monitoring Equipment & Sampling,unique_0060,products-list-569b554c-80ab-46c0-b54a-af8f006dd198.csv
+96,Filtration,Dust Collectors,unique_0116,products-list-be31f41c-207d-466f-9069-af8f006dd1b8.csv
+97,Filtration,Engine Accessories,unique_0120,products-list-c7a0fdb9-1a2b-4883-be87-af8f006dd1cc.csv
+98,Filtration,Filtration Accessories,unique_0141,products-list-fd73d133-aa80-4028-9b26-af8f006dd1ed.csv
+99,Filtration,Gauges & Pressure Sensors,unique_0081,products-list-85df2a62-8bdf-4d1e-b517-af8f006dd1fc.csv
+100,Filtration,High Pressure Filter,unique_0032,products-list-333cdd3f-0895-45df-b392-af8f006dd210.csv
+101,Filtration,Housings (Bag And Cartridge),unique_0101,products-list-afa69be3-80ca-4a98-8192-af8f006dd21e.csv
+102,Filtration,Hvac & Panel Filters,unique_0006,products-list-0a8ca4f0-3cdb-4302-a842-af8f006dd230.csv
+103,Filtration,"Instrument Air, Pneumatic Filters, Flr",unique_0053,products-list-4edf02ff-a8c4-4289-bddf-af8f006dd254.csv
+104,Filtration,Mist Collectors,unique_0105,products-list-b0a978b2-f7f2-4199-91cb-af8f006dd264.csv
+105,Filtration,Paint Booth & Roll Media Filters,unique_0020,products-list-1a349f3d-0cbe-462d-8e73-af8f006dd276.csv
+106,Filtration,Process And Coolant Filters,unique_0021,products-list-1bb32112-dbc8-4ab1-96dd-af8f006dd288.csv
+107,Filtration,Self-Cleaning Filters & Centrifugal Solutions,unique_0048,products-list-47786de8-7fe2-4473-a6b4-af8f006dd29b.csv
+108,Filtration,Smoke Collectors,unique_0114,products-list-b814c88c-58d5-42ac-9f88-af8f006dd2af.csv
+109,Filtration,Strainers,unique_0103,products-list-b01db817-fa34-4457-89b9-af8f006dd2c2.csv
+110,Filtration,Tramp Oil Separators,unique_0075,products-list-77fe572f-20a6-436d-88d5-af8f006dd2d0.csv
+111,Hose and Fittings,"Hydraulic Hose, Fittings & Adapters",unique_0074,products-list-7782a93d-4ba1-4562-a007-af8f006dcefe.csv
+112,Hose and Fittings,Industrial Hose & Fittings,unique_0090,products-list-908c7cde-2407-46d4-8f5b-af8f006dcf11.csv
+113,Hose and Fittings,Welded Metal Hose,unique_0113,products-list-b7c388a1-8e69-40a6-9a6f-af8f006dcf63.csv
+114,Hose and Fittings,Gaskets,unique_0004,products-list-038ca5b4-ac79-4d73-b830-af8f006dcebd.csv
+115,Hose and Fittings,Couplings & Cam And Groove,unique_0102,products-list-afa93c1d-7b88-41c9-9eac-af8f006dce58.csv
+116,Hose and Fittings,Hose Accessories & Tools,unique_0086,products-list-89b778a1-eaa8-465e-8f6f-af8f006dcee1.csv
+117,Hose and Fittings,Chemical Hose,unique_0133,products-list-e8793d42-8ce3-4dcf-8ec1-af8f006dce43.csv
+118,Hose and Fittings,"Crimpnology Nipples, Flanges And Unions",unique_0012,products-list-0ead3903-0ea1-4c6d-9e91-af8f006dce6a.csv
+119,Hose and Fittings,Expansion Joints,unique_0022,products-list-1eaed941-6146-4b1b-b5c5-af8f006dce77.csv
+120,Hose and Fittings,Fasteners,unique_0124,products-list-d1da2a68-c1ac-437a-8acc-af8f006dce8a.csv
+121,Hose and Fittings,Fire Hose,unique_0135,products-list-f3b34b8b-46e8-4bd5-a9dd-af8f006dce9a.csv
+122,Hose and Fittings,Flexible Ducting,unique_0096,products-list-9dd46b2d-2a1d-406f-86bd-af8f006dceae.csv
+123,Hose and Fittings,"General Hose, Tubing & Accessories",unique_0131,products-list-e1e3f13f-117e-44f3-b4ec-af8f006dced0.csv
+124,Hose and Fittings,Hose Fittings,unique_0038,products-list-393dfff2-a151-4857-918e-af8f006dcef0.csv
+125,Hose and Fittings,"Nozzles, Spray Guns & Accessories",unique_0093,products-list-94245708-5edc-4cb8-9c31-af8f006dcf22.csv
+126,Hose and Fittings,Oil Field Hose,unique_0106,products-list-b202ad1b-6ba2-45c4-8ba8-af8f006dcf30.csv
+127,Hose and Fittings,"Pipe, Welding & Tube Fittings",unique_0061,products-list-5b05c705-35b1-4eb5-b523-af8f006dcf43.csv
+128,Hose and Fittings,Sanitary Fittings,unique_0143,products-list-fe8400dc-8455-4623-9ac4-af8f006dcf51.csv
+129,Lubrication,Automatic Lubrication Systems (Als),unique_0130,products-list-e11fee0a-21a5-4188-9085-af8f006dcd66.csv
+130,Lubrication,Automated Oil & Grease Injector Systems,unique_0072,products-list-6da51f21-96ef-4916-99b2-af8f006dcd56.csv
+131,Lubrication,Automatied Oil & Grease Progressive Systems,unique_0019,products-list-155ab05b-40c6-48fc-93b5-af8f006dcd74.csv
+132,Lubrication,Controllers,unique_0087,products-list-8a1b1f04-8772-4ea6-8aa1-af8f006dcd9a.csv
+133,Lubrication,Dual Line Systems,unique_0011,products-list-0e3647c4-ded3-4eef-8454-af8f006dcdc2.csv
+134,Lubrication,Chain Lubrication Systems,unique_0092,products-list-92a06a42-48c2-4e03-88fd-af8f006dcd89.csv
+135,Lubrication,Agitators,unique_0068,products-list-668dfdd0-d2fd-4eb9-964d-af8f006dcd47.csv
+136,Lubrication,Custom Designed Solutions,unique_0139,products-list-f8ca95a7-324c-4f2b-8a0b-af8f006dcdb3.csv
+137,Lubrication,"Hose, Cord, & Reels",unique_0003,products-list-03209783-5095-4900-9d21-af8f006dcdd3.csv
+138,Lubrication,Meters & Valves,unique_0091,products-list-9133450e-b9ea-45a1-93f0-af8f006dcde3.csv
+139,Lubrication,Oil Air Systems,unique_0040,products-list-3b62daa3-5905-408c-a282-af8f006dcdf3.csv
+140,Lubrication,Pumps,unique_0023,products-list-1ee77cca-deb5-42f3-b2b9-af8f006dce15.csv
+141,Lubrication,"Sprayers, Dispensers, And Guns",unique_0104,products-list-b071b493-45a1-4ac8-80b8-af8f006dce24.csv
+142,Lubrication,Unloaders And Evacuation Systems,unique_0112,products-list-b6a34f1a-9369-4a95-bf5d-af8f006dce36.csv
