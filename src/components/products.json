@@ -45,14 +45,14 @@
       "id": 7,
       "name": "BALLUFF",
       "brand": "BALLUFF",
-      "image": "../assets/brand/BALLUFF.svg",
+      "image": "../assets/brand/BALLUFF.webp",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 8,
       "name": "BEE VALVE",
       "brand": "BEE VALVE",
-      "image": "../assets/brand/BEE_VALVE.svg",
+      "image": "../assets/brand/BEE_VALVE.png",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
@@ -66,14 +66,14 @@
       "id": 10,
       "name": "BOSCH REXROTH",
       "brand": "BOSCH REXROTH",
-      "image": "../assets/brand/BOSCH_REXROTH.svg",
+      "image": "../assets/brand/BOSCH_REXROTH.gif",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 11,
       "name": "BRAND HYDRAULICS",
       "brand": "BRAND HYDRAULICS",
-      "image": "../assets/brand/BRAND_HYDRAULICS.svg",
+      "image": "../assets/brand/BRAND_HYDRAULICS.png",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
@@ -91,17 +91,10 @@
       "description": "Leading-edge automation solutions for various industries."
   },
   {
-      "id": 14,
-      "name": "DANFOSS",
-      "brand": "DANFOSS",
-      "image": "../assets/brand/DANFOSS.svg",
-      "description": "Leading-edge automation solutions for various industries."
-  },
-  {
       "id": 15,
       "name": "DIXON VALVE & COUPLING",
       "brand": "DIXON VALVE & COUPLING",
-      "image": "../assets/brand/DIXON_VALVE__COUPLING.svg",
+      "image": "../assets/brand/DIXON_VALVE_COUPLING.svg",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
@@ -109,13 +102,6 @@
       "name": "DONALDSON",
       "brand": "DONALDSON",
       "image": "../assets/brand/DONALDSON.svg",
-      "description": "Leading-edge automation solutions for various industries."
-  },
-  {
-      "id": 17,
-      "name": "FESTO",
-      "brand": "FESTO",
-      "image": "../assets/brand/FESTO.svg",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
@@ -129,49 +115,49 @@
       "id": 19,
       "name": "FILTER-MART",
       "brand": "FILTER-MART",
-      "image": "../assets/brand/FILTER-MART.svg",
+      "image": "../assets/brand/FILTER_MART.png",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 20,
       "name": "FLOW EZY FILTERS",
       "brand": "FLOW EZY FILTERS",
-      "image": "../assets/brand/FLOW_EZY_FILTERS.svg",
+      "image": "../assets/brand/FLOW_EZY_FILTERS.jpg",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 21,
       "name": "FLOWLINE",
       "brand": "FLOWLINE",
-      "image": "../assets/brand/FLOWLINE.svg",
+      "image": "../assets/brand/FLOWLINE.png",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 22,
       "name": "FLOWMATIC",
       "brand": "FLOWMATIC",
-      "image": "../assets/brand/FLOWMATIC.svg",
+      "image": "../assets/brand/FLOWMATIC.webp",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 23,
       "name": "FLUITEK",
       "brand": "FLUITEK",
-      "image": "../assets/brand/FLUITEK.svg",
+      "image": "../assets/brand/FLUITEK.png",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 24,
       "name": "HTM SENSORS",
       "brand": "HTM SENSORS",
-      "image": "../assets/brand/HTM_SENSORS.svg",
+      "image": "../assets/brand/HTM_SENSORS.webp",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
       "id": 25,
       "name": "HUMPHREY",
       "brand": "HUMPHREY",
-      "image": "../assets/brand/HUMPHREY.svg",
+      "image": "../assets/brand/HUMPHREY.webp",
       "description": "Leading-edge automation solutions for various industries."
   },
   {
