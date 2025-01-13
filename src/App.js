@@ -6,22 +6,22 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import Header from "./components/Header";
-import HeroSection from "./components/HeroSection";
-import AboutUsSection from "./components/AboutUsSection";
-import ProductsSection from "./components/ProductsSection";
+import Header from "./components/landing/Header";
+import HeroSection from "./components/landing/HeroSection";
+import AboutUsSection from "./components/landing/AboutUsSection";
+import ProductsSection from "./components/brands/ProductsSection";
 import TestimonialsSection from "./components/TestimonialsSection";
-import Contact from "./components/contact";
-import ContactUsSection from "./components/ContactUsSection";
-import BrandPage from "./components/BrandPage";
-import Footer from "./components/Footer";
-import ProductDetailPage from "./components/ProductDetailPage";
+import Contact from "./components/landing/contact";
+import ContactUsSection from "./components/landing/ContactUsSection";
+import BrandPage from "./components/brands/BrandPage";
+import Footer from "./components/landing/Footer";
+import ProductDetailPage from "./components/brands/ProductDetailPage";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AddProducts from "./components/AddProducts";
-import ProductsPage from "./components/ProductsPage";
-import SubcategoriesPage from "./components/SubcategoriesPage";
-import CategoryProductsPage from "./components/CategoryProductsPage";
+import ProductsPage from "./components/products/ProductsPage";
+import SubcategoriesPage from "./components/products/SubcategoriesPage";
+import CategoryProductsPage from "./components/products/CategoryProductsPage";
 import "./styles/App.css";
 
 const UserContext = createContext();
