@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Papa from "papaparse";
 import "./../styles/ProductsPage.css";
+
+// Import the JSON data directly
+import categoriesDataJson from "./subcategory.json"; // Adjust the path as needed
 
 const ProductsPage = () => {
   const [categoriesData, setCategoriesData] = useState([]);
@@ -9,54 +11,8 @@ const ProductsPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Parse the subcategories.csv to extract parent categories and subcategories
-    Papa.parse("/subcategories.csv", {
-      download: true,
-      header: true,
-      skipEmptyLines: true, // Skip empty lines in the CSV file
-      complete: (result) => {
-        console.log("Raw CSV Parse Result:", result);
-
-        // Check for parsing errors or missing data
-        if (!result.data) {
-          console.error("No data found in CSV.");
-          return;
-        }
-        if (result.errors.length > 0) {
-          console.error("Errors during CSV parsing:", result.errors);
-          return;
-        }
-
-        // Filter rows with missing ParentCategory or subcategoryName
-        const validData = result.data.filter(
-          (row) => row.ParentCategory && row.subcategoryName,
-        );
-
-        if (validData.length === 0) {
-          console.error("No valid rows found in the CSV.");
-          return;
-        }
-
-        // Generate unique categories with subcategories
-        const uniqueCategories = [
-          ...new Set(validData.map((row) => row.ParentCategory)),
-        ].map((name, index) => ({
-          id: index + 1,
-          name,
-          description: `Explore products in ${name}`,
-          image: `/images/${name.toLowerCase().replace(/ /g, "_")}.jpg`,
-          subcategories: validData
-            .filter((row) => row.ParentCategory === name)
-            .map((row) => row.subcategoryName || "Unnamed Subcategory"),
-        }));
-
-        console.log("Final Categories Data:", uniqueCategories);
-        setCategoriesData(uniqueCategories);
-      },
-      error: (error) => {
-        console.error("Error loading CSV:", error);
-      },
-    });
+    // Load the categories data from the JSON file
+    setCategoriesData(categoriesDataJson);
   }, []);
 
   const toggleCategory = (id) => {
@@ -83,8 +39,8 @@ const ProductsPage = () => {
               </button>
               {expandedCategory === category.id && (
                 <ul className="subcategory-list">
-                  {category.subcategories.map((subcategory, index) => (
-                    <li key={index}>{subcategory}</li>
+                  {category.subcategories.map((subcategory) => (
+                    <li key={subcategory.id}>{subcategory.subcategory_name}</li>
                   ))}
                 </ul>
               )}

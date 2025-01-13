@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Papa from "papaparse";
 import "./../styles/CategoryProductsPage.css";
 
 const CategoryProductsPage = () => {
-  const location = useLocation();
-  const [setProducts] = useState([]);
+  const { subcategoryId } = useParams(); // Get the unique_id from URL
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 20; // Limit to 20 products per page
@@ -13,43 +12,47 @@ const CategoryProductsPage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const uniqueId = location.state?.uniqueId;
-
-    if (!uniqueId) {
-      console.error("No unique ID specified.");
-      setError("No unique ID provided. Unable to filter products.");
+    if (!subcategoryId) {
+      console.error("No subcategory ID specified in the URL.");
+      setError("No subcategory ID provided. Unable to filter products.");
       setLoading(false);
       return;
     }
 
-    // Load the merged CSV file
-    Papa.parse("products.csv", {
+    setLoading(true); // Show loading animation during fetch
+
+    // Load the CSV file
+    Papa.parse("/products.csv", {
       download: true,
       header: true,
+      skipEmptyLines: true,
       complete: (result) => {
         const allProducts = result.data || [];
-        console.log("Parsed Products Data:", allProducts); // Debug parsed data
+        console.log("Parsed Products Data:", allProducts);
 
-        // Filter products by unique ID
+        // Filter products by the UniqueColumn
         const filtered = allProducts.filter(
-          (product) => product.uniqueId?.trim() === uniqueId?.trim(),
+          (product) =>
+            product.UniqueColumn?.trim().toLowerCase() ===
+            subcategoryId?.trim().toLowerCase(),
         );
 
         if (!filtered.length) {
+          console.warn("No products found for subcategory ID:", subcategoryId);
           setError("No products found for the selected subcategory.");
+        } else {
+          setFilteredProducts(filtered);
         }
 
-        setProducts(allProducts); // Optional: Keep all products in case you need global access
-        setFilteredProducts(filtered);
-        setLoading(false);
+        setLoading(false); // Hide loading animation
       },
-      error: (error) => {
-        console.error("Error loading merged CSV:", error);
+      error: (err) => {
+        console.error("Error loading products CSV:", err);
         setError("Failed to load products. Please try again later.");
-        setLoading(false);
+        setLoading(false); // Hide loading animation
       },
     });
-  }, [location.state]);
+  }, [subcategoryId]);
 
   // Pagination logic
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
@@ -67,7 +70,12 @@ const CategoryProductsPage = () => {
   };
 
   if (loading) {
-    return <h2>Loading products...</h2>;
+    return (
+      <div className="loading-container">
+        <div className="spinner"></div>
+        <h2>Loading products...</h2>
+      </div>
+    );
   }
 
   if (error) {
@@ -91,6 +99,7 @@ const CategoryProductsPage = () => {
             />
             <h3>{product.productTitle}</h3>
             <p>Part Number: {product.productNumber}</p>
+            <p>Brand: {product.brand}</p>
           </div>
         ))}
       </div>

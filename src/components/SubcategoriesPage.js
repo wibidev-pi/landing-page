@@ -1,23 +1,31 @@
-import React from "react";
-import { useParams, useLocation, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import categoriesData from "./subcategory.json"; // Import JSON data
 import "./../styles/SubcategoriesPage.css";
 
 const SubcategoriesPage = () => {
   const { categoryName } = useParams(); // Extract category name from the URL
-  const location = useLocation(); // Retrieve state data passed from ProductsPage
+  const [subcategories, setSubcategories] = useState([]); // Subcategories state
   const navigate = useNavigate();
 
-  // Retrieve subcategories from location state or fallback to an empty array
-  const { subcategories } = location.state || { subcategories: [] };
+  useEffect(() => {
+    // Find the category by name in the JSON data
+    const category = categoriesData.find(
+      (cat) => cat.name.toLowerCase() === categoryName.toLowerCase(),
+    );
 
-  console.log("Category Name:", categoryName);
-  console.log("Subcategories Data:", subcategories);
+    // Set subcategories if the category is found
+    if (category) {
+      setSubcategories(category.subcategories);
+    } else {
+      console.error(`Category "${categoryName}" not found.`);
+    }
+  }, [categoryName]);
 
-  // Handle subcategory click to navigate to the products page
   const handleSubcategoryClick = (subcategory) => {
     console.log("Navigating to subcategory:", subcategory);
-    navigate(`/products-page/${subcategory.subcategoryId}`, {
-      state: { subcategoryName: subcategory.subcategoryName },
+    navigate(`/products-page/${subcategory.unique_id}`, {
+      state: { subcategoryName: subcategory.subcategory_name },
     });
   };
 
@@ -28,24 +36,21 @@ const SubcategoriesPage = () => {
         {subcategories.length > 0 ? (
           subcategories.map((subcategory) => (
             <div
-              key={subcategory.subcategoryId}
+              key={subcategory.id}
               className="subcategory-tile"
               onClick={() => handleSubcategoryClick(subcategory)}
             >
-              {/* Dynamically construct the image source based on subcategory name */}
               <img
-                src={`/images/${subcategory.subcategoryName
-                  ?.toLowerCase()
-                  .replace(/ /g, "_")}.jpg`}
-                alt={`Image of ${subcategory.subcategoryName}`}
+                src={subcategory.image}
+                alt={`Image of ${subcategory.subcategory_name}`}
                 onError={(e) => {
                   console.error(
-                    `Image not found for ${subcategory.subcategoryName}, using fallback.`,
+                    `Image not found for ${subcategory.subcategory_name}, using fallback.`,
                   );
-                  e.target.src = "/images/default.jpg"; // Fallback image
+                  e.target.src = "../assets/img.png"; // Fallback image
                 }}
               />
-              <h3>{subcategory.subcategoryName}</h3>
+              <h3>{subcategory.subcategory_name}</h3>
             </div>
           ))
         ) : (
