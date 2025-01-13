@@ -1,0 +1,927 @@
+[
+    {
+        "id": 1,
+        "name": "Mobile Hydraulics",
+        "description": "Explore products in Mobile Hydraulics",
+        "image": "/images/mobile_hydraulics.jpg",
+        "subcategories": [
+            {
+                "id": "1.1",
+                "subcategory_name": "Pumps",
+                "description": "",
+                "image": "/images/Pumps.jpg",
+                "unique_id": "unique_0023"
+            },
+            {
+                "id": "1.2",
+                "subcategory_name": "Motors",
+                "description": "",
+                "image": "/images/Motors.jpg",
+                "unique_id": "unique_0036"
+            },
+            {
+                "id": "1.3",
+                "subcategory_name": "Valves",
+                "description": "",
+                "image": "/images/Valves.jpg",
+                "unique_id": "unique_0028"
+            },
+            {
+                "id": "1.6",
+                "subcategory_name": "Mobile Electronics",
+                "description": "",
+                "image": "/images/Mobile Electronics.jpg",
+                "unique_id": "unique_0095"
+            },
+            {
+                "id": "1.7",
+                "subcategory_name": "Accumulators",
+                "description": "",
+                "image": "/images/Accumulators.jpg",
+                "unique_id": "unique_0031"
+            },
+            {
+                "id": "1.8",
+                "subcategory_name": "Brakes & Clutches",
+                "description": "",
+                "image": "/images/Brakes & Clutches.jpg",
+                "unique_id": "unique_0054"
+            },
+            {
+                "id": "1.18",
+                "subcategory_name": "Reservoirs & Reservoir Accessories",
+                "description": "",
+                "image": "/images/Reservoirs & Reservoir Accessories.jpg",
+                "unique_id": "unique_0097"
+            },
+            {
+                "id": "1.20",
+                "subcategory_name": "Steering",
+                "description": "",
+                "image": "/images/Steering.jpg",
+                "unique_id": "unique_0127"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Industrial Hydraulics",
+        "description": "Explore products in Industrial Hydraulics",
+        "image": "/images/industrial_hydraulics.jpg",
+        "subcategories": [
+            {
+                "id": "2.1",
+                "subcategory_name": "Pumps",
+                "description": "",
+                "image": "/images/Pumps.jpg",
+                "unique_id": "unique_0023"
+            },
+            {
+                "id": "2.2",
+                "subcategory_name": "Motors",
+                "description": "",
+                "image": "/images/Motors.jpg",
+                "unique_id": "unique_0036"
+            },
+            {
+                "id": "2.3",
+                "subcategory_name": "Valves",
+                "description": "",
+                "image": "/images/Valves.jpg",
+                "unique_id": "unique_0028"
+            },
+            {
+                "id": "2.4",
+                "subcategory_name": "Actuators, Cylinders & Cylinder Accessories",
+                "description": "",
+                "image": "/images/Actuators_Cylinders_and_Cylinder_Accessories.jpg",
+                "unique_id": "unique_0025"
+            },
+            {
+                "id": "2.6",
+                "subcategory_name": "Power Units",
+                "description": "",
+                "image": "/images/Power_Units.jpg",
+                "unique_id": "unique_0037"
+            },
+            {
+                "id": "2.7",
+                "subcategory_name": "Accumulators",
+                "description": "",
+                "image": "/images/Accumulators.jpg",
+                "unique_id": "unique_0031"
+            },
+            {
+                "id": "2.8",
+                "subcategory_name": "Brakes And Clutches",
+                "description": "",
+                "image": "/images/Brakes_And_Clutches.jpg",
+                "unique_id": "unique_0089"
+            },
+            {
+                "id": "2.10",
+                "subcategory_name": "Clamps",
+                "description": "",
+                "image": "/images/Clamps.jpg",
+                "unique_id": "unique_0107"
+            },
+            {
+                "id": "2.11",
+                "subcategory_name": "Clamps, Clips, Screws & Pins",
+                "description": "",
+                "image": "/images/Clamps_Clips_Screws_and_Pins.jpg",
+                "unique_id": "unique_0138"
+            },
+            {
+                "id": "2.14",
+                "subcategory_name": "Gauges, Pressure Sensors, Level Sensors & Temperature Sensors",
+                "description": "",
+                "image": "/images/Gauges_Pressure_Sensors_Level_Sensors_and_Temperature_Sensors.jpg",
+                "unique_id": "unique_0065"
+            },
+            {
+                "id": "2.16",
+                "subcategory_name": "Industrial Cylinders",
+                "description": "",
+                "image": "/images/Industrial_Cylinders.jpg",
+                "unique_id": "unique_0014"
+            },
+            {
+                "id": "2.17",
+                "subcategory_name": "Industrial Filtration",
+                "description": "",
+                "image": "/images/Industrial_Filtration.jpg",
+                "unique_id": "unique_0142"
+            },
+            {
+                "id": "2.18",
+                "subcategory_name": "Industrial Hydraulic Accessories",
+                "description": "",
+                "image": "/images/Industrial_Hydraulic_Accessories.jpg",
+                "unique_id": "unique_0043"
+            },
+            {
+                "id": "2.19",
+                "subcategory_name": "Quick Disconnect",
+                "description": "",
+                "image": "/images/Quick_Disconnect.jpg",
+                "unique_id": "unique_0083"
+            },
+            {
+                "id": "2.20",
+                "subcategory_name": "Reservoirs & Reservoir Accessories",
+                "description": "",
+                "image": "/images/Reservoirs_and_Reservoir_Accessories.jpg",
+                "unique_id": "unique_0097"
+            },
+            {
+                "id": "2.21",
+                "subcategory_name": "Seal Kits, Sealants & Gaskets",
+                "description": "",
+                "image": "/images/Seal_Kits_Sealants_and_Gaskets.jpg",
+                "unique_id": "unique_0052"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Pneumatics",
+        "description": "Explore products in Pneumatics",
+        "image": "/images/pneumatics.jpg",
+        "subcategories": [
+            {
+                "id": "3.1",
+                "subcategory_name": "Valves",
+                "description": "",
+                "image": "/images/Valves.jpg",
+                "unique_id": "unique_0028"
+            },
+            {
+                "id": "3.2",
+                "subcategory_name": "Valve Manifolds",
+                "description": "",
+                "image": "/images/Valve_Manifolds.jpg",
+                "unique_id": "unique_0035"
+            },
+            {
+                "id": "3.3",
+                "subcategory_name": "Actuators, Cylinders & Grippers",
+                "description": "",
+                "image": "/images/Actuators_Cylinders_and_Grippers.jpg",
+                "unique_id": "unique_0082"
+            },
+            {
+                "id": "3.4",
+                "subcategory_name": "Air Prep",
+                "description": "",
+                "image": "/images/Air_Prep.jpg",
+                "unique_id": "unique_0110"
+            },
+            {
+                "id": "3.5",
+                "subcategory_name": "Vacuum & Vacuum Components",
+                "description": "",
+                "image": "/images/Vacuum_and_Vacuum_Components.jpg",
+                "unique_id": "unique_0013"
+            },
+            {
+                "id": "3.6",
+                "subcategory_name": "Fittings",
+                "description": "",
+                "image": "/images/Fittings.jpg",
+                "unique_id": "unique_0109"
+            },
+            {
+                "id": "3.7",
+                "subcategory_name": "Boosters",
+                "description": "",
+                "image": "/images/Boosters.jpg",
+                "unique_id": "unique_0136"
+            },
+            {
+                "id": "3.8",
+                "subcategory_name": "Flow Control",
+                "description": "",
+                "image": "/images/Flow_Control.jpg",
+                "unique_id": "unique_0017"
+            },
+            {
+                "id": "3.9",
+                "subcategory_name": "Pneumatic Accessories",
+                "description": "",
+                "image": "/images/Pneumatic_Accessories.jpg",
+                "unique_id": "unique_0062"
+            },
+            {
+                "id": "3.10",
+                "subcategory_name": "Pressure Switches",
+                "description": "",
+                "image": "/images/Pressure_Switches.jpg",
+                "unique_id": "unique_0042"
+            },
+            {
+                "id": "3.11",
+                "subcategory_name": "Pumps",
+                "description": "",
+                "image": "/images/Pumps.jpg",
+                "unique_id": "unique_0023"
+            },
+            {
+                "id": "3.12",
+                "subcategory_name": "Service Kits",
+                "description": "",
+                "image": "/images/Service_Kits.jpg",
+                "unique_id": "unique_0122"
+            },
+            {
+                "id": "3.13",
+                "subcategory_name": "Suspension & Air Springs",
+                "description": "",
+                "image": "/images/Suspension_and_Air_Springs.jpg",
+                "unique_id": "unique_0039"
+            },
+            {
+                "id": "3.14",
+                "subcategory_name": "Transducers",
+                "description": "",
+                "image": "/images/Transducers.jpg",
+                "unique_id": "unique_0066"
+            },
+            {
+                "id": "3.15",
+                "subcategory_name": "Tubing",
+                "description": "",
+                "image": "/images/Tubing.jpg",
+                "unique_id": "unique_0073"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Fluid Process",
+        "description": "Explore products in Fluid Process",
+        "image": "/images/fluid_process.jpg",
+        "subcategories": [
+            {
+                "id": "4.1",
+                "subcategory_name": "Process Pumps, Diaphragm Pumps & Pumping Systems",
+                "description": "",
+                "image": "/images/Process_Pumps_Diaphragm_Pumps_and_Pumping_Systems.jpg",
+                "unique_id": "unique_0058"
+            },
+            {
+                "id": "4.2",
+                "subcategory_name": "Pipes, Pipe Fittings & Corrosion Resistant Piping Systems",
+                "description": "",
+                "image": "/images/Pipes_Pipe_Fittings_and_Corrosion_Resistant_Piping_Systems.jpg",
+                "unique_id": "unique_0046"
+            },
+            {
+                "id": "4.3",
+                "subcategory_name": "Mixers",
+                "description": "",
+                "image": "/images/Mixers.jpg",
+                "unique_id": "unique_0041"
+            },
+            {
+                "id": "4.4",
+                "subcategory_name": "Measurement Instrumentation & Control",
+                "description": "",
+                "image": "/images/Measurement_Instrumentation_and_Control.jpg",
+                "unique_id": "unique_0064"
+            },
+            {
+                "id": "4.5",
+                "subcategory_name": "Fluid Process Filtration",
+                "description": "",
+                "image": "/images/Fluid_Process_Filtration.jpg",
+                "unique_id": "unique_0056"
+            },
+            {
+                "id": "4.6",
+                "subcategory_name": "Tubing, Hose & Tube Fittings",
+                "description": "",
+                "image": "/images/Tubing_Hose_and_Tube_Fittings.jpg",
+                "unique_id": "unique_0076"
+            },
+            {
+                "id": "4.7",
+                "subcategory_name": "Drain, Waste & Vent Systems",
+                "description": "",
+                "image": "/images/Drain_Waste_and_Vent_Systems.jpg",
+                "unique_id": "unique_0094"
+            },
+            {
+                "id": "4.8",
+                "subcategory_name": "Flow Control & Valves",
+                "description": "",
+                "image": "/images/Flow_Control_and_Valves.jpg",
+                "unique_id": "unique_0034"
+            },
+            {
+                "id": "4.9",
+                "subcategory_name": "Fluid Process Accessories",
+                "description": "",
+                "image": "/images/Fluid_Process_Accessories.jpg",
+                "unique_id": "unique_0079"
+            },
+            {
+                "id": "4.10",
+                "subcategory_name": "Heaters",
+                "description": "",
+                "image": "/images/Heaters.jpg",
+                "unique_id": "unique_0111"
+            },
+            {
+                "id": "4.11",
+                "subcategory_name": "Seals",
+                "description": "",
+                "image": "/images/Seals.jpg",
+                "unique_id": "unique_0015"
+            },
+            {
+                "id": "4.12",
+                "subcategory_name": "Storage Containment Tanks",
+                "description": "",
+                "image": "/images/Storage_Containment_Tanks.jpg",
+                "unique_id": "unique_0128"
+            },
+            {
+                "id": "4.13",
+                "subcategory_name": "Structural Shapes",
+                "description": "",
+                "image": "/images/Structural_Shapes.jpg",
+                "unique_id": "unique_0018"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Automation And Motion Control",
+        "description": "Explore products in Automation And Motion Control",
+        "image": "/images/automation_and_motion_control.jpg",
+        "subcategories": [
+            {
+                "id": "5.1",
+                "subcategory_name": "Variable Frequency & Servo Drives (Ac And Dc)",
+                "description": "",
+                "image": "/images/Variable_Frequency_and_Servo_Drives_Ac_And_Dc.jpg",
+                "unique_id": "unique_0119"
+            },
+            {
+                "id": "5.2",
+                "subcategory_name": "Motors (Ac, Dc, Servo, Stepper)",
+                "description": "",
+                "image": "/images/Motors_Ac_Dc_Servo_Stepper.jpg",
+                "unique_id": "unique_0057"
+            },
+            {
+                "id": "5.3",
+                "subcategory_name": "Electric Actuators",
+                "description": "",
+                "image": "/images/Electric_Actuators.jpg",
+                "unique_id": "unique_0084"
+            },
+            {
+                "id": "5.4",
+                "subcategory_name": "Sensors & Cables",
+                "description": "",
+                "image": "/images/Sensors_and_Cables.jpg",
+                "unique_id": "unique_0098"
+            },
+            {
+                "id": "5.5",
+                "subcategory_name": "Gear Boxes & Gear Motors",
+                "description": "",
+                "image": "/images/Gear_Boxes_and_Gear_Motors.jpg",
+                "unique_id": "unique_0088"
+            },
+            {
+                "id": "5.6",
+                "subcategory_name": "Industrial Framing",
+                "description": "",
+                "image": "/images/Industrial_Framing.jpg",
+                "unique_id": "unique_0029"
+            },
+            {
+                "id": "5.7",
+                "subcategory_name": "Connection Technologies",
+                "description": "",
+                "image": "/images/Connection_Technologies.jpg",
+                "unique_id": "unique_0077"
+            },
+            {
+                "id": "5.8",
+                "subcategory_name": "Hmi & Panel Pc'S",
+                "description": "",
+                "image": "/images/Hmi_and_Panel_PcS.jpg",
+                "unique_id": "unique_0121"
+            },
+            {
+                "id": "5.9",
+                "subcategory_name": "Industrial Computers",
+                "description": "",
+                "image": "/images/Industrial_Computers.jpg",
+                "unique_id": "unique_0027"
+            },
+            {
+                "id": "5.10",
+                "subcategory_name": "Industrial Control Panels",
+                "description": "",
+                "image": "/images/Industrial_Control_Panels.jpg",
+                "unique_id": "unique_0044"
+            },
+            {
+                "id": "5.11",
+                "subcategory_name": "Linear Technologies (Transducers)",
+                "description": "",
+                "image": "/images/Linear_Technologies_Transducers.jpg",
+                "unique_id": "unique_0069"
+            },
+            {
+                "id": "5.12",
+                "subcategory_name": "Motor Controls, Relays, Contactors & Pilot Devices",
+                "description": "",
+                "image": "/images/Motor_Controls_Relays_Contactors_and_Pilot_Devices.jpg",
+                "unique_id": "unique_0099"
+            },
+            {
+                "id": "5.13",
+                "subcategory_name": "Plc, Remote I/O, Fieldbus Modules & Ethernet",
+                "description": "",
+                "image": "/images/Plc_Remote_I/O_Fieldbus_Modules_and_Ethernet.jpg",
+                "unique_id": "unique_0100"
+            },
+            {
+                "id": "5.14",
+                "subcategory_name": "Robots & End Of Arm Tooling",
+                "description": "",
+                "image": "/images/Robots_and_End_Of_Arm_Tooling.jpg",
+                "unique_id": "unique_0108"
+            },
+            {
+                "id": "5.15",
+                "subcategory_name": "Safety Devices & Sensors",
+                "description": "",
+                "image": "/images/Safety_Devices_and_Sensors.jpg",
+                "unique_id": "unique_0005"
+            },
+            {
+                "id": "5.16",
+                "subcategory_name": "Transformers & Power Supply",
+                "description": "",
+                "image": "/images/Transformers_and_Power_Supply.jpg",
+                "unique_id": "unique_0051"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Filtration",
+        "description": "Explore products in Filtration",
+        "image": "/images/filtration.jpg",
+        "subcategories": [
+            {
+                "id": "6.1",
+                "subcategory_name": "Bag Filters",
+                "description": "",
+                "image": "/images/Bag_Filters.jpg",
+                "unique_id": "unique_0144"
+            },
+            {
+                "id": "6.2",
+                "subcategory_name": "Cartridge & Spin-On Filters",
+                "description": "",
+                "image": "/images/Cartridge_and_Spin-On_Filters.jpg",
+                "unique_id": "unique_0045"
+            },
+            {
+                "id": "6.3",
+                "subcategory_name": "Air & Gas Filters",
+                "description": "",
+                "image": "/images/Air_and_Gas_Filters.jpg",
+                "unique_id": "unique_0055"
+            },
+            {
+                "id": "6.4",
+                "subcategory_name": "Hydraulic, Lube, And Fuel Filters",
+                "description": "",
+                "image": "/images/Hydraulic_Lube_And_Fuel_Filters.jpg",
+                "unique_id": "unique_0030"
+            },
+            {
+                "id": "6.5",
+                "subcategory_name": "Dryers & Moisture Removal Solutions",
+                "description": "",
+                "image": "/images/Dryers_and_Moisture_Removal_Solutions.jpg",
+                "unique_id": "unique_0067"
+            },
+            {
+                "id": "6.6",
+                "subcategory_name": "Filter Carts & Off-Line Filtration",
+                "description": "",
+                "image": "/images/Filter_Carts_and_Off-Line_Filtration.jpg",
+                "unique_id": "unique_0085"
+            },
+            {
+                "id": "6.7",
+                "subcategory_name": "Breathers",
+                "description": "",
+                "image": "/images/Breathers.jpg",
+                "unique_id": "unique_0071"
+            },
+            {
+                "id": "6.8",
+                "subcategory_name": "Condition Monitoring Equipment & Sampling",
+                "description": "",
+                "image": "/images/Condition_Monitoring_Equipment_and_Sampling.jpg",
+                "unique_id": "unique_0060"
+            },
+            {
+                "id": "6.9",
+                "subcategory_name": "Dust Collectors",
+                "description": "",
+                "image": "/images/Dust_Collectors.jpg",
+                "unique_id": "unique_0116"
+            },
+            {
+                "id": "6.10",
+                "subcategory_name": "Engine Accessories",
+                "description": "",
+                "image": "/images/Engine_Accessories.jpg",
+                "unique_id": "unique_0120"
+            },
+            {
+                "id": "6.11",
+                "subcategory_name": "Filtration Accessories",
+                "description": "",
+                "image": "/images/Filtration_Accessories.jpg",
+                "unique_id": "unique_0141"
+            },
+            {
+                "id": "6.12",
+                "subcategory_name": "Gauges & Pressure Sensors",
+                "description": "",
+                "image": "/images/Gauges_and_Pressure_Sensors.jpg",
+                "unique_id": "unique_0081"
+            },
+            {
+                "id": "6.13",
+                "subcategory_name": "High Pressure Filter",
+                "description": "",
+                "image": "/images/High_Pressure_Filter.jpg",
+                "unique_id": "unique_0032"
+            },
+            {
+                "id": "6.14",
+                "subcategory_name": "Housings (Bag And Cartridge)",
+                "description": "",
+                "image": "/images/Housings_Bag_And_Cartridge.jpg",
+                "unique_id": "unique_0101"
+            },
+            {
+                "id": "6.15",
+                "subcategory_name": "Hvac & Panel Filters",
+                "description": "",
+                "image": "/images/Hvac_and_Panel_Filters.jpg",
+                "unique_id": "unique_0006"
+            },
+            {
+                "id": "6.16",
+                "subcategory_name": "Instrument Air, Pneumatic Filters, Flr",
+                "description": "",
+                "image": "/images/Instrument_Air_Pneumatic_Filters_Flr.jpg",
+                "unique_id": "unique_0053"
+            },
+            {
+                "id": "6.17",
+                "subcategory_name": "Mist Collectors",
+                "description": "",
+                "image": "/images/Mist_Collectors.jpg",
+                "unique_id": "unique_0105"
+            },
+            {
+                "id": "6.18",
+                "subcategory_name": "Paint Booth & Roll Media Filters",
+                "description": "",
+                "image": "/images/Paint_Booth_and_Roll_Media_Filters.jpg",
+                "unique_id": "unique_0020"
+            },
+            {
+                "id": "6.19",
+                "subcategory_name": "Process And Coolant Filters",
+                "description": "",
+                "image": "/images/Process_And_Coolant_Filters.jpg",
+                "unique_id": "unique_0021"
+            },
+            {
+                "id": "6.20",
+                "subcategory_name": "Self-Cleaning Filters & Centrifugal Solutions",
+                "description": "",
+                "image": "/images/Self-Cleaning_Filters_and_Centrifugal_Solutions.jpg",
+                "unique_id": "unique_0048"
+            },
+            {
+                "id": "6.21",
+                "subcategory_name": "Smoke Collectors",
+                "description": "",
+                "image": "/images/Smoke_Collectors.jpg",
+                "unique_id": "unique_0114"
+            },
+            {
+                "id": "6.22",
+                "subcategory_name": "Strainers",
+                "description": "",
+                "image": "/images/Strainers.jpg",
+                "unique_id": "unique_0103"
+            },
+            {
+                "id": "6.23",
+                "subcategory_name": "Tramp Oil Separators",
+                "description": "",
+                "image": "/images/Tramp_Oil_Separators.jpg",
+                "unique_id": "unique_0075"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Hose and Fittings",
+        "description": "Explore products in Hose and Fittings",
+        "image": "/images/hose_and_fittings.jpg",
+        "subcategories": [
+            {
+                "id": "7.1",
+                "subcategory_name": "Hydraulic Hose, Fittings & Adapters",
+                "description": "",
+                "image": "/images/Hydraulic_Hose_Fittings_and_Adapters.jpg",
+                "unique_id": "unique_0074"
+            },
+            {
+                "id": "7.2",
+                "subcategory_name": "Industrial Hose & Fittings",
+                "description": "",
+                "image": "/images/Industrial_Hose_and_Fittings.jpg",
+                "unique_id": "unique_0090"
+            },
+            {
+                "id": "7.3",
+                "subcategory_name": "Welded Metal Hose",
+                "description": "",
+                "image": "/images/Welded_Metal_Hose.jpg",
+                "unique_id": "unique_0113"
+            },
+            {
+                "id": "7.4",
+                "subcategory_name": "Gaskets",
+                "description": "",
+                "image": "/images/Gaskets.jpg",
+                "unique_id": "unique_0004"
+            },
+            {
+                "id": "7.5",
+                "subcategory_name": "Couplings & Cam And Groove",
+                "description": "",
+                "image": "/images/Couplings_and_Cam_And_Groove.jpg",
+                "unique_id": "unique_0102"
+            },
+            {
+                "id": "7.6",
+                "subcategory_name": "Hose Accessories & Tools",
+                "description": "",
+                "image": "/images/Hose_Accessories_and_Tools.jpg",
+                "unique_id": "unique_0086"
+            },
+            {
+                "id": "7.7",
+                "subcategory_name": "Chemical Hose",
+                "description": "",
+                "image": "/images/Chemical_Hose.jpg",
+                "unique_id": "unique_0133"
+            },
+            {
+                "id": "7.8",
+                "subcategory_name": "Crimpnology Nipples, Flanges And Unions",
+                "description": "",
+                "image": "/images/Crimpnology_Nipples_Flanges_And_Unions.jpg",
+                "unique_id": "unique_0012"
+            },
+            {
+                "id": "7.9",
+                "subcategory_name": "Expansion Joints",
+                "description": "",
+                "image": "/images/Expansion_Joints.jpg",
+                "unique_id": "unique_0022"
+            },
+            {
+                "id": "7.10",
+                "subcategory_name": "Fasteners",
+                "description": "",
+                "image": "/images/Fasteners.jpg",
+                "unique_id": "unique_0124"
+            },
+            {
+                "id": "7.11",
+                "subcategory_name": "Fire Hose",
+                "description": "",
+                "image": "/images/Fire_Hose.jpg",
+                "unique_id": "unique_0135"
+            },
+            {
+                "id": "7.12",
+                "subcategory_name": "Flexible Ducting",
+                "description": "",
+                "image": "/images/Flexible_Ducting.jpg",
+                "unique_id": "unique_0096"
+            },
+            {
+                "id": "7.13",
+                "subcategory_name": "General Hose, Tubing & Accessories",
+                "description": "",
+                "image": "/images/General_Hose_Tubing_and_Accessories.jpg",
+                "unique_id": "unique_0131"
+            },
+            {
+                "id": "7.14",
+                "subcategory_name": "Hose Fittings",
+                "description": "",
+                "image": "/images/Hose_Fittings.jpg",
+                "unique_id": "unique_0038"
+            },
+            {
+                "id": "7.15",
+                "subcategory_name": "Nozzles, Spray Guns & Accessories",
+                "description": "",
+                "image": "/images/Nozzles_Spray_Guns_and_Accessories.jpg",
+                "unique_id": "unique_0093"
+            },
+            {
+                "id": "7.16",
+                "subcategory_name": "Oil Field Hose",
+                "description": "",
+                "image": "/images/Oil_Field_Hose.jpg",
+                "unique_id": "unique_0106"
+            },
+            {
+                "id": "7.17",
+                "subcategory_name": "Pipe, Welding & Tube Fittings",
+                "description": "",
+                "image": "/images/Pipe_Welding_and_Tube_Fittings.jpg",
+                "unique_id": "unique_0061"
+            },
+            {
+                "id": "7.18",
+                "subcategory_name": "Sanitary Fittings",
+                "description": "",
+                "image": "/images/Sanitary_Fittings.jpg",
+                "unique_id": "unique_0143"
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Lubrication",
+        "description": "Explore products in Lubrication",
+        "image": "/images/lubrication.jpg",
+        "subcategories": [
+            {
+                "id": "8.1",
+                "subcategory_name": "Automatic Lubrication Systems (Als)",
+                "description": "",
+                "image": "/images/Automatic_Lubrication_Systems_Als.jpg",
+                "unique_id": "unique_0130"
+            },
+            {
+                "id": "8.2",
+                "subcategory_name": "Automated Oil & Grease Injector Systems",
+                "description": "",
+                "image": "/images/Automated_Oil_and_Grease_Injector_Systems.jpg",
+                "unique_id": "unique_0072"
+            },
+            {
+                "id": "8.3",
+                "subcategory_name": "Automatied Oil & Grease Progressive Systems",
+                "description": "",
+                "image": "/images/Automatied_Oil_and_Grease_Progressive_Systems.jpg",
+                "unique_id": "unique_0019"
+            },
+            {
+                "id": "8.4",
+                "subcategory_name": "Controllers",
+                "description": "",
+                "image": "/images/Controllers.jpg",
+                "unique_id": "unique_0087"
+            },
+            {
+                "id": "8.5",
+                "subcategory_name": "Dual Line Systems",
+                "description": "",
+                "image": "/images/Dual_Line_Systems.jpg",
+                "unique_id": "unique_0011"
+            },
+            {
+                "id": "8.6",
+                "subcategory_name": "Chain Lubrication Systems",
+                "description": "",
+                "image": "/images/Chain_Lubrication_Systems.jpg",
+                "unique_id": "unique_0092"
+            },
+            {
+                "id": "8.7",
+                "subcategory_name": "Agitators",
+                "description": "",
+                "image": "/images/Agitators.jpg",
+                "unique_id": "unique_0068"
+            },
+            {
+                "id": "8.8",
+                "subcategory_name": "Custom Designed Solutions",
+                "description": "",
+                "image": "/images/Custom_Designed_Solutions.jpg",
+                "unique_id": "unique_0139"
+            },
+            {
+                "id": "8.9",
+                "subcategory_name": "Hose, Cord, & Reels",
+                "description": "",
+                "image": "/images/Hose_Cord_and_Reels.jpg",
+                "unique_id": "unique_0003"
+            },
+            {
+                "id": "8.10",
+                "subcategory_name": "Meters & Valves",
+                "description": "",
+                "image": "/images/Meters_and_Valves.jpg",
+                "unique_id": "unique_0091"
+            },
+            {
+                "id": "8.11",
+                "subcategory_name": "Oil Air Systems",
+                "description": "",
+                "image": "/images/Oil_Air_Systems.jpg",
+                "unique_id": "unique_0040"
+            },
+            {
+                "id": "8.12",
+                "subcategory_name": "Pumps",
+                "description": "",
+                "image": "/images/Pumps.jpg",
+                "unique_id": "unique_0023"
+            },
+            {
+                "id": "8.13",
+                "subcategory_name": "Sprayers, Dispensers, And Guns",
+                "description": "",
+                "image": "/images/Sprayers_Dispensers_And_Guns.jpg",
+                "unique_id": "unique_0104"
+            },
+            {
+                "id": "8.14",
+                "subcategory_name": "Unloaders And Evacuation Systems",
+                "description": "",
+                "image": "/images/Unloaders_And_Evacuation_Systems.jpg",
+                "unique_id": "unique_0112"
+            }
+        ]
+    }
+]

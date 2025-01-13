@@ -1,0 +1,429 @@
+[
+  {
+      "id": 1,
+      "name": "FESTO",
+      "brand": "FESTO",
+      "image": "../assets/brand/festo.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 2,
+      "name": "OMRAN",
+      "brand": "OMRAN",
+      "image": "../assets/brand/omran.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 3,
+      "name": "AIGNEP",
+      "brand": "AIGNEP",
+      "image": "../assets/brand/aignep.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 4,
+      "name": "DANFOSS",
+      "brand": "DANFOSS",
+      "image": "../assets/brand/danfoss.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 5,
+      "name": "ACE CONTROLS",
+      "brand": "ACE CONTROLS",
+      "image": "../assets/brand/ACE_CONTROLS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 6,
+      "name": "ARROW PNEUMATICS",
+      "brand": "ARROW PNEUMATICS",
+      "image": "../assets/brand/ARROW_PNEUMATICS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 7,
+      "name": "BALLUFF",
+      "brand": "BALLUFF",
+      "image": "../assets/brand/BALLUFF.webp",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 8,
+      "name": "BEE VALVE",
+      "brand": "BEE VALVE",
+      "image": "../assets/brand/BEE_VALVE.png",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 9,
+      "name": "BONFIGLIOLI",
+      "brand": "BONFIGLIOLI",
+      "image": "../assets/brand/BONFIGLIOLI.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 10,
+      "name": "BOSCH REXROTH",
+      "brand": "BOSCH REXROTH",
+      "image": "../assets/brand/BOSCH_REXROTH.gif",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 11,
+      "name": "BRAND HYDRAULICS",
+      "brand": "BRAND HYDRAULICS",
+      "image": "../assets/brand/BRAND_HYDRAULICS.png",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 12,
+      "name": "BUCHER",
+      "brand": "BUCHER",
+      "image": "../assets/brand/BUCHER.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 13,
+      "name": "CROUZET",
+      "brand": "CROUZET",
+      "image": "../assets/brand/CROUZET.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 15,
+      "name": "DIXON VALVE & COUPLING",
+      "brand": "DIXON VALVE & COUPLING",
+      "image": "../assets/brand/DIXON_VALVE_COUPLING.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 16,
+      "name": "DONALDSON",
+      "brand": "DONALDSON",
+      "image": "../assets/brand/DONALDSON.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 18,
+      "name": "FILTER TECHNOLOGY",
+      "brand": "FILTER TECHNOLOGY",
+      "image": "../assets/brand/FILTER_TECHNOLOGY.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 19,
+      "name": "FILTER-MART",
+      "brand": "FILTER-MART",
+      "image": "../assets/brand/FILTER_MART.png",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 20,
+      "name": "FLOW EZY FILTERS",
+      "brand": "FLOW EZY FILTERS",
+      "image": "../assets/brand/FLOW_EZY_FILTERS.jpg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 21,
+      "name": "FLOWLINE",
+      "brand": "FLOWLINE",
+      "image": "../assets/brand/FLOWLINE.png",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 22,
+      "name": "FLOWMATIC",
+      "brand": "FLOWMATIC",
+      "image": "../assets/brand/FLOWMATIC.webp",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 23,
+      "name": "FLUITEK",
+      "brand": "FLUITEK",
+      "image": "../assets/brand/FLUITEK.png",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 24,
+      "name": "HTM SENSORS",
+      "brand": "HTM SENSORS",
+      "image": "../assets/brand/HTM_SENSORS.webp",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 25,
+      "name": "HUMPHREY",
+      "brand": "HUMPHREY",
+      "image": "../assets/brand/HUMPHREY.webp",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 26,
+      "name": "HUSCO",
+      "brand": "HUSCO",
+      "image": "../assets/brand/HUSCO.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 27,
+      "name": "HYDAC",
+      "brand": "HYDAC",
+      "image": "../assets/brand/HYDAC.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 28,
+      "name": "HYDRAFORCE",
+      "brand": "HYDRAFORCE",
+      "image": "../assets/brand/HYDRAFORCE.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 29,
+      "name": "IFM EFECTOR",
+      "brand": "IFM EFECTOR",
+      "image": "../assets/brand/IFM_EFECTOR.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 30,
+      "name": "IMI NORGREN",
+      "brand": "IMI NORGREN",
+      "image": "../assets/brand/IMI_NORGREN.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 31,
+      "name": "INTERTECH",
+      "brand": "INTERTECH",
+      "image": "../assets/brand/INTERTECH.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 32,
+      "name": "Ingersoll-Rand (ARO Division)",
+      "brand": "Ingersoll-Rand (ARO Division)",
+      "image": "../assets/brand/Ingersoll-Rand_ARO_Division.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 33,
+      "name": "JACO MANUFACTURING",
+      "brand": "JACO MANUFACTURING",
+      "image": "../assets/brand/JACO_MANUFACTURING.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 34,
+      "name": "KELLER PRODUCTS",
+      "brand": "KELLER PRODUCTS",
+      "image": "../assets/brand/KELLER_PRODUCTS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 35,
+      "name": "LEGRIS",
+      "brand": "LEGRIS",
+      "image": "../assets/brand/LEGRIS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 36,
+      "name": "LENZ FILTERS",
+      "brand": "LENZ FILTERS",
+      "image": "../assets/brand/LENZ_FILTERS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 37,
+      "name": "MAGNATROL VALVE",
+      "brand": "MAGNATROL VALVE",
+      "image": "../assets/brand/MAGNATROL_VALVE.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 38,
+      "name": "MP FILTRATION",
+      "brand": "MP FILTRATION",
+      "image": "../assets/brand/MP_FILTRATION.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 39,
+      "name": "NORMA PENNSYLVANIA",
+      "brand": "NORMA PENNSYLVANIA",
+      "image": "../assets/brand/NORMA_PENNSYLVANIA.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 40,
+      "name": "NORMAN FILTERS",
+      "brand": "NORMAN FILTERS",
+      "image": "../assets/brand/NORMAN_FILTERS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 41,
+      "name": "PARAMOUNT CAN",
+      "brand": "PARAMOUNT CAN",
+      "image": "../assets/brand/PARAMOUNT_CAN.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 42,
+      "name": "PARKER / NYCOIL",
+      "brand": "PARKER / NYCOIL",
+      "image": "../assets/brand/PARKER__NYCOIL.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 43,
+      "name": "PARKER ARLON",
+      "brand": "PARKER ARLON",
+      "image": "../assets/brand/PARKER_ARLON.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 44,
+      "name": "PARKER GREER",
+      "brand": "PARKER GREER",
+      "image": "../assets/brand/PARKER_GREER.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 45,
+      "name": "PARKER HANNIFIN",
+      "brand": "PARKER HANNIFIN",
+      "image": "../assets/brand/PARKER_HANNIFIN.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 46,
+      "name": "PARKER HYDRAULICS",
+      "brand": "PARKER HYDRAULICS",
+      "image": "../assets/brand/PARKER_HYDRAULICS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 47,
+      "name": "PARKER SKINNER",
+      "brand": "PARKER SKINNER",
+      "image": "../assets/brand/PARKER_SKINNER.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 48,
+      "name": "PARKER SNAP-TITE",
+      "brand": "PARKER SNAP-TITE",
+      "image": "../assets/brand/PARKER_SNAP-TITE.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 49,
+      "name": "PARKER WILKERSON",
+      "brand": "PARKER WILKERSON",
+      "image": "../assets/brand/PARKER_WILKERSON.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 50,
+      "name": "PENTAIR FILTRATION SOLUTIONS",
+      "brand": "PENTAIR FILTRATION SOLUTIONS",
+      "image": "../assets/brand/PENTAIR_FILTRATION_SOLUTIONS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 51,
+      "name": "RIEKE CORPORATION",
+      "brand": "RIEKE CORPORATION",
+      "image": "../assets/brand/RIEKE_CORPORATION.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 52,
+      "name": "ROTARY POWER",
+      "brand": "ROTARY POWER",
+      "image": "../assets/brand/ROTARY_POWER.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 53,
+      "name": "SAINT GOBAIN PERFORMANCE PLASTICS",
+      "brand": "SAINT GOBAIN PERFORMANCE PLASTICS",
+      "image": "../assets/brand/SAINT_GOBAIN_PERFORMANCE_PLASTICS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 54,
+      "name": "SCHROEDER",
+      "brand": "SCHROEDER",
+      "image": "../assets/brand/SCHROEDER.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 55,
+      "name": "SUN HYDRAULICS",
+      "brand": "SUN HYDRAULICS",
+      "image": "../assets/brand/SUN_HYDRAULICS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 56,
+      "name": "SUNFAB",
+      "brand": "SUNFAB",
+      "image": "../assets/brand/SUNFAB.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 57,
+      "name": "ULTRATECH INTERNATIONAL",
+      "brand": "ULTRATECH INTERNATIONAL",
+      "image": "../assets/brand/ULTRATECH_INTERNATIONAL.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 58,
+      "name": "VACCON",
+      "brand": "VACCON",
+      "image": "../assets/brand/VACCON.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 59,
+      "name": "VEHICLE IMPROVEMENT PRODUCTS",
+      "brand": "VEHICLE IMPROVEMENT PRODUCTS",
+      "image": "../assets/brand/VEHICLE_IMPROVEMENT_PRODUCTS.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 60,
+      "name": "WIKA",
+      "brand": "WIKA",
+      "image": "../assets/brand/WIKA.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 61,
+      "name": "WIKA INSTRUMENT",
+      "brand": "WIKA INSTRUMENT",
+      "image": "../assets/brand/WIKA_INSTRUMENT.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 62,
+      "name": "WILKERSON",
+      "brand": "WILKERSON",
+      "image": "../assets/brand/WILKERSON.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  },
+  {
+      "id": 63,
+      "name": "ZENITH",
+      "brand": "ZENITH",
+      "image": "../assets/brand/ZENITH.svg",
+      "description": "Leading-edge automation solutions for various industries."
+  }
+]
